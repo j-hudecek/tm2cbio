@@ -1,6 +1,8 @@
 #tranSMART to cBioPortal mapping file
+#comments start with #
 
 #cbioportal
+#path to the directory to create
 target path=
 #meta study
 study id=
@@ -11,7 +13,7 @@ study description=
 study type=
 #optional
 study citation=
-#optional
+#optional, pubmedid
 study pmid=
 
 #type of cancer, optional unless defining a new type of cancer
@@ -23,14 +25,16 @@ type short name=
 
 
 #meta clinical
+#path to the source clinical data file
 clinical file path=
 
-#mapping of special attributes, specify concept path
+#mapping of special attributes, specify concept path in tranSMART
 mapping AGE path=
 #days2years, days2months, months2years, months2days, years2months, years2days
 mapping AGE convert=
 
 mapping SEX path=
+#regex replace, specify a regular expression and what should it be substituted with, separated by TAB, there can be multiple
 mapping SEX replace=1	MALE
 mapping SEX replace=0	FEMALE
 
@@ -62,6 +66,7 @@ mapping CANCER_TYPE path=
 
 mapping TUMOR_SITE path=
 
+#regex replace on concepts path - allows customization of column names, specify a regular expression and what should it be substituted with, separated by TAB
 mapping concept to column name replace=
 
 mapping type <custom concept> =
