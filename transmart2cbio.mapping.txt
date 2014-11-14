@@ -1,0 +1,68 @@
+#tranSMART to cBioPortal mapping file
+
+#cbioportal
+target path=
+#meta study
+study id=
+study name=
+study short name=
+study description=
+#short name of the type e.g. brca for breast cancer
+study type=
+#optional
+study citation=
+#optional
+study pmid=
+
+#type of cancer, optional unless defining a new type of cancer
+type name=
+type short=
+type keywords=
+type color=
+type short name=
+
+
+#meta clinical
+clinical file path=
+
+#mapping of special attributes, specify concept path
+mapping AGE path=
+#days2years, days2months, months2years, months2days, years2months, years2days
+mapping AGE convert=
+
+mapping SEX path=
+mapping SEX replace=1	MALE
+mapping SEX replace=0	FEMALE
+
+mapping RACE path=
+
+mapping ETHNICITY path=
+
+mapping AGE_AT_DIAGNOSIS path=
+
+mapping TUMOR_TYPE path=
+
+mapping DAYS_TO_DEATH path=
+mapping DAYS_TO_DEATH convert=
+
+mapping OS_STATUS path=
+mapping OS_STATUS replace=1	LIVING
+mapping OS_STATUS replace=0	DECEASED
+
+mapping OS_MONTHS path=
+mapping OS_MONTHS convert=
+
+mapping DFS_STATUS path=
+mapping DFS_STATUS replace=
+
+mapping DFS_MONTHS path=
+mapping DFS_MONTHS convert=
+
+mapping CANCER_TYPE path=
+
+mapping TUMOR_SITE path=
+
+mapping concept to column name replace=
+
+mapping type <custom concept> =
+
