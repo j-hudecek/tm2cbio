@@ -8,6 +8,8 @@ class Translator {
 
     private static String[] exportColumns
 
+    private static List<String> patients = [];
+
     public static void process(Config c) {
         new File(c.target_path).mkdirs()
         createMetaStudyFile(c)
@@ -31,6 +33,13 @@ class Translator {
             writeMeta(out, concept2col, c)
             writeData(out, toReplace, toConvert, c)
         }
+        new File(c.target_path+"/case_lists").mkdirs()
+        new File(c.target_path+"/case_lists/all.txt").write("""cancer_study_identifier: ${c.study_id}
+stable_id: ${c.study_id}_all
+case_list_name: All
+case_list_description: All tumor samples (${c.patient_count} samples)
+case_list_ids: ${patients.join('\t')}
+""")
     }
 
     private static String applyRegexes(String input, String regexesInConfig, Config c) {
@@ -48,7 +57,9 @@ class Translator {
         new File(c.clinical_file_path).eachLine {line, lineNumber ->
             if (lineNumber == 1)
                 return;
-            def fields = line.split('\t')
+            String[] fields = line.split('\t')
+            //store patient's ID (first column) for case list
+            patients.push(fields[0].trim())
             toReplace.each {
                 fields[it.key] = applyRegexes(fields[it.key], it.value, c)
             }
