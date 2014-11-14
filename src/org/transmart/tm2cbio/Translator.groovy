@@ -84,6 +84,7 @@ case_list_ids: ${patients.join('\t')}
         out.println("#" + exportColumns.collect({
             getTypeForConcept(it, c)
         }).join('\t'));
+        concept2col[exportColumns[0]] = "CASE_ID" //cbioportal's word for patient ID
         out.println(exportColumns.collect({
             concept2col[it]
         }).join('\t'))
