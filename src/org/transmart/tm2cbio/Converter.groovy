@@ -4,34 +4,36 @@ package org.transmart.tm2cbio
  * Created by j.hudecek on 10-11-2014.
  */
 class Converter {
-    public static String days2months(String s) throws NumberFormatException {
+    private static String conversionImpl(String s, groovy.lang.Closure<Double> c )
+    {
+        if (s == "NA")
+            return "NA"
         double days = parseEuropeanDouble(s)
-        return (days/30).intValue().toString()
+        return c.call(days).intValue().toString()
+    }
+
+    public static String days2months(String s) throws NumberFormatException {
+        conversionImpl(s, {it/30})
     }
 
     public static String days2years(String s) throws NumberFormatException {
-        double days = parseEuropeanDouble(s)
-        return (days/365).intValue().toString()
+        conversionImpl(s, {it/365})
     }
 
     public static String month2years(String s) throws NumberFormatException {
-        double months = parseEuropeanDouble(s)
-        return (months/12).intValue().toString()
+        conversionImpl(s, {it/12})
     }
 
     public static String month2days(String s) throws NumberFormatException {
-        double months = parseEuropeanDouble(s)
-        return (months*30).intValue().toString()
+        conversionImpl(s, {it*30})
     }
 
     public static String year2days(String s) throws NumberFormatException {
-        double years = parseEuropeanDouble(s)
-        return (years*365).intValue().toString()
+        conversionImpl(s, {it*365})
     }
 
     public static String years2months(String s) throws NumberFormatException {
-        double years = parseEuropeanDouble(s)
-        return (years*12).intValue().toString()
+        conversionImpl(s, {it*12})
     }
 
     private static double parseEuropeanDouble(String s) {
