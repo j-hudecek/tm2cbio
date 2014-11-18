@@ -6,7 +6,7 @@ package org.transmart.tm2cbio
 class Converter {
     private static String conversionImpl(String s, groovy.lang.Closure<Double> c )
     {
-        if (s == "NA")
+        if (s.startsWith("NA"))
             return "NA"
         double days = parseEuropeanDouble(s)
         return c.call(days).intValue().toString()
