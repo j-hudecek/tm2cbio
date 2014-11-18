@@ -1,0 +1,19 @@
+#tranSMART to cBioPortal mapping file
+
+#cbioportal
+target path=c:/temp/tm2cbiotest
+#meta study
+study id=GSE4922
+study name=GSE4922
+study short name=GSE4922
+study description=GSE4922 from tm demo instance
+#short name e.g. brca
+study type=brca
+
+#meta clinical
+clinical file path=c:\temp\tm2cbiotest\clinical_i2b2trans.txt 
+
+mapping AGE path=/Subjects/Demograpics/Age
+mapping AGE convert=years2months
+
+
