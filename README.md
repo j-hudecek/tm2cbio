@@ -1,8 +1,8 @@
 tm2cbio
 =======
 
-![GSE4922 in tranSMART](http://i.imgur.com/3fETXa3.png)
-![GSE4922 in cBioPortal](http://i.imgur.com/wNRSMrn.png)
+![GSE4922 to cbio](https://github.com/j-hudecek/tm2cbio/tm2cbio2.PNG)
+
 
 
 Utility to translate tranSMART export files to a directory ready for import to cBioPortal
