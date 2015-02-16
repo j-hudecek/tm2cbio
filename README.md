@@ -1,7 +1,7 @@
 tm2cbio
 =======
 
-![GSE4922 to cbio](https://github.com/j-hudecek/tm2cbio/tm2cbio2.PNG)
+![GSE4922 to cbio](https://github.com/j-hudecek/tm2cbio/blob/master/tm2cbio2.PNG)
 
 
 
