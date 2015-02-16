@@ -71,7 +71,7 @@ class Config  extends Expando {
     public Map types = [:]
 
     public Config(String filename) {
-        List<String> lines = new File(filename).readLines();
+        List<String> lines = new File(expandPath(filename)).readLines();
         if (lines.size() == 0)
             throw new IllegalArgumentException("Empty mapping file")
         if (lines[0] != "#tranSMART to cBioPortal mapping file")
@@ -111,6 +111,8 @@ class Config  extends Expando {
                 this.@"$variable_name" = variable_value;
             }
         }
+        target_path = expandPath(target_path)
+        clinical_file_path = expandPath(clinical_file_path)
         patient_count = new File(clinical_file_path).readLines().size()-1
     }
 
@@ -138,6 +140,14 @@ class Config  extends Expando {
     public static  String translateConcept(String concept) {
         //bug workaround: groovy's regexes fall apart if term separator is \
         return concept.replace(' ','_').replace('\\','/')
+    }
+
+    public static String expandPath(String path) {
+        if (path.startsWith("~" + File.separator)) {
+            path = System.getProperty("user.home") + path.substring(1);
+        }
+
+        return path;
     }
 
 }
