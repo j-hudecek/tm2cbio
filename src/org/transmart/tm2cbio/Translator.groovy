@@ -15,6 +15,7 @@ class Translator {
         createMetaStudyFile(c)
         createMetaClinicalFile(c)
         Map concept2col = createConceptToColumnMapping(c)
+        println("Created meta files")
 
         // figure out on which column index are the special columns that need replacing/converting
         def toReplace = [:]
@@ -33,6 +34,7 @@ class Translator {
             writeMeta(out, concept2col, c)
             writeData(out, toReplace, toConvert, c)
         }
+        println("Created data file '"+c.target_path + "/data_clinical.txt'")
         new File(c.target_path+"/case_lists").mkdirs()
         new File(c.target_path+"/case_lists/all.txt").write("""cancer_study_identifier: ${c.study_id}
 stable_id: ${c.study_id}_all
@@ -40,6 +42,7 @@ case_list_name: All
 case_list_description: All tumor samples (${c.patient_count} samples)
 case_list_ids: ${patients.join('\t')}
 """)
+        println("Created case list with "+patients.size()+" cases")
     }
 
     private static String applyRegexes(String input, String regexesInConfig, Config c) {
@@ -105,6 +108,7 @@ case_list_ids: ${patients.join('\t')}
 
     private static Map createConceptToColumnMapping(Config c) {
         String firstRow;
+        println("Reading data file '"+c.clinical_file_path+"'")
         new File(c.clinical_file_path).withReader { firstRow = it.readLine() } ;
         firstRow = applyRegexes(firstRow, "mapping_concept_to_column_name_replace", c)
         firstRow = Config.translateConcept(firstRow)

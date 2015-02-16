@@ -73,22 +73,22 @@ class Config  extends Expando {
     public Config(String filename) {
         List<String> lines = new File(expandPath(filename)).readLines();
         if (lines.size() == 0)
-            throw new IllegalArgumentException("Empty mapping file")
+            throw new IllegalArgumentException("Empty mapping file '"+expandPath(filename)+"'")
         if (lines[0] != "#tranSMART to cBioPortal mapping file")
-            throw new IllegalArgumentException("mapping file must have '#tranSMART to cBioPortal mapping file' as a header on the first line")
+            throw new IllegalArgumentException("mapping file must have '#tranSMART to cBioPortal mapping file' as a header on the first line '"+expandPath(filename)+"'")
         lines.each {
             if (it == "" || it.startsWith("#") || it.endsWith('='))
                 return; //empty assignment
             String[] variable_def = it.split("=")
             if (variable_def.size()!=2)
-                throw new IllegalArgumentException("wrong format at $it")
+                throw new IllegalArgumentException("wrong format at $it at file '"+expandPath(filename)+"'")
             String variable_name = variable_def[0]
             String variable_value = variable_def[1]
             if (variable_name.endsWith(" replace")) {
                 //handle replace regexes
                 String[] replace_def = variable_value.split("\t")
                 if (replace_def.size() != 2)
-                    throw new IllegalArgumentException("invalid replacement at $it")
+                    throw new IllegalArgumentException("invalid replacement at $it at file '"+expandPath(filename)+"'")
                 checkPathBeforeReplace(variable_name)
                 variable_name = variable_name.replace(" ", "_")
                 String with_name = variable_name+"_with"

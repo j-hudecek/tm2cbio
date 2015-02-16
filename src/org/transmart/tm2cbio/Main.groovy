@@ -17,10 +17,12 @@ class Main {
             return;
         }
         if (!new File(args[0]).exists()) {
-            println("File "+args[0]+" doesn't exist");
+            println("File '"+args[0]+"' doesn't exist");
             return;
         }
+        println("Converting file using mapping file '"+args[0]+"'")
         Config c = new Config(args[0]);
         Translator.process(c);
+        println("Done")
     }
 }
