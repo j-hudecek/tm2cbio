@@ -1,6 +1,10 @@
 tm2cbio
 =======
 
+![GSE4922 in tranSMART](http://i.imgur.com/3fETXa3.png)
+![GSE4922 in cBioPortal](http://i.imgur.com/wNRSMrn.png)
+
+
 Utility to translate tranSMART export files to a directory ready for import to cBioPortal
 
 1. Use the tranSMART data export functionality to obtain the data file with clinical data.
