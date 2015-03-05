@@ -11,7 +11,7 @@ study description=GSE4922 from tm demo instance
 study type=brca
 
 #meta clinical
-clinical file path=c:\temp\tm2cbiotest\clinical_i2b2trans.txt 
+clinical file path=c:\temp\tm2cbiotest\clinical_i2b2trans.txt
 
 mapping AGE path=/Subjects/Demograpics/Age
 mapping AGE convert=years2months
