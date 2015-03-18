@@ -1,290 +1,290 @@
 PATIENT ID	SAMPLE CODES	\Clinical Data\Clinical Endpoints\Censored	\Subjects\Medical History\Tumor Characteristics\Tumor Grade, Elston Scale	\Subjects\Medical History\Systemic Therapy	\Subjects\Medical History\Tumor Characteristics\p53 Mutation Status	\Subjects\Medical History\Prior Endocrine Therapy	\Samples and Timepoints\Sample Source	\Subjects\Medical History\Cancer Characteristics\Lymph Node Involvement	\Clinical Data\Clinical Endpoints\Genetic Grade Signature Status Prediction (by SWS classifier)	\Clinical Data\Clinical Endpoints\Probability 1-like (by SWS classifier)	\Clinical Data\Clinical Endpoints\Disease Free Survival, years	\Subjects\Medical History\Tumor Characteristics\Estrogen Receptor Status, IHC	\Clinical Data\Clinical Endpoints\Probability 3-like (by SWS classifier)	\Subjects\Demographics\Age
-A NUH.BT009 	null	NA          	Grade 2     	NA          	NA          	NA          	Breast Tumor	NA          	2b          	0.12200     	NA          	NA          	0.87800     	NA          
-A NUH.BT014 	null	NA          	Grade 2     	NA          	NA          	NA          	Breast Tumor	NA          	2b          	0.00100     	NA          	NA          	0.99900     	NA          
-A NUH.BT018 	null	NA          	Grade 2     	NA          	NA          	NA          	Breast Tumor	NA          	2a          	0.95900     	NA          	NA          	0.04100     	NA          
-A NUH.BT019 	null	NA          	Grade 2     	NA          	NA          	NA          	Breast Tumor	NA          	2a          	0.92400     	NA          	NA          	0.07600     	NA          
-A NUH.BT022 	null	NA          	Grade 2     	NA          	NA          	NA          	Breast Tumor	NA          	2a          	0.95900     	NA          	NA          	0.04100     	NA          
-A NUH.BT023 	null	NA          	Grade 2     	NA          	NA          	NA          	Breast Tumor	NA          	2a          	0.77600     	NA          	NA          	0.22400     	NA          
-A NUH.BT029 	null	NA          	Grade 2     	NA          	NA          	NA          	Breast Tumor	NA          	2b          	0.00600     	NA          	NA          	0.99400     	NA          
-A NUH.BT031 	null	NA          	Grade 2     	NA          	NA          	NA          	Breast Tumor	NA          	2b          	0.44200     	NA          	NA          	0.55800     	NA          
-A NUH.BT035 	null	NA          	Grade 2     	NA          	NA          	NA          	Breast Tumor	NA          	2a          	0.95900     	NA          	NA          	0.04100     	NA          
-A NUH.BT042 	null	NA          	Grade 2     	NA          	NA          	NA          	Breast Tumor	NA          	2a          	0.95900     	NA          	NA          	0.04100     	NA          
-A NUH.BT046 	null	NA          	Grade 2     	NA          	NA          	NA          	Breast Tumor	NA          	2a          	0.89400     	NA          	NA          	0.10600     	NA          
-A NUH.BT047 	null	NA          	Grade 2     	NA          	NA          	NA          	Breast Tumor	NA          	2a          	0.95900     	NA          	NA          	0.04100     	NA          
-A NUH.BT049 	null	NA          	Grade 2     	NA          	NA          	NA          	Breast Tumor	NA          	2a          	0.70300     	NA          	NA          	0.29700     	NA          
-A NUH.BT054 	null	NA          	Grade 2     	NA          	NA          	NA          	Breast Tumor	NA          	2b          	0.00400     	NA          	NA          	0.99600     	NA          
-A NUH.BT055 	null	NA          	Grade 2     	NA          	NA          	NA          	Breast Tumor	NA          	2a          	0.95900     	NA          	NA          	0.04100     	NA          
-A NUH.BT058 	null	NA          	Grade 2     	NA          	NA          	NA          	Breast Tumor	NA          	2a          	0.95900     	NA          	NA          	0.04100     	NA          
-A NUH.BT061 	null	NA          	Grade 2     	NA          	NA          	NA          	Breast Tumor	NA          	2b          	0.00300     	NA          	NA          	0.99700     	NA          
-A NUH.BT067 	null	NA          	Grade 2     	NA          	NA          	NA          	Breast Tumor	NA          	2a          	0.95900     	NA          	NA          	0.04100     	NA          
-A NUH.BT068 	null	NA          	Grade 2     	NA          	NA          	NA          	Breast Tumor	NA          	2a          	0.89400     	NA          	NA          	0.10600     	NA          
-A NUH.BT070 	null	NA          	Grade 2     	NA          	NA          	NA          	Breast Tumor	NA          	2a          	0.89400     	NA          	NA          	0.10600     	NA          
-A NUH.BT074 	null	NA          	Grade 2     	NA          	NA          	NA          	Breast Tumor	NA          	2b          	0.00800     	NA          	NA          	0.99200     	NA          
-A NUH.BT078 	null	NA          	Grade 2     	NA          	NA          	NA          	Breast Tumor	NA          	2a          	0.95900     	NA          	NA          	0.04100     	NA          
-A NUH.BT083 	null	NA          	Grade 2     	NA          	NA          	NA          	Breast Tumor	NA          	2b          	0.14100     	NA          	NA          	0.85900     	NA          
-A NUH.BT085 	null	NA          	Grade 2     	NA          	NA          	NA          	Breast Tumor	NA          	2b          	0.12200     	NA          	NA          	0.87800     	NA          
-A NUH.BT086 	null	NA          	Grade 2     	NA          	NA          	NA          	Breast Tumor	NA          	2b          	0.00100     	NA          	NA          	0.99900     	NA          
-A NUH.BT087 	null	NA          	Grade 2     	NA          	NA          	NA          	Breast Tumor	NA          	2a          	0.95900     	NA          	NA          	0.04100     	NA          
-A NUH.BT088 	null	NA          	Grade 2     	NA          	NA          	NA          	Breast Tumor	NA          	2a          	0.58400     	NA          	NA          	0.41600     	NA          
-A NUH.BT090 	null	NA          	Grade 2     	NA          	NA          	NA          	Breast Tumor	NA          	2b          	0.05600     	NA          	NA          	0.94400     	NA          
-A NUH.BT093 	null	NA          	Grade 2     	NA          	NA          	NA          	Breast Tumor	NA          	2a          	0.87600     	NA          	NA          	0.12400     	NA          
-A NUH.BT094 	null	NA          	Grade 2     	NA          	NA          	NA          	Breast Tumor	NA          	2a          	0.95900     	NA          	NA          	0.04100     	NA          
-A NUH.BT095 	null	NA          	Grade 2     	NA          	NA          	NA          	Breast Tumor	NA          	2a          	0.92400     	NA          	NA          	0.07600     	NA          
-A NUH.BT096 	null	NA          	Grade 2     	NA          	NA          	NA          	Breast Tumor	NA          	2a          	0.95900     	NA          	NA          	0.04100     	NA          
-A NUH.BT097 	null	NA          	Grade 2     	NA          	NA          	NA          	Breast Tumor	NA          	2a          	0.95900     	NA          	NA          	0.04100     	NA          
-A NUH.BT103 	null	NA          	Grade 2     	NA          	NA          	NA          	Breast Tumor	NA          	2a          	0.95900     	NA          	NA          	0.04100     	NA          
-A NUH.BT104 	null	NA          	Grade 2     	NA          	NA          	NA          	Breast Tumor	NA          	2b          	0.47900     	NA          	NA          	0.52100     	NA          
-A NUH.BT108 	null	NA          	Grade 2     	NA          	NA          	NA          	Breast Tumor	NA          	2a          	0.95900     	NA          	NA          	0.04100     	NA          
-A NUH.BT111 	null	NA          	Grade 2     	NA          	NA          	NA          	Breast Tumor	NA          	2b          	0.08500     	NA          	NA          	0.91500     	NA          
-A NUH.BT113 	null	NA          	Grade 2     	NA          	NA          	NA          	Breast Tumor	NA          	2a          	0.87600     	NA          	NA          	0.12400     	NA          
-A NUH.BT114 	null	NA          	Grade 2     	NA          	NA          	NA          	Breast Tumor	NA          	2a          	0.95900     	NA          	NA          	0.04100     	NA          
-A NUH.BT119 	null	NA          	Grade 2     	NA          	NA          	NA          	Breast Tumor	NA          	2a          	0.95900     	NA          	NA          	0.04100     	NA          
-A X100B08   	null	Yes         	Grade 1     	Positive    	68.00000    	No          	Breast Tumor	Wild type   	1-like      	0.95927     	11.80000    	No          	0.04073     	9.00000     
-A X101B88   	null	Yes         	Grade 3     	Negative    	40.00000    	No          	Breast Tumor	Mutated     	3-like      	0.00067     	11.80000    	No          	0.99933     	12.00000    
-A X102B06   	null	Yes         	Grade 3     	Positive    	51.00000    	Yes         	Breast Tumor	Mutated     	3-like      	0.00067     	11.80000    	No          	0.99933     	26.00000    
-A X103B41   	null	Yes         	Grade 3     	Negative    	52.00000    	Yes         	Breast Tumor	Wild type   	3-like      	0.00471     	11.80000    	Yes         	0.99529     	22.00000    
-A X104B91   	null	Yes         	Grade 3     	Positive    	80.00000    	Yes         	Breast Tumor	Mutated     	3-like      	0.00067     	3.60000     	Undetermined	0.99933     	24.00000    
-A X105B13   	null	Yes         	Grade 1     	Positive    	46.00000    	No          	Breast Tumor	Wild type   	1-like      	0.95927     	11.80000    	No          	0.04073     	13.00000    
-A X106B55   	null	No          	Grade 1     	Positive    	37.00000    	No          	Breast Tumor	Wild type   	1-like      	0.95927     	1.20000     	No          	0.04073     	60.00000    
-A X10B88    	null	Yes         	Grade 1     	Positive    	70.00000    	No          	Breast Tumor	Wild type   	1-like      	0.95927     	11.30000    	No          	0.04073     	50.00000    
-A X110B34   	null	Yes         	Grade 2     	Positive    	74.00000    	No          	Breast Tumor	Mutated     	2b          	0.00068     	11.70000    	No          	0.99932     	20.00000    
-A X111B51   	null	No          	Grade 3     	Positive    	41.00000    	No          	Breast Tumor	Mutated     	3-like      	0.00067     	0.50000     	No          	0.99933     	33.00000    
-A X112B55   	null	No          	Grade 2     	Positive    	61.00000    	Yes         	Breast Tumor	Wild type   	2b          	0.00636     	0.90000     	Yes         	0.99364     	24.00000    
-A X113B11   	null	No          	Grade 3     	Positive    	38.00000    	No          	Breast Tumor	Wild type   	3-like      	0.00067     	3.10000     	No          	0.99933     	32.00000    
-A X114B68   	null	Yes         	Grade 1     	Positive    	67.00000    	Yes         	Breast Tumor	Wild type   	1-like      	0.73301     	11.20000    	Yes         	0.26699     	12.00000    
-A X11B47    	null	Yes         	Grade 2     	Negative    	69.00000    	No          	Breast Tumor	Wild type   	2a          	0.95929     	7.40000     	No          	0.04071     	18.00000    
-A X120B73   	null	Yes         	Grade 2     	Positive    	34.00000    	No          	Breast Tumor	Wild type   	2b          	0.00068     	11.60000    	No          	0.99932     	16.00000    
-A X122B81   	null	Yes         	Grade 2     	Positive    	79.00000    	No          	Breast Tumor	Wild type   	2a          	0.95929     	11.20000    	No          	0.04071     	19.00000    
-A X124B25   	null	No          	Grade 2     	Positive    	46.00000    	No          	Breast Tumor	Wild type   	2a          	0.95929     	5.00000     	No          	0.04071     	21.00000    
-A X127B00   	null	No          	Grade 3     	Positive    	57.00000    	No          	Breast Tumor	Mutated     	3-like      	0.00067     	1.90000     	No          	0.99933     	22.00000    
-A X128B48   	null	Yes         	Grade 1     	Uncertain   	71.00000    	No          	Breast Tumor	Wild type   	1-like      	0.95927     	4.60000     	Undetermined	0.04073     	12.00000    
-A X130B92   	null	No          	Grade 2     	Positive    	73.00000    	Yes         	Breast Tumor	Wild type   	2a          	0.95929     	4.40000     	Yes         	0.04071     	18.00000    
-A X131B79   	null	No          	Grade 3     	Positive    	59.00000    	Yes         	Breast Tumor	Wild type   	3-like      	0.00067     	1.80000     	Yes         	0.99933     	26.00000    
-A X134B33   	null	No          	Grade 2     	Positive    	63.00000    	No          	Breast Tumor	Wild type   	2b          	0.01456     	2.00000     	No          	0.98544     	28.00000    
-A X135B40   	null	No          	Grade 1     	Positive    	64.00000    	Yes         	Breast Tumor	Wild type   	1-like      	0.95927     	9.50000     	No          	0.04073     	26.00000    
-A X136B04   	null	No          	Grade 2     	Positive    	54.00000    	No          	Breast Tumor	Wild type   	2a          	0.95929     	2.40000     	No          	0.04071     	17.00000    
-A X137B88   	null	No          	Grade 2     	Negative    	68.00000    	No          	Breast Tumor	Mutated     	2a          	0.89398     	10.50000    	No          	0.10602     	6.00000     
-A X138B34   	null	Yes         	Grade 1     	Positive    	65.00000    	Yes         	Breast Tumor	Wild type   	1-like      	0.95927     	11.50000    	Yes         	0.04073     	23.00000    
-A X139B03   	null	No          	Grade 3     	Positive    	84.00000    	Yes         	Breast Tumor	Wild type   	3-like      	0.00067     	0.30000     	No          	0.99933     	28.00000    
-A X13B79    	null	Yes         	Grade 2     	Positive    	67.00000    	No          	Breast Tumor	Wild type   	2a          	0.95929     	10.80000    	No          	0.04071     	25.00000    
-A X140B91   	null	Yes         	Grade 2     	Positive    	61.00000    	No          	Breast Tumor	Wild type   	2a          	0.95929     	11.50000    	No          	0.04071     	12.00000    
-A X142B05   	null	No          	Grade 3     	Negative    	67.00000    	No          	Breast Tumor	Wild type   	3-like      	0.02271     	1.30000     	No          	0.97729     	27.00000    
-A X143B81   	null	Yes         	Grade 3     	Negative    	93.00000    	No          	Breast Tumor	Mutated     	3-like      	0.00067     	2.20000     	Undetermined	0.99933     	29.00000    
-A X144B49   	null	Yes         	Grade 2     	Positive    	40.00000    	No          	Breast Tumor	Mutated     	2a          	0.95929     	11.50000    	No          	0.04071     	21.00000    
-A X145B10   	null	Yes         	Grade 2     	Positive    	73.00000    	No          	Breast Tumor	Wild type   	2b          	0.00340     	11.40000    	No          	0.99660     	18.00000    
-A X146B39   	null	Yes         	Grade 3     	Negative    	34.00000    	Yes         	Breast Tumor	Mutated     	3-like      	0.00067     	0.70000     	Yes         	0.99933     	50.00000    
-A X147B19   	null	No          	Grade 3     	Negative    	71.00000    	Yes         	Breast Tumor	Mutated     	3-like      	0.00381     	1.80000     	Yes         	0.99619     	24.00000    
-A X14B98    	null	Yes         	Grade 2     	Positive    	61.00000    	Yes         	Breast Tumor	Wild type   	2a          	0.92357     	10.80000    	Yes         	0.07643     	20.00000    
-A X150B81   	null	Yes         	Grade 2     	Positive    	55.00000    	Yes         	Breast Tumor	Wild type   	2a          	0.77619     	11.40000    	Yes         	0.22381     	35.00000    
-A X151B84   	null	Yes         	Grade 2     	Positive    	57.00000    	No          	Breast Tumor	Wild type   	2a          	0.89398     	11.40000    	No          	0.10602     	15.00000    
-A X152B99   	null	Yes         	Grade 2     	Positive    	83.00000    	No          	Breast Tumor	Wild type   	2a          	0.95929     	2.10000     	No          	0.04071     	18.00000    
-A X153B09   	null	Yes         	Grade 3     	Negative    	71.00000    	No          	Breast Tumor	Mutated     	3-like      	0.00067     	11.40000    	No          	0.99933     	18.00000    
-A X154B42   	null	No          	Grade 2     	Positive    	52.00000    	Yes         	Breast Tumor	Wild type   	2b          	0.00454     	3.40000     	Yes         	0.99546     	9.00000     
-A X155B52   	null	Yes         	Grade 1     	Negative    	57.00000    	No          	Breast Tumor	Wild type   	1-like      	0.95927     	11.40000    	No          	0.04073     	13.00000    
-A X156B01   	null	No          	Grade 1     	Positive    	70.00000    	No          	Breast Tumor	Wild type   	1-like      	0.95927     	0.80000     	No          	0.04073     	12.00000    
-A X158B84   	null	No          	Grade 2     	Positive    	69.00000    	No          	Breast Tumor	Wild type   	2a          	0.95929     	4.70000     	No          	0.04071     	7.00000     
-A X159B47   	null	No          	Grade 2     	Positive    	57.00000    	Yes         	Breast Tumor	Mutated     	2b          	0.00068     	6.50000     	Yes         	0.99932     	14.00000    
-A X15C94    	null	Yes         	Grade 2     	Positive    	83.00000    	Yes         	Breast Tumor	Wild type   	2a          	0.95929     	4.40000     	No          	0.04071     	50.00000    
-A X160B16   	null	Yes         	Grade 1     	Positive    	73.00000    	No          	Breast Tumor	Wild type   	1-like      	0.95927     	5.50000     	No          	0.04073     	14.00000    
-A X161B31   	null	Yes         	Grade 2     	Positive    	69.00000    	No          	Breast Tumor	Wild type   	2a          	0.95929     	11.40000    	No          	0.04071     	13.00000    
-A X162B98   	null	No          	Grade 3     	Positive    	73.00000    	Yes         	Breast Tumor	Wild type   	3-like      	0.00067     	8.90000     	Yes         	0.99933     	33.00000    
-A X163B27   	null	Yes         	Grade 1     	Positive    	49.00000    	No          	Breast Tumor	Wild type   	1-like      	0.95927     	11.30000    	No          	0.04073     	8.00000     
-A X164B81   	null	Yes         	Grade 2     	Negative    	62.00000    	No          	Breast Tumor	Mutated     	2b          	0.00068     	11.30000    	No          	0.99932     	23.00000    
-A X165B72   	null	No          	Grade 2     	Positive    	74.00000    	Yes         	Breast Tumor	Wild type   	2b          	0.04575     	1.50000     	Yes         	0.95425     	23.00000    
-A X166B79   	null	Yes         	Grade 2     	Positive    	65.00000    	Yes         	Breast Tumor	Wild type   	2b          	0.02484     	11.30000    	Yes         	0.97516     	22.00000    
-A X168B51   	null	Yes         	Grade 2     	Positive    	90.00000    	No          	Breast Tumor	Wild type   	2a          	0.95929     	5.30000     	No          	0.04071     	45.00000    
-A X169B79   	null	Yes         	Grade 2     	Positive    	57.00000    	Yes         	Breast Tumor	Wild type   	2a          	0.95929     	11.30000    	No          	0.04071     	14.11000    
-A X16C97    	null	No          	Grade 2     	Positive    	80.00000    	No          	Breast Tumor	Wild type   	2a          	0.87655     	3.60000     	No          	0.12345     	15.00000    
-A X170B15   	null	No          	Grade 2     	Positive    	70.00000    	Yes         	Breast Tumor	Wild type   	2a          	0.89398     	4.10000     	Yes         	0.10602     	25.00000    
-A X171B77   	null	No          	Grade 2     	Positive    	62.00000    	Yes         	Breast Tumor	Wild type   	2b          	0.00454     	1.80000     	No          	0.99546     	18.00000    
-A X172B19   	null	No          	Grade 3     	Positive    	42.00000    	No          	Breast Tumor	Wild type   	3-like      	0.00067     	8.60000     	No          	0.99933     	23.00000    
-A X173B43   	null	Yes         	Grade 1     	Positive    	72.00000    	Yes         	Breast Tumor	Wild type   	1-like      	0.95927     	11.30000    	Yes         	0.04073     	16.00000    
-A X174B41   	null	No          	Grade 1     	Positive    	74.00000    	No          	Breast Tumor	Wild type   	1-like      	0.95927     	3.30000     	No          	0.04073     	11.00000    
-A X175B72   	null	No          	Grade 2     	Positive    	46.00000    	Yes         	Breast Tumor	Wild type   	2a          	0.89398     	0.00000     	Yes         	0.10602     	60.00000    
-A X176B74   	null	Yes         	Grade 2     	Positive    	77.00000    	No          	Breast Tumor	Wild type   	2a          	0.95929     	6.00000     	No          	0.04071     	25.00000    
-A X177B67   	null	No          	Grade 1     	Positive    	41.00000    	No          	Breast Tumor	Wild type   	1-like      	0.95927     	6.80000     	No          	0.04073     	18.00000    
-A X178B74   	null	Yes         	Grade 2     	Positive    	82.00000    	No          	Breast Tumor	Wild type   	2a          	0.75985     	7.40000     	No          	0.24015     	16.00000    
-A X179B28   	null	No          	Grade 2     	Positive    	66.00000    	No          	Breast Tumor	Wild type   	2a          	0.95929     	2.30000     	No          	0.04071     	8.00000     
-A X17C40    	null	Yes         	Grade 2     	Positive    	83.00000    	Yes         	Breast Tumor	Wild type   	2a          	0.95929     	1.90000     	Undetermined	0.04071     	25.00000    
-A X180B38   	null	Yes         	Grade 1     	Positive    	70.00000    	No          	Breast Tumor	Wild type   	1-like      	0.95927     	7.30000     	No          	0.04073     	2.00000     
-A X181B70   	null	No          	Grade 1     	Positive    	34.00000    	Yes         	Breast Tumor	Wild type   	1-like      	0.95927     	1.90000     	Yes         	0.04073     	20.00000    
-A X182B43   	null	Yes         	Grade 3     	Negative    	51.00000    	Yes         	Breast Tumor	Wild type   	3-like      	0.00449     	11.10000    	Yes         	0.99551     	28.00000    
-A X183B75   	null	No          	Grade 2     	Positive    	60.00000    	Yes         	Breast Tumor	Wild type   	2a          	0.89398     	7.00000     	Yes         	0.10602     	24.00000    
-A X184B38   	null	Yes         	Grade 1     	Positive    	63.00000    	No          	Breast Tumor	Wild type   	1-like      	0.88666     	11.00000    	No          	0.11334     	10.00000    
-A X185B44   	null	Yes         	Grade 1     	Positive    	68.00000    	No          	Breast Tumor	Wild type   	1-like      	0.95927     	11.00000    	No          	0.04073     	8.00000     
-A X186B22   	null	No          	Grade 2     	Positive    	86.00000    	Yes         	Breast Tumor	Mutated     	2b          	0.02873     	0.20000     	Yes         	0.97127     	46.00000    
-A X187B36   	null	No          	Grade 2     	Positive    	29.00000    	Yes         	Breast Tumor	Mutated     	2b          	0.00068     	0.00000     	Yes         	0.99932     	23.00000    
-A X188B13   	null	Yes         	Grade 2     	Negative    	60.00000    	No          	Breast Tumor	Wild type   	2b          	0.46657     	11.00000    	No          	0.53343     	14.00000    
-A X189B83   	null	Yes         	Grade 2     	Negative    	58.00000    	Yes         	Breast Tumor	Mutated     	2b          	0.00454     	11.00000    	No          	0.99546     	38.00000    
-A X18C56    	null	Yes         	Grade 2     	Positive    	68.00000    	No          	Breast Tumor	Wild type   	2a          	0.77619     	10.80000    	No          	0.22381     	19.00000    
-A X191B79   	null	No          	Grade 2     	Positive    	59.00000    	Yes         	Breast Tumor	Wild type   	2b          	0.00068     	4.40000     	No          	0.99932     	27.00000    
-A X192B69   	null	Yes         	Grade 1     	Positive    	73.00000    	No          	Breast Tumor	Wild type   	1-like      	0.95927     	7.90000     	No          	0.04073     	8.00000     
-A X193B72   	null	Yes         	Grade 2     	Negative    	68.00000    	Yes         	Breast Tumor	Wild type   	2b          	0.46657     	10.90000    	Yes         	0.53343     	16.00000    
-A X194B60   	null	Yes         	Grade 3     	Positive    	77.00000    	Yes         	Breast Tumor	Mutated     	3-like      	0.00471     	3.60000     	Yes         	0.99529     	22.00000    
-A X195B75   	null	Yes         	Grade 1     	Positive    	87.00000    	No          	Breast Tumor	Wild type   	1-like      	0.95927     	3.00000     	No          	0.04073     	18.00000    
-A X196B81   	null	Yes         	Grade 1     	Positive    	65.00000    	No          	Breast Tumor	Wild type   	1-like      	0.95927     	10.90000    	No          	0.04073     	14.00000    
-A X197B95   	null	Yes         	Grade 2     	Positive    	44.00000    	No          	Breast Tumor	Wild type   	2a          	0.77619     	10.90000    	No          	0.22381     	16.00000    
-A X198B90   	null	Yes         	Grade 2     	Positive    	74.00000    	No          	Breast Tumor	Wild type   	2a          	0.95929     	10.90000    	No          	0.04071     	20.00000    
-A X199B55   	null	Yes         	Grade 2     	Positive    	54.00000    	No          	Breast Tumor	Wild type   	2a          	0.89398     	10.90000    	No          	0.10602     	23.00000    
-A X19C33    	null	No          	Grade 1     	Positive    	61.00000    	Yes         	Breast Tumor	Mutated     	1-like      	0.95927     	0.00000     	Yes         	0.04073     	31.00000    
-A X200B47   	null	No          	Grade 3     	Positive    	47.00000    	Yes         	Breast Tumor	Wild type   	1-like      	0.93078     	5.40000     	Yes         	0.06922     	20.00000    
-A X201B68   	null	Yes         	Grade 2     	Positive    	53.00000    	Yes         	Breast Tumor	Wild type   	2a          	0.95929     	10.90000    	Yes         	0.04071     	24.00000    
-A X202B44   	null	Yes         	Grade 2     	Positive    	72.00000    	Yes         	Breast Tumor	Wild type   	2a          	0.95929     	10.80000    	No          	0.04071     	10.00000    
-A X203B49   	null	Yes         	Grade 2     	Positive    	51.00000    	Yes         	Breast Tumor	Wild type   	2a          	0.95929     	10.80000    	Yes         	0.04071     	40.00000    
-A X204B85   	null	Yes         	Grade 1     	Positive    	70.00000    	No          	Breast Tumor	Wild type   	1-like      	0.91457     	10.60000    	No          	0.08543     	12.00000    
-A X205B99   	null	No          	Grade 1     	Positive    	59.00000    	No          	Breast Tumor	Wild type   	1-like      	0.95927     	4.40000     	No          	0.04073     	22.00000    
-A X206C05   	null	Yes         	Grade 2     	Positive    	80.00000    	No          	Breast Tumor	Wild type   	2a          	0.92357     	6.40000     	No          	0.07643     	18.00000    
-A X207C08   	null	Yes         	Grade 1     	Positive    	59.00000    	Yes         	Breast Tumor	Wild type   	1-like      	0.95927     	10.80000    	Yes         	0.04073     	10.00000    
-A X208C06   	null	Yes         	Grade 2     	Positive    	67.00000    	Yes         	Breast Tumor	Mutated     	2b          	0.00068     	0.10000     	Undetermined	0.99932     	22.00000    
-A X209C10   	null	Yes         	Grade 1     	Positive    	80.00000    	No          	Breast Tumor	Wild type   	1-like      	0.95927     	10.80000    	No          	0.04073     	14.00000    
-A X210C72   	null	No          	Grade 2     	Positive    	45.00000    	Yes         	Breast Tumor	Wild type   	2a          	0.89398     	0.50000     	No          	0.10602     	42.00000    
-A X211C88   	null	Yes         	Grade 2     	Positive    	85.00000    	No          	Breast Tumor	Wild type   	2a          	0.77619     	1.50000     	Undetermined	0.22381     	18.00000    
-A X212C21   	null	No          	Grade 2     	Uncertain   	74.00000    	Yes         	Breast Tumor	Wild type   	2a          	0.95929     	3.80000     	No          	0.04071     	24.14000    
-A X213C36   	null	Yes         	Grade 2     	Positive    	70.00000    	No          	Breast Tumor	Mutated     	2b          	0.00454     	10.10000    	No          	0.99546     	18.00000    
-A X216C61   	null	Yes         	Grade 2     	Positive    	71.00000    	Yes         	Breast Tumor	Wild type   	2a          	0.95929     	10.80000    	Yes         	0.04071     	22.00000    
-A X217C79   	null	Yes         	Grade 2     	Positive    	74.00000    	No          	Breast Tumor	Wild type   	2a          	0.95929     	10.80000    	No          	0.04071     	19.00000    
-A X218C29   	null	Yes         	Grade 2     	Positive    	69.00000    	No          	Breast Tumor	Wild type   	2a          	0.89398     	10.80000    	No          	0.10602     	14.00000    
-A X21C28    	null	Yes         	Grade 1     	Positive    	68.00000    	No          	Breast Tumor	Wild type   	1-like      	0.95927     	10.70000    	No          	0.04073     	10.00000    
-A X220C70   	null	Yes         	Grade 1     	Positive    	42.00000    	No          	Breast Tumor	Wild type   	1-like      	0.95927     	10.80000    	No          	0.04073     	20.00000    
-A X221C14   	null	No          	Grade 2     	Positive    	68.00000    	No          	Breast Tumor	Wild type   	2b          	0.14109     	3.00000     	No          	0.85891     	17.00000    
-A X222C26   	null	No          	Grade 3     	Positive    	50.00000    	Yes         	Breast Tumor	Mutated     	3-like      	0.02587     	0.10000     	Yes         	0.97413     	65.00000    
-A X223C51   	null	Yes         	Grade 2     	Positive    	44.00000    	Yes         	Breast Tumor	Wild type   	2a          	0.89398     	8.40000     	Yes         	0.10602     	32.00000    
-A X224C93   	null	Yes         	Grade 1     	Negative    	70.00000    	No          	Breast Tumor	Wild type   	1-like      	0.95927     	7.90000     	No          	0.04073     	11.00000    
-A X225C52   	null	Yes         	Grade 2     	Positive    	72.00000    	Yes         	Breast Tumor	Wild type   	2b          	0.00068     	10.80000    	Yes         	0.99932     	27.00000    
-A X226C06   	null	Yes         	Grade 3     	Positive    	28.00000    	Yes         	Breast Tumor	Mutated     	3-like      	0.00067     	10.80000    	Yes         	0.99933     	45.00000    
-A X227C50   	null	Yes         	Grade 1     	Positive    	57.00000    	No          	Breast Tumor	Wild type   	1-like      	0.95927     	9.10000     	No          	0.04073     	12.00000    
-A X229C44   	null	Yes         	Grade 1     	Positive    	52.00000    	No          	Breast Tumor	Wild type   	1-like      	0.95927     	10.70000    	No          	0.04073     	13.00000    
-A X22C62    	null	Yes         	Grade 2     	Positive    	83.00000    	No          	Breast Tumor	Wild type   	2a          	0.95929     	4.80000     	No          	0.04071     	12.00000    
-A X230C47   	null	No          	Grade 2     	Positive    	77.00000    	Yes         	Breast Tumor	Wild type   	2b          	0.00068     	0.50000     	Yes         	0.99932     	22.00000    
-A X231C80   	null	No          	Grade 1     	Positive    	56.00000    	No          	Breast Tumor	Wild type   	1-like      	0.95927     	6.40000     	No          	0.04073     	22.00000    
-A X232C58   	null	No          	Grade 3     	Positive    	44.00000    	Yes         	Breast Tumor	Wild type   	3-like      	0.00067     	1.80000     	Yes         	0.99933     	24.00000    
-A X233C91   	null	Yes         	Grade 1     	Positive    	49.00000    	No          	Breast Tumor	Wild type   	1-like      	0.95927     	10.70000    	No          	0.04073     	11.00000    
-A X234C15   	null	Yes         	Grade 3     	Positive    	29.00000    	Yes         	Breast Tumor	Wild type   	3-like      	0.00067     	10.70000    	Yes         	0.99933     	11.00000    
-A X235C20   	null	Yes         	Grade 1     	Uncertain   	71.00000    	Yes         	Breast Tumor	Wild type   	1-like      	0.95927     	10.70000    	No          	0.04073     	21.00000    
-A X236C55   	null	Yes         	Grade 1     	Positive    	72.00000    	No          	Breast Tumor	Wild type   	1-like      	0.95927     	10.70000    	No          	0.04073     	18.00000    
-A X237C56   	null	Yes         	Grade 2     	Positive    	50.00000    	Yes         	Breast Tumor	Wild type   	2b          	0.14109     	10.70000    	Yes         	0.85891     	19.00000    
-A X238C87   	null	Yes         	Grade 3     	Negative    	54.00000    	Yes         	Breast Tumor	Wild type   	1-like      	0.59500     	10.70000    	No          	0.40500     	24.00000    
-A X23C52    	null	No          	Grade 2     	Positive    	68.00000    	No          	Breast Tumor	Mutated     	2b          	0.00454     	8.50000     	No          	0.99546     	22.00000    
-A X240C54   	null	No          	Grade 2     	Positive    	61.00000    	No          	Breast Tumor	Mutated     	2b          	0.00454     	2.40000     	Yes         	0.99546     	35.00000    
-A X241C01   	null	No          	Grade 3     	Positive    	66.00000    	No          	Breast Tumor	Wild type   	3-like      	0.04656     	0.90000     	No          	0.95344     	23.00000    
-A X242C21   	null	No          	Grade 2     	Positive    	64.00000    	No          	Breast Tumor	Mutated     	2b          	0.20816     	2.20000     	No          	0.79184     	18.00000    
-A X243C70   	null	Yes         	Grade 1     	Positive    	50.00000    	No          	Breast Tumor	Wild type   	1-like      	0.95927     	10.60000    	No          	0.04073     	10.00000    
-A X244C89   	null	No          	Grade 2     	Positive    	51.00000    	Yes         	Breast Tumor	Wild type   	2a          	0.77619     	7.30000     	Yes         	0.22381     	33.00000    
-A X245C22   	null	No          	Grade 2     	Positive    	76.00000    	Yes         	Breast Tumor	Mutated     	2b          	0.14109     	0.00000     	Yes         	0.85891     	45.00000    
-A X246C75   	null	Yes         	Grade 1     	Positive    	73.00000    	No          	Breast Tumor	Wild type   	1-like      	0.88666     	10.20000    	No          	0.11334     	11.00000    
-A X247C76   	null	Yes         	Grade 2     	Positive    	56.00000    	No          	Breast Tumor	Wild type   	2a          	0.95929     	10.50000    	No          	0.04071     	25.00000    
-A X248C91   	null	Yes         	Grade 1     	Positive    	57.00000    	No          	Breast Tumor	Wild type   	3-like      	0.48563     	10.50000    	No          	0.51437     	23.00000    
-A X249C42   	null	Yes         	Grade 3     	Negative    	88.00000    	No          	Breast Tumor	Wild type   	3-like      	0.00067     	0.20000     	Undetermined	0.99933     	25.00000    
-A X24C30    	null	Yes         	Grade 2     	Positive    	55.00000    	No          	Breast Tumor	Wild type   	2a          	0.95929     	10.70000    	No          	0.04071     	16.00000    
-A X250C78   	null	No          	Grade 3     	Negative    	75.00000    	No          	Breast Tumor	Mutated     	3-like      	0.00067     	2.50000     	No          	0.99933     	18.00000    
-A X251C14   	null	Yes         	Grade 2     	Positive    	66.00000    	No          	Breast Tumor	Wild type   	2a          	0.95929     	10.50000    	No          	0.04071     	8.00000     
-A X252C64   	null	No          	Grade 3     	Positive    	77.00000    	Yes         	Breast Tumor	Wild type   	3-like      	0.00067     	3.10000     	No          	0.99933     	25.25000    
-A X253C20   	null	No          	Grade 1     	Positive    	75.00000    	No          	Breast Tumor	Wild type   	1-like      	0.95927     	2.20000     	No          	0.04073     	9.00000     
-A X254C80   	null	Yes         	Grade 2     	Positive    	67.00000    	Yes         	Breast Tumor	Wild type   	2a          	0.95929     	10.50000    	No          	0.04071     	22.00000    
-A X255C06   	null	Yes         	Grade 2     	Positive    	72.00000    	No          	Breast Tumor	Wild type   	2a          	0.95929     	10.50000    	No          	0.04071     	22.00000    
-A X256C45   	null	No          	Grade 2     	Negative    	57.00000    	Yes         	Breast Tumor	Mutated     	2b          	0.00068     	1.30000     	Yes         	0.99932     	32.00000    
-A X257C87   	null	Yes         	Grade 2     	Positive    	46.00000    	Yes         	Breast Tumor	Wild type   	2a          	0.95929     	10.50000    	Yes         	0.04071     	20.00000    
-A X258C21   	null	No          	Grade 2     	Positive    	71.00000    	No          	Breast Tumor	Wild type   	2a          	0.95929     	5.80000     	No          	0.04071     	8.00000     
-A X259C74   	null	Yes         	Grade 1     	Positive    	65.00000    	No          	Breast Tumor	Wild type   	1-like      	0.95927     	10.40000    	No          	0.04073     	10.00000    
-A X260C91   	null	Yes         	Grade 2     	Positive    	58.00000    	No          	Breast Tumor	Mutated     	2b          	0.08879     	10.40000    	No          	0.91121     	21.00000    
-A X261C94   	null	Yes         	Grade 1     	Positive    	76.00000    	No          	Breast Tumor	Wild type   	1-like      	0.95927     	10.40000    	No          	0.04073     	14.00000    
-A X262C85   	null	Yes         	Grade 1     	Positive    	71.00000    	No          	Breast Tumor	Wild type   	1-like      	0.95927     	10.40000    	No          	0.04073     	20.00000    
-A X263C82   	null	No          	Grade 1     	Positive    	71.00000    	No          	Breast Tumor	Wild type   	1-like      	0.95927     	8.10000     	No          	0.04073     	20.00000    
-A X265C40   	null	Yes         	Grade 2     	Positive    	76.00000    	No          	Breast Tumor	Wild type   	2a          	0.77619     	10.40000    	No          	0.22381     	18.00000    
-A X266C51   	null	Yes         	Grade 1     	Positive    	58.00000    	No          	Breast Tumor	Wild type   	1-like      	0.95927     	10.40000    	No          	0.04073     	22.00000    
-A X267C04   	null	Yes         	Grade 1     	Positive    	84.00000    	No          	Breast Tumor	Wild type   	1-like      	0.95927     	10.30000    	No          	0.04073     	28.00000    
-A X268C87   	null	Yes         	Grade 2     	Positive    	32.00000    	No          	Breast Tumor	Mutated     	2b          	0.00068     	10.30000    	No          	0.99932     	15.00000    
-A X269C68   	null	Yes         	Grade 3     	Negative    	46.00000    	No          	Breast Tumor	Mutated     	3-like      	0.00067     	0.00000     	Yes         	0.99933     	25.00000    
-A X26C23    	null	No          	Grade 3     	Positive    	39.00000    	Yes         	Breast Tumor	Wild type   	3-like      	0.00067     	1.20000     	Yes         	0.99933     	19.00000    
-A X270C93   	null	Yes         	Grade 3     	Negative    	40.00000    	Yes         	Breast Tumor	Wild type   	3-like      	0.00269     	10.30000    	Yes         	0.99731     	33.00000    
-A X271C71   	null	No          	Grade 3     	Negative    	66.00000    	Yes         	Breast Tumor	Wild type   	3-like      	0.00067     	1.20000     	Yes         	0.99933     	29.00000    
-A X272C88   	null	Yes         	Grade 2     	Positive    	45.00000    	No          	Breast Tumor	Wild type   	2a          	0.95929     	10.30000    	No          	0.04071     	17.00000    
-A X274C81   	null	Yes         	Grade 2     	Positive    	66.00000    	No          	Breast Tumor	Wild type   	2a          	0.95929     	10.30000    	No          	0.04071     	16.00000    
-A X275C70   	null	Yes         	Grade 2     	Positive    	69.00000    	No          	Breast Tumor	Wild type   	2a          	0.95929     	10.30000    	No          	0.04071     	17.00000    
-A X277C64   	null	Yes         	Grade 2     	Positive    	79.00000    	No          	Breast Tumor	Wild type   	2a          	0.95929     	8.60000     	No          	0.04071     	20.00000    
-A X278C80   	null	Yes         	Grade 2     	Positive    	56.00000    	No          	Breast Tumor	Wild type   	2b          	0.34937     	10.30000    	No          	0.65063     	11.00000    
-A X279C61   	null	Yes         	Grade 3     	Positive    	50.00000    	No          	Breast Tumor	Mutated     	3-like      	0.00067     	10.20000    	No          	0.99933     	19.00000    
-A X27C82    	null	Yes         	Grade 2     	Positive    	67.00000    	Yes         	Breast Tumor	Wild type   	2a          	0.95929     	6.80000     	Yes         	0.04071     	13.00000    
-A X280C43   	null	No          	Grade 2     	Positive    	45.00000    	No          	Breast Tumor	Wild type   	2a          	0.95929     	1.00000     	No          	0.04071     	11.00000    
-A X282C51   	null	Yes         	Grade 1     	Positive    	55.00000    	No          	Breast Tumor	Wild type   	1-like      	0.73301     	9.90000     	No          	0.26699     	10.00000    
-A X284C63   	null	Yes         	Grade 1     	Positive    	48.00000    	No          	Breast Tumor	Mutated     	1-like      	0.95927     	10.10000    	No          	0.04073     	18.00000    
-A X286C91   	null	Yes         	Grade 2     	Positive    	62.00000    	No          	Breast Tumor	Wild type   	2a          	0.95929     	10.00000    	No          	0.04071     	20.00000    
-A X287C67   	null	Yes         	Grade 3     	Positive    	37.00000    	Yes         	Breast Tumor	Mutated     	3-like      	0.00067     	10.00000    	Yes         	0.99933     	20.00000    
-A X288C57   	null	Yes         	Grade 2     	Positive    	88.00000    	Yes         	Breast Tumor	Wild type   	2a          	0.95929     	10.00000    	Yes         	0.04071     	38.00000    
-A X289C75   	null	Yes         	Grade 1     	Positive    	52.00000    	Yes         	Breast Tumor	Wild type   	1-like      	0.95927     	10.00000    	Yes         	0.04073     	20.00000    
-A X28C76    	null	Yes         	Grade 1     	Positive    	56.00000    	No          	Breast Tumor	Wild type   	1-like      	0.95927     	10.50000    	No          	0.04073     	9.00000     
-A X290C91   	null	Yes         	Grade 2     	Negative    	75.00000    	No          	Breast Tumor	Wild type   	2a          	0.95929     	10.00000    	No          	0.04071     	18.00000    
-A X291C17   	null	Yes         	Grade 3     	Negative    	84.00000    	Yes         	Breast Tumor	Mutated     	3-like      	0.16137     	0.90000     	No          	0.83863     	42.00000    
-A X292C66   	null	Yes         	Grade 2     	Positive    	51.00000    	No          	Breast Tumor	Wild type   	2a          	0.95929     	10.00000    	No          	0.04071     	20.00000    
-A X294C04   	null	Yes         	Grade 1     	Positive    	43.00000    	Yes         	Breast Tumor	Wild type   	1-like      	0.95927     	10.00000    	No          	0.04073     	25.00000    
-A X296C95   	null	Yes         	Grade 2     	Positive    	73.00000    	No          	Breast Tumor	Wild type   	2a          	0.95929     	9.90000     	No          	0.04071     	13.00000    
-A X297C26   	null	Yes         	Grade 2     	Positive    	51.00000    	Yes         	Breast Tumor	Wild type   	2a          	0.95929     	9.90000     	Yes         	0.04071     	30.00000    
-A X298C47   	null	No          	Grade 2     	Positive    	62.00000    	Yes         	Breast Tumor	Wild type   	2a          	0.95929     	6.50000     	No          	0.04071     	24.00000    
-A X301C66   	null	Yes         	Grade 2     	Positive    	74.00000    	Yes         	Breast Tumor	Mutated     	2a          	0.95929     	9.90000     	No          	0.04071     	32.00000    
-A X303C36   	null	Yes         	Grade 3     	Negative    	37.00000    	No          	Breast Tumor	Mutated     	3-like      	0.00067     	9.90000     	No          	0.99933     	23.00000    
-A X304C89   	null	No          	Grade 3     	Positive    	54.00000    	No          	Breast Tumor	Wild type   	3-like      	0.00067     	2.60000     	No          	0.99933     	15.00000    
-A X307C50   	null	Yes         	Grade 2     	Positive    	66.00000    	Yes         	Breast Tumor	Wild type   	2a          	0.77619     	9.80000     	No          	0.22381     	24.00000    
-A X308C93   	null	No          	Grade 2     	Negative    	38.00000    	No          	Breast Tumor	Mutated     	2b          	0.00454     	2.30000     	No          	0.99546     	21.00000    
-A X309C49   	null	Yes         	Grade 1     	Positive    	44.00000    	No          	Breast Tumor	Wild type   	3-like      	0.28547     	9.80000     	No          	0.71453     	12.00000    
-A X311A27   	null	No          	Grade 3     	Positive    	70.00000    	Yes         	Breast Tumor	Mutated     	3-like      	0.00067     	0.60000     	Yes         	0.99933     	32.00000    
-A X313A87   	null	Yes         	Grade 3     	Positive    	65.00000    	Yes         	Breast Tumor	Mutated     	3-like      	0.00067     	10.20000    	Yes         	0.99933     	28.00000    
-A X314B55   	null	No          	Grade 3     	Negative    	38.00000    	No          	Breast Tumor	Mutated     	3-like      	0.00224     	0.20000     	No          	0.99776     	30.00000    
-A X316C65   	null	Yes         	Grade 1     	Positive    	51.00000    	No          	Breast Tumor	Wild type   	1-like      	0.95927     	10.80000    	No          	0.04073     	13.00000    
-A X33C30    	null	Yes         	Grade 1     	Positive    	49.00000    	Yes         	Breast Tumor	Wild type   	1-like      	0.95927     	10.20000    	Yes         	0.04073     	18.00000    
-A X34C80    	null	Yes         	Grade 2     	Positive    	67.00000    	No          	Breast Tumor	Wild type   	2a          	0.95929     	10.20000    	No          	0.04071     	20.00000    
-A X35C29    	null	No          	Grade 2     	Positive    	45.00000    	Yes         	Breast Tumor	Wild type   	2b          	0.20179     	2.40000     	No          	0.79821     	23.00000    
-A X36C17    	null	Yes         	Grade 2     	Positive    	46.00000    	No          	Breast Tumor	Wild type   	2a          	0.95929     	10.10000    	No          	0.04071     	22.00000    
-A X37C06    	null	Yes         	Grade 3     	Positive    	73.00000    	No          	Breast Tumor	Mutated     	3-like      	0.01529     	10.00000    	No          	0.98471     	15.00000    
-A X39C24    	null	Yes         	Grade 1     	Positive    	52.00000    	Yes         	Breast Tumor	Wild type   	1-like      	0.95927     	10.00000    	Yes         	0.04073     	17.00000    
-A X40C57    	null	Yes         	Grade 2     	Positive    	56.00000    	Yes         	Breast Tumor	Wild type   	2a          	0.87655     	10.00000    	Yes         	0.12345     	22.00000    
-A X41C65    	null	Yes         	Grade 2     	Positive    	61.00000    	Yes         	Breast Tumor	Wild type   	2a          	0.95929     	9.90000     	Yes         	0.04071     	22.00000    
-A X42C57    	null	Yes         	Grade 1     	Uncertain   	59.00000    	No          	Breast Tumor	Wild type   	1-like      	0.88666     	9.90000     	No          	0.11334     	26.00000    
-A X43C47    	null	Yes         	Grade 2     	Positive    	46.00000    	No          	Breast Tumor	Wild type   	2a          	0.87655     	9.90000     	No          	0.12345     	12.00000    
-A X44A53    	null	Yes         	Grade 2     	Positive    	41.00000    	Yes         	Breast Tumor	Wild type   	2b          	0.12181     	12.80000    	Yes         	0.87819     	19.00000    
-A X45A96    	null	No          	Grade 1     	Positive    	75.00000    	No          	Breast Tumor	Wild type   	1-like      	0.78025     	7.60000     	No          	0.21975     	18.00000    
-A X46A25    	null	No          	Grade 3     	Positive    	74.00000    	Yes         	Breast Tumor	Mutated     	3-like      	0.00067     	0.00000     	Yes         	0.99933     	22.00000    
-A X47A87    	null	No          	Grade 2     	Negative    	61.00000    	No          	Breast Tumor	Wild type   	2b          	0.00068     	9.60000     	Yes         	0.99932     	53.00000    
-A X48A46    	null	Yes         	Grade 1     	Positive    	78.00000    	Yes         	Breast Tumor	Wild type   	1-like      	0.67697     	1.80000     	Undetermined	0.32303     	38.00000    
-A X49A07    	null	No          	Grade 1     	Positive    	80.00000    	No          	Breast Tumor	Wild type   	1-like      	0.95927     	4.90000     	No          	0.04073     	14.00000    
-A X50A91    	null	No          	Grade 2     	Positive    	47.00000    	Yes         	Breast Tumor	Mutated     	2a          	0.77619     	9.10000     	Yes         	0.22381     	22.00000    
-A X51A98    	null	Yes         	Grade 2     	Positive    	59.00000    	Yes         	Breast Tumor	Wild type   	2a          	0.95929     	12.70000    	Yes         	0.04071     	32.00000    
-A X52A90    	null	Yes         	Grade 1     	Positive    	53.00000    	No          	Breast Tumor	Wild type   	3-like      	0.01002     	12.70000    	No          	0.98998     	24.00000    
-A X53A06    	null	No          	Grade 2     	Positive    	82.00000    	Yes         	Breast Tumor	Wild type   	2b          	0.20179     	2.60000     	Yes         	0.79821     	21.00000    
-A X54A09    	null	No          	Grade 3     	Negative    	68.00000    	No          	Breast Tumor	Mutated     	3-like      	0.00067     	0.60000     	No          	0.99933     	14.00000    
-A X55A79    	null	Yes         	Grade 3     	Positive    	62.00000    	Yes         	Breast Tumor	Wild type   	3-like      	0.00067     	3.30000     	Yes         	0.99933     	41.00000    
-A X56A94    	null	No          	Grade 2     	Positive    	52.00000    	Yes         	Breast Tumor	Wild type   	2a          	0.95929     	1.10000     	Yes         	0.04071     	45.00000    
-A X58A50    	null	No          	Grade 2     	Positive    	47.00000    	Yes         	Breast Tumor	Wild type   	2b          	0.00068     	0.40000     	Yes         	0.99932     	8.00000     
-A X5B97     	null	No          	Grade 2     	Positive    	37.00000    	No          	Breast Tumor	Mutated     	2b          	0.00068     	0.80000     	No          	0.99932     	26.00000    
-A X60A05    	null	No          	Grade 2     	Positive    	77.00000    	No          	Breast Tumor	Wild type   	2a          	0.95929     	0.70000     	No          	0.04071     	36.00000    
-A X61A53    	null	No          	Grade 1     	Positive    	68.00000    	No          	Breast Tumor	Wild type   	1-like      	0.95927     	6.10000     	No          	0.04073     	14.00000    
-A X62A02    	null	No          	Grade 3     	Negative    	77.00000    	No          	Breast Tumor	Mutated     	3-like      	0.00067     	0.30000     	No          	0.99933     	24.00000    
-A X63A62    	null	No          	Grade 2     	Positive    	55.00000    	Yes         	Breast Tumor	Wild type   	2a          	0.95929     	0.20000     	Yes         	0.04071     	24.00000    
-A X64A59    	null	Yes         	Grade 2     	Positive    	61.00000    	Yes         	Breast Tumor	Mutated     	2b          	0.04575     	12.40000    	No          	0.95425     	28.00000    
-A X65A68    	null	Yes         	Grade 1     	Positive    	49.00000    	No          	Breast Tumor	Wild type   	1-like      	0.95927     	12.40000    	No          	0.04073     	18.00000    
-A X66A84    	null	No          	Grade 3     	Positive    	48.00000    	Yes         	Breast Tumor	Mutated     	3-like      	0.00067     	1.30000     	Yes         	0.99933     	35.00000    
-A X67A43    	null	No          	Grade 3     	Negative    	79.00000    	Yes         	Breast Tumor	Wild type   	3-like      	0.00067     	0.90000     	Yes         	0.99933     	28.00000    
-A X69A93    	null	Yes         	Grade 3     	Positive    	62.00000    	Yes         	Breast Tumor	Mutated     	3-like      	0.00067     	12.40000    	Yes         	0.99933     	50.00000    
-A X6B85     	null	No          	Grade 1     	Positive    	71.00000    	Yes         	Breast Tumor	Wild type   	1-like      	0.95927     	0.60000     	Yes         	0.04073     	26.00000    
-A X70A79    	null	Yes         	Grade 3     	Positive    	87.00000    	No          	Breast Tumor	Wild type   	3-like      	0.03353     	12.00000    	Undetermined	0.96647     	15.00000    
-A X72A92    	null	Yes         	Grade 1     	Positive    	55.00000    	Yes         	Breast Tumor	Wild type   	1-like      	0.95927     	12.30000    	No          	0.04073     	16.00000    
-A X73A01    	null	Yes         	Grade 3     	Positive    	44.00000    	Yes         	Breast Tumor	Mutated     	3-like      	0.00067     	12.30000    	Yes         	0.99933     	130.00000   
-A X74A63    	null	No          	Grade 1     	Positive    	56.00000    	No          	Breast Tumor	Wild type   	1-like      	0.95927     	5.90000     	No          	0.04073     	22.00000    
-A X75A01    	null	No          	Grade 2     	Positive    	69.00000    	No          	Breast Tumor	Wild type   	2b          	0.20179     	3.60000     	No          	0.79821     	19.00000    
-A X76A44    	null	No          	Grade 3     	Positive    	81.00000    	Yes         	Breast Tumor	Mutated     	3-like      	0.00067     	0.00000     	Yes         	0.99933     	65.00000    
-A X77A50    	null	No          	Grade 2     	Positive    	75.00000    	Yes         	Breast Tumor	Wild type   	2a          	0.65910     	1.10000     	Yes         	0.34090     	20.00000    
-A X79A35    	null	Yes         	Grade 3     	Negative    	65.00000    	Yes         	Breast Tumor	Mutated     	1-like      	0.99662     	0.80000     	Yes         	0.00338     	25.00000    
-A X7B96     	null	No          	Grade 2     	Positive    	52.00000    	Yes         	Breast Tumor	Mutated     	2a          	0.95929     	2.40000     	Yes         	0.04071     	19.00000    
-A X82A83    	null	Yes         	Grade 3     	Positive    	72.00000    	Yes         	Breast Tumor	Mutated     	3-like      	0.00471     	2.60000     	Yes         	0.99529     	27.00000    
-A X83A37    	null	Yes         	Grade 1     	Positive    	69.00000    	No          	Breast Tumor	Uncertain   	1-like      	0.95927     	12.20000    	No          	0.04073     	22.00000    
-A X84A44    	null	Yes         	Grade 2     	Positive    	84.00000    	Yes         	Breast Tumor	Wild type   	2b          	0.01706     	12.20000    	No          	0.98294     	28.00000    
-A X85A03    	null	Yes         	Grade 2     	Positive    	86.00000    	Yes         	Breast Tumor	Wild type   	2a          	0.77619     	2.10000     	Yes         	0.22381     	15.00000    
-A X86A40    	null	Yes         	Grade 2     	Negative    	61.00000    	No          	Breast Tumor	Mutated     	2b          	0.00068     	12.20000    	No          	0.99932     	24.00000    
-A X87A79    	null	Yes         	Grade 2     	Positive    	36.00000    	No          	Breast Tumor	Wild type   	2a          	0.65910     	12.10000    	No          	0.34090     	12.00000    
-A X88A67    	null	No          	Grade 2     	Positive    	63.00000    	No          	Breast Tumor	Wild type   	2b          	0.02873     	4.30000     	No          	0.97127     	24.00000    
-A X89A64    	null	Yes         	Grade 3     	Positive    	60.00000    	No          	Breast Tumor	Uncertain   	3-like      	0.00067     	12.10000    	No          	0.99933     	23.00000    
-A X8B87     	null	Yes         	Grade 1     	Positive    	58.00000    	Yes         	Breast Tumor	Wild type   	1-like      	0.95927     	11.30000    	No          	0.04073     	17.00000    
-A X90A63    	null	Yes         	Grade 3     	Positive    	76.00000    	No          	Breast Tumor	Wild type   	3-like      	0.00067     	2.70000     	No          	0.99933     	26.00000    
-A X94A16    	null	Yes         	Grade 2     	Positive    	73.00000    	No          	Breast Tumor	Wild type   	2a          	0.95929     	11.10000    	No          	0.04071     	6.00000     
-A X96A21    	null	No          	Grade 2     	Positive    	63.00000    	Yes         	Breast Tumor	Wild type   	2a          	0.95929     	0.10000     	Yes         	0.04071     	38.00000    
-A X99A50    	null	Yes         	Grade 1     	Positive    	82.00000    	No          	Breast Tumor	Mutated     	1-like      	0.95927     	10.50000    	No          	0.04073     	19.00000    
-A X9B52     	null	Yes         	Grade 2     	Positive    	71.00000    	No          	Breast Tumor	Wild type   	2a          	0.87655     	11.30000    	No          	0.12345     	12.00000    
+NUH.BT009	null	NA       	Grade 2    	NA       	NA       	NA       	Breast Tumor	NA       	2b         	0.12200    	NA       	NA       	0.87800    	NA        
+NUH.BT014	null	NA       	Grade 2    	NA       	NA       	NA       	Breast Tumor	NA       	2b         	0.00100    	NA       	NA       	0.99900    	NA        
+NUH.BT018	null	NA       	Grade 2    	NA       	NA       	NA       	Breast Tumor	NA       	2a         	0.95900    	NA       	NA       	0.04100    	NA        
+NUH.BT019	null	NA       	Grade 2    	NA       	NA       	NA       	Breast Tumor	NA       	2a         	0.92400    	NA       	NA       	0.07600    	NA        
+NUH.BT022	null	NA       	Grade 2    	NA       	NA       	NA       	Breast Tumor	NA       	2a         	0.95900    	NA       	NA       	0.04100    	NA        
+NUH.BT023	null	NA       	Grade 2    	NA       	NA       	NA       	Breast Tumor	NA       	2a         	0.77600    	NA       	NA       	0.22400    	NA        
+NUH.BT029	null	NA       	Grade 2    	NA       	NA       	NA       	Breast Tumor	NA       	2b         	0.00600    	NA       	NA       	0.99400    	NA        
+NUH.BT031	null	NA       	Grade 2    	NA       	NA       	NA       	Breast Tumor	NA       	2b         	0.44200    	NA       	NA       	0.55800    	NA        
+NUH.BT035	null	NA       	Grade 2    	NA       	NA       	NA       	Breast Tumor	NA       	2a         	0.95900    	NA       	NA       	0.04100    	NA        
+NUH.BT042	null	NA       	Grade 2    	NA       	NA       	NA       	Breast Tumor	NA       	2a         	0.95900    	NA       	NA       	0.04100    	NA        
+NUH.BT046	null	NA       	Grade 2    	NA       	NA       	NA       	Breast Tumor	NA       	2a         	0.89400    	NA       	NA       	0.10600    	NA        
+NUH.BT047	null	NA       	Grade 2    	NA       	NA       	NA       	Breast Tumor	NA       	2a         	0.95900    	NA       	NA       	0.04100    	NA        
+NUH.BT049	null	NA       	Grade 2    	NA       	NA       	NA       	Breast Tumor	NA       	2a         	0.70300    	NA       	NA       	0.29700    	NA        
+NUH.BT054	null	NA       	Grade 2    	NA       	NA       	NA       	Breast Tumor	NA       	2b         	0.00400    	NA       	NA       	0.99600    	NA        
+NUH.BT055	null	NA       	Grade 2    	NA       	NA       	NA       	Breast Tumor	NA       	2a         	0.95900    	NA       	NA       	0.04100    	NA        
+NUH.BT058	null	NA       	Grade 2    	NA       	NA       	NA       	Breast Tumor	NA       	2a         	0.95900    	NA       	NA       	0.04100    	NA        
+NUH.BT061	null	NA       	Grade 2    	NA       	NA       	NA       	Breast Tumor	NA       	2b         	0.00300    	NA       	NA       	0.99700    	NA        
+NUH.BT067	null	NA       	Grade 2    	NA       	NA       	NA       	Breast Tumor	NA       	2a         	0.95900    	NA       	NA       	0.04100    	NA        
+NUH.BT068	null	NA       	Grade 2    	NA       	NA       	NA       	Breast Tumor	NA       	2a         	0.89400    	NA       	NA       	0.10600    	NA        
+NUH.BT070	null	NA       	Grade 2    	NA       	NA       	NA       	Breast Tumor	NA       	2a         	0.89400    	NA       	NA       	0.10600    	NA        
+NUH.BT074	null	NA       	Grade 2    	NA       	NA       	NA       	Breast Tumor	NA       	2b         	0.00800    	NA       	NA       	0.99200    	NA        
+NUH.BT078	null	NA       	Grade 2    	NA       	NA       	NA       	Breast Tumor	NA       	2a         	0.95900    	NA       	NA       	0.04100    	NA        
+NUH.BT083	null	NA       	Grade 2    	NA       	NA       	NA       	Breast Tumor	NA       	2b         	0.14100    	NA       	NA       	0.85900    	NA        
+NUH.BT085	null	NA       	Grade 2    	NA       	NA       	NA       	Breast Tumor	NA       	2b         	0.12200    	NA       	NA       	0.87800    	NA        
+NUH.BT086	null	NA       	Grade 2    	NA       	NA       	NA       	Breast Tumor	NA       	2b         	0.00100    	NA       	NA       	0.99900    	NA        
+NUH.BT087	null	NA       	Grade 2    	NA       	NA       	NA       	Breast Tumor	NA       	2a         	0.95900    	NA       	NA       	0.04100    	NA        
+NUH.BT088	null	NA       	Grade 2    	NA       	NA       	NA       	Breast Tumor	NA       	2a         	0.58400    	NA       	NA       	0.41600    	NA        
+NUH.BT090	null	NA       	Grade 2    	NA       	NA       	NA       	Breast Tumor	NA       	2b         	0.05600    	NA       	NA       	0.94400    	NA        
+NUH.BT093	null	NA       	Grade 2    	NA       	NA       	NA       	Breast Tumor	NA       	2a         	0.87600    	NA       	NA       	0.12400    	NA        
+NUH.BT094	null	NA       	Grade 2    	NA       	NA       	NA       	Breast Tumor	NA       	2a         	0.95900    	NA       	NA       	0.04100    	NA        
+NUH.BT095	null	NA       	Grade 2    	NA       	NA       	NA       	Breast Tumor	NA       	2a         	0.92400    	NA       	NA       	0.07600    	NA        
+NUH.BT096	null	NA       	Grade 2    	NA       	NA       	NA       	Breast Tumor	NA       	2a         	0.95900    	NA       	NA       	0.04100    	NA        
+NUH.BT097	null	NA       	Grade 2    	NA       	NA       	NA       	Breast Tumor	NA       	2a         	0.95900    	NA       	NA       	0.04100    	NA        
+NUH.BT103	null	NA       	Grade 2    	NA       	NA       	NA       	Breast Tumor	NA       	2a         	0.95900    	NA       	NA       	0.04100    	NA        
+NUH.BT104	null	NA       	Grade 2    	NA       	NA       	NA       	Breast Tumor	NA       	2b         	0.47900    	NA       	NA       	0.52100    	NA        
+NUH.BT108	null	NA       	Grade 2    	NA       	NA       	NA       	Breast Tumor	NA       	2a         	0.95900    	NA       	NA       	0.04100    	NA        
+NUH.BT111	null	NA       	Grade 2    	NA       	NA       	NA       	Breast Tumor	NA       	2b         	0.08500    	NA       	NA       	0.91500    	NA        
+NUH.BT113	null	NA       	Grade 2    	NA       	NA       	NA       	Breast Tumor	NA       	2a         	0.87600    	NA       	NA       	0.12400    	NA        
+NUH.BT114	null	NA       	Grade 2    	NA       	NA       	NA       	Breast Tumor	NA       	2a         	0.95900    	NA       	NA       	0.04100    	NA        
+NUH.BT119	null	NA       	Grade 2    	NA       	NA       	NA       	Breast Tumor	NA       	2a         	0.95900    	NA       	NA       	0.04100    	NA        
+X100B08  	null	Yes        	Grade 1    	Positive   	68.00000   	No         	Breast Tumor	Wild type  	1-like     	0.95927    	11.80000   	No         	0.04073    	9.00000     
+X101B88  	null	Yes        	Grade 3    	Negative   	40.00000   	No         	Breast Tumor	Mutated    	3-like     	0.00067    	11.80000   	No         	0.99933    	12.00000    
+X102B06  	null	Yes        	Grade 3    	Positive   	51.00000   	Yes        	Breast Tumor	Mutated    	3-like     	0.00067    	11.80000   	No         	0.99933    	26.00000    
+X103B41  	null	Yes        	Grade 3    	Negative   	52.00000   	Yes        	Breast Tumor	Wild type  	3-like     	0.00471    	11.80000   	Yes        	0.99529    	22.00000    
+X104B91  	null	Yes        	Grade 3    	Positive   	80.00000   	Yes        	Breast Tumor	Mutated    	3-like     	0.00067    	3.60000    	Undetermined	0.99933    	24.00000    
+X105B13  	null	Yes        	Grade 1    	Positive   	46.00000   	No         	Breast Tumor	Wild type  	1-like     	0.95927    	11.80000   	No         	0.04073    	13.00000    
+X106B55  	null	No         	Grade 1    	Positive   	37.00000   	No         	Breast Tumor	Wild type  	1-like     	0.95927    	1.20000    	No         	0.04073    	60.00000    
+X10B88   	null	Yes        	Grade 1    	Positive   	70.00000   	No         	Breast Tumor	Wild type  	1-like     	0.95927    	11.30000   	No         	0.04073    	50.00000    
+X110B34  	null	Yes        	Grade 2    	Positive   	74.00000   	No         	Breast Tumor	Mutated    	2b         	0.00068    	11.70000   	No         	0.99932    	20.00000    
+X111B51  	null	No         	Grade 3    	Positive   	41.00000   	No         	Breast Tumor	Mutated    	3-like     	0.00067    	0.50000    	No         	0.99933    	33.00000    
+X112B55  	null	No         	Grade 2    	Positive   	61.00000   	Yes        	Breast Tumor	Wild type  	2b         	0.00636    	0.90000    	Yes        	0.99364    	24.00000    
+X113B11  	null	No         	Grade 3    	Positive   	38.00000   	No         	Breast Tumor	Wild type  	3-like     	0.00067    	3.10000    	No         	0.99933    	32.00000    
+X114B68  	null	Yes        	Grade 1    	Positive   	67.00000   	Yes        	Breast Tumor	Wild type  	1-like     	0.73301    	11.20000   	Yes        	0.26699    	12.00000    
+X11B47   	null	Yes        	Grade 2    	Negative   	69.00000   	No         	Breast Tumor	Wild type  	2a         	0.95929    	7.40000    	No         	0.04071    	18.00000    
+X120B73  	null	Yes        	Grade 2    	Positive   	34.00000   	No         	Breast Tumor	Wild type  	2b         	0.00068    	11.60000   	No         	0.99932    	16.00000    
+X122B81  	null	Yes        	Grade 2    	Positive   	79.00000   	No         	Breast Tumor	Wild type  	2a         	0.95929    	11.20000   	No         	0.04071    	19.00000    
+X124B25  	null	No         	Grade 2    	Positive   	46.00000   	No         	Breast Tumor	Wild type  	2a         	0.95929    	5.00000    	No         	0.04071    	21.00000    
+X127B00  	null	No         	Grade 3    	Positive   	57.00000   	No         	Breast Tumor	Mutated    	3-like     	0.00067    	1.90000    	No         	0.99933    	22.00000    
+X128B48  	null	Yes        	Grade 1    	Uncertain  	71.00000   	No         	Breast Tumor	Wild type  	1-like     	0.95927    	4.60000    	Undetermined	0.04073    	12.00000    
+X130B92  	null	No         	Grade 2    	Positive   	73.00000   	Yes        	Breast Tumor	Wild type  	2a         	0.95929    	4.40000    	Yes        	0.04071    	18.00000    
+X131B79  	null	No         	Grade 3    	Positive   	59.00000   	Yes        	Breast Tumor	Wild type  	3-like     	0.00067    	1.80000    	Yes        	0.99933    	26.00000    
+X134B33  	null	No         	Grade 2    	Positive   	63.00000   	No         	Breast Tumor	Wild type  	2b         	0.01456    	2.00000    	No         	0.98544    	28.00000    
+X135B40  	null	No         	Grade 1    	Positive   	64.00000   	Yes        	Breast Tumor	Wild type  	1-like     	0.95927    	9.50000    	No         	0.04073    	26.00000    
+X136B04  	null	No         	Grade 2    	Positive   	54.00000   	No         	Breast Tumor	Wild type  	2a         	0.95929    	2.40000    	No         	0.04071    	17.00000    
+X137B88  	null	No         	Grade 2    	Negative   	68.00000   	No         	Breast Tumor	Mutated    	2a         	0.89398    	10.50000   	No         	0.10602    	6.00000     
+X138B34  	null	Yes        	Grade 1    	Positive   	65.00000   	Yes        	Breast Tumor	Wild type  	1-like     	0.95927    	11.50000   	Yes        	0.04073    	23.00000    
+X139B03  	null	No         	Grade 3    	Positive   	84.00000   	Yes        	Breast Tumor	Wild type  	3-like     	0.00067    	0.30000    	No         	0.99933    	28.00000    
+X13B79   	null	Yes        	Grade 2    	Positive   	67.00000   	No         	Breast Tumor	Wild type  	2a         	0.95929    	10.80000   	No         	0.04071    	25.00000    
+X140B91  	null	Yes        	Grade 2    	Positive   	61.00000   	No         	Breast Tumor	Wild type  	2a         	0.95929    	11.50000   	No         	0.04071    	12.00000    
+X142B05  	null	No         	Grade 3    	Negative   	67.00000   	No         	Breast Tumor	Wild type  	3-like     	0.02271    	1.30000    	No         	0.97729    	27.00000    
+X143B81  	null	Yes        	Grade 3    	Negative   	93.00000   	No         	Breast Tumor	Mutated    	3-like     	0.00067    	2.20000    	Undetermined	0.99933    	29.00000    
+X144B49  	null	Yes        	Grade 2    	Positive   	40.00000   	No         	Breast Tumor	Mutated    	2a         	0.95929    	11.50000   	No         	0.04071    	21.00000    
+X145B10  	null	Yes        	Grade 2    	Positive   	73.00000   	No         	Breast Tumor	Wild type  	2b         	0.00340    	11.40000   	No         	0.99660    	18.00000    
+X146B39  	null	Yes        	Grade 3    	Negative   	34.00000   	Yes        	Breast Tumor	Mutated    	3-like     	0.00067    	0.70000    	Yes        	0.99933    	50.00000    
+X147B19  	null	No         	Grade 3    	Negative   	71.00000   	Yes        	Breast Tumor	Mutated    	3-like     	0.00381    	1.80000    	Yes        	0.99619    	24.00000    
+X14B98   	null	Yes        	Grade 2    	Positive   	61.00000   	Yes        	Breast Tumor	Wild type  	2a         	0.92357    	10.80000   	Yes        	0.07643    	20.00000    
+X150B81  	null	Yes        	Grade 2    	Positive   	55.00000   	Yes        	Breast Tumor	Wild type  	2a         	0.77619    	11.40000   	Yes        	0.22381    	35.00000    
+X151B84  	null	Yes        	Grade 2    	Positive   	57.00000   	No         	Breast Tumor	Wild type  	2a         	0.89398    	11.40000   	No         	0.10602    	15.00000    
+X152B99  	null	Yes        	Grade 2    	Positive   	83.00000   	No         	Breast Tumor	Wild type  	2a         	0.95929    	2.10000    	No         	0.04071    	18.00000    
+X153B09  	null	Yes        	Grade 3    	Negative   	71.00000   	No         	Breast Tumor	Mutated    	3-like     	0.00067    	11.40000   	No         	0.99933    	18.00000    
+X154B42  	null	No         	Grade 2    	Positive   	52.00000   	Yes        	Breast Tumor	Wild type  	2b         	0.00454    	3.40000    	Yes        	0.99546    	9.00000     
+X155B52  	null	Yes        	Grade 1    	Negative   	57.00000   	No         	Breast Tumor	Wild type  	1-like     	0.95927    	11.40000   	No         	0.04073    	13.00000    
+X156B01  	null	No         	Grade 1    	Positive   	70.00000   	No         	Breast Tumor	Wild type  	1-like     	0.95927    	0.80000    	No         	0.04073    	12.00000    
+X158B84  	null	No         	Grade 2    	Positive   	69.00000   	No         	Breast Tumor	Wild type  	2a         	0.95929    	4.70000    	No         	0.04071    	7.00000     
+X159B47  	null	No         	Grade 2    	Positive   	57.00000   	Yes        	Breast Tumor	Mutated    	2b         	0.00068    	6.50000    	Yes        	0.99932    	14.00000    
+X15C94   	null	Yes        	Grade 2    	Positive   	83.00000   	Yes        	Breast Tumor	Wild type  	2a         	0.95929    	4.40000    	No         	0.04071    	50.00000    
+X160B16  	null	Yes        	Grade 1    	Positive   	73.00000   	No         	Breast Tumor	Wild type  	1-like     	0.95927    	5.50000    	No         	0.04073    	14.00000    
+X161B31  	null	Yes        	Grade 2    	Positive   	69.00000   	No         	Breast Tumor	Wild type  	2a         	0.95929    	11.40000   	No         	0.04071    	13.00000    
+X162B98  	null	No         	Grade 3    	Positive   	73.00000   	Yes        	Breast Tumor	Wild type  	3-like     	0.00067    	8.90000    	Yes        	0.99933    	33.00000    
+X163B27  	null	Yes        	Grade 1    	Positive   	49.00000   	No         	Breast Tumor	Wild type  	1-like     	0.95927    	11.30000   	No         	0.04073    	8.00000     
+X164B81  	null	Yes        	Grade 2    	Negative   	62.00000   	No         	Breast Tumor	Mutated    	2b         	0.00068    	11.30000   	No         	0.99932    	23.00000    
+X165B72  	null	No         	Grade 2    	Positive   	74.00000   	Yes        	Breast Tumor	Wild type  	2b         	0.04575    	1.50000    	Yes        	0.95425    	23.00000    
+X166B79  	null	Yes        	Grade 2    	Positive   	65.00000   	Yes        	Breast Tumor	Wild type  	2b         	0.02484    	11.30000   	Yes        	0.97516    	22.00000    
+X168B51  	null	Yes        	Grade 2    	Positive   	90.00000   	No         	Breast Tumor	Wild type  	2a         	0.95929    	5.30000    	No         	0.04071    	45.00000    
+X169B79  	null	Yes        	Grade 2    	Positive   	57.00000   	Yes        	Breast Tumor	Wild type  	2a         	0.95929    	11.30000   	No         	0.04071    	14.11000    
+X16C97   	null	No         	Grade 2    	Positive   	80.00000   	No         	Breast Tumor	Wild type  	2a         	0.87655    	3.60000    	No         	0.12345    	15.00000    
+X170B15  	null	No         	Grade 2    	Positive   	70.00000   	Yes        	Breast Tumor	Wild type  	2a         	0.89398    	4.10000    	Yes        	0.10602    	25.00000    
+X171B77  	null	No         	Grade 2    	Positive   	62.00000   	Yes        	Breast Tumor	Wild type  	2b         	0.00454    	1.80000    	No         	0.99546    	18.00000    
+X172B19  	null	No         	Grade 3    	Positive   	42.00000   	No         	Breast Tumor	Wild type  	3-like     	0.00067    	8.60000    	No         	0.99933    	23.00000    
+X173B43  	null	Yes        	Grade 1    	Positive   	72.00000   	Yes        	Breast Tumor	Wild type  	1-like     	0.95927    	11.30000   	Yes        	0.04073    	16.00000    
+X174B41  	null	No         	Grade 1    	Positive   	74.00000   	No         	Breast Tumor	Wild type  	1-like     	0.95927    	3.30000    	No         	0.04073    	11.00000    
+X175B72  	null	No         	Grade 2    	Positive   	46.00000   	Yes        	Breast Tumor	Wild type  	2a         	0.89398    	0.00000    	Yes        	0.10602    	60.00000    
+X176B74  	null	Yes        	Grade 2    	Positive   	77.00000   	No         	Breast Tumor	Wild type  	2a         	0.95929    	6.00000    	No         	0.04071    	25.00000    
+X177B67  	null	No         	Grade 1    	Positive   	41.00000   	No         	Breast Tumor	Wild type  	1-like     	0.95927    	6.80000    	No         	0.04073    	18.00000    
+X178B74  	null	Yes        	Grade 2    	Positive   	82.00000   	No         	Breast Tumor	Wild type  	2a         	0.75985    	7.40000    	No         	0.24015    	16.00000    
+X179B28  	null	No         	Grade 2    	Positive   	66.00000   	No         	Breast Tumor	Wild type  	2a         	0.95929    	2.30000    	No         	0.04071    	8.00000     
+X17C40   	null	Yes        	Grade 2    	Positive   	83.00000   	Yes        	Breast Tumor	Wild type  	2a         	0.95929    	1.90000    	Undetermined	0.04071    	25.00000    
+X180B38  	null	Yes        	Grade 1    	Positive   	70.00000   	No         	Breast Tumor	Wild type  	1-like     	0.95927    	7.30000    	No         	0.04073    	2.00000     
+X181B70  	null	No         	Grade 1    	Positive   	34.00000   	Yes        	Breast Tumor	Wild type  	1-like     	0.95927    	1.90000    	Yes        	0.04073    	20.00000    
+X182B43  	null	Yes        	Grade 3    	Negative   	51.00000   	Yes        	Breast Tumor	Wild type  	3-like     	0.00449    	11.10000   	Yes        	0.99551    	28.00000    
+X183B75  	null	No         	Grade 2    	Positive   	60.00000   	Yes        	Breast Tumor	Wild type  	2a         	0.89398    	7.00000    	Yes        	0.10602    	24.00000    
+X184B38  	null	Yes        	Grade 1    	Positive   	63.00000   	No         	Breast Tumor	Wild type  	1-like     	0.88666    	11.00000   	No         	0.11334    	10.00000    
+X185B44  	null	Yes        	Grade 1    	Positive   	68.00000   	No         	Breast Tumor	Wild type  	1-like     	0.95927    	11.00000   	No         	0.04073    	8.00000     
+X186B22  	null	No         	Grade 2    	Positive   	86.00000   	Yes        	Breast Tumor	Mutated    	2b         	0.02873    	0.20000    	Yes        	0.97127    	46.00000    
+X187B36  	null	No         	Grade 2    	Positive   	29.00000   	Yes        	Breast Tumor	Mutated    	2b         	0.00068    	0.00000    	Yes        	0.99932    	23.00000    
+X188B13  	null	Yes        	Grade 2    	Negative   	60.00000   	No         	Breast Tumor	Wild type  	2b         	0.46657    	11.00000   	No         	0.53343    	14.00000    
+X189B83  	null	Yes        	Grade 2    	Negative   	58.00000   	Yes        	Breast Tumor	Mutated    	2b         	0.00454    	11.00000   	No         	0.99546    	38.00000    
+X18C56   	null	Yes        	Grade 2    	Positive   	68.00000   	No         	Breast Tumor	Wild type  	2a         	0.77619    	10.80000   	No         	0.22381    	19.00000    
+X191B79  	null	No         	Grade 2    	Positive   	59.00000   	Yes        	Breast Tumor	Wild type  	2b         	0.00068    	4.40000    	No         	0.99932    	27.00000    
+X192B69  	null	Yes        	Grade 1    	Positive   	73.00000   	No         	Breast Tumor	Wild type  	1-like     	0.95927    	7.90000    	No         	0.04073    	8.00000     
+X193B72  	null	Yes        	Grade 2    	Negative   	68.00000   	Yes        	Breast Tumor	Wild type  	2b         	0.46657    	10.90000   	Yes        	0.53343    	16.00000    
+X194B60  	null	Yes        	Grade 3    	Positive   	77.00000   	Yes        	Breast Tumor	Mutated    	3-like     	0.00471    	3.60000    	Yes        	0.99529    	22.00000    
+X195B75  	null	Yes        	Grade 1    	Positive   	87.00000   	No         	Breast Tumor	Wild type  	1-like     	0.95927    	3.00000    	No         	0.04073    	18.00000    
+X196B81  	null	Yes        	Grade 1    	Positive   	65.00000   	No         	Breast Tumor	Wild type  	1-like     	0.95927    	10.90000   	No         	0.04073    	14.00000    
+X197B95  	null	Yes        	Grade 2    	Positive   	44.00000   	No         	Breast Tumor	Wild type  	2a         	0.77619    	10.90000   	No         	0.22381    	16.00000    
+X198B90  	null	Yes        	Grade 2    	Positive   	74.00000   	No         	Breast Tumor	Wild type  	2a         	0.95929    	10.90000   	No         	0.04071    	20.00000    
+X199B55  	null	Yes        	Grade 2    	Positive   	54.00000   	No         	Breast Tumor	Wild type  	2a         	0.89398    	10.90000   	No         	0.10602    	23.00000    
+X19C33   	null	No         	Grade 1    	Positive   	61.00000   	Yes        	Breast Tumor	Mutated    	1-like     	0.95927    	0.00000    	Yes        	0.04073    	31.00000    
+X200B47  	null	No         	Grade 3    	Positive   	47.00000   	Yes        	Breast Tumor	Wild type  	1-like     	0.93078    	5.40000    	Yes        	0.06922    	20.00000    
+X201B68  	null	Yes        	Grade 2    	Positive   	53.00000   	Yes        	Breast Tumor	Wild type  	2a         	0.95929    	10.90000   	Yes        	0.04071    	24.00000    
+X202B44  	null	Yes        	Grade 2    	Positive   	72.00000   	Yes        	Breast Tumor	Wild type  	2a         	0.95929    	10.80000   	No         	0.04071    	10.00000    
+X203B49  	null	Yes        	Grade 2    	Positive   	51.00000   	Yes        	Breast Tumor	Wild type  	2a         	0.95929    	10.80000   	Yes        	0.04071    	40.00000    
+X204B85  	null	Yes        	Grade 1    	Positive   	70.00000   	No         	Breast Tumor	Wild type  	1-like     	0.91457    	10.60000   	No         	0.08543    	12.00000    
+X205B99  	null	No         	Grade 1    	Positive   	59.00000   	No         	Breast Tumor	Wild type  	1-like     	0.95927    	4.40000    	No         	0.04073    	22.00000    
+X206C05  	null	Yes        	Grade 2    	Positive   	80.00000   	No         	Breast Tumor	Wild type  	2a         	0.92357    	6.40000    	No         	0.07643    	18.00000    
+X207C08  	null	Yes        	Grade 1    	Positive   	59.00000   	Yes        	Breast Tumor	Wild type  	1-like     	0.95927    	10.80000   	Yes        	0.04073    	10.00000    
+X208C06  	null	Yes        	Grade 2    	Positive   	67.00000   	Yes        	Breast Tumor	Mutated    	2b         	0.00068    	0.10000    	Undetermined	0.99932    	22.00000    
+X209C10  	null	Yes        	Grade 1    	Positive   	80.00000   	No         	Breast Tumor	Wild type  	1-like     	0.95927    	10.80000   	No         	0.04073    	14.00000    
+X210C72  	null	No         	Grade 2    	Positive   	45.00000   	Yes        	Breast Tumor	Wild type  	2a         	0.89398    	0.50000    	No         	0.10602    	42.00000    
+X211C88  	null	Yes        	Grade 2    	Positive   	85.00000   	No         	Breast Tumor	Wild type  	2a         	0.77619    	1.50000    	Undetermined	0.22381    	18.00000    
+X212C21  	null	No         	Grade 2    	Uncertain  	74.00000   	Yes        	Breast Tumor	Wild type  	2a         	0.95929    	3.80000    	No         	0.04071    	24.14000    
+X213C36  	null	Yes        	Grade 2    	Positive   	70.00000   	No         	Breast Tumor	Mutated    	2b         	0.00454    	10.10000   	No         	0.99546    	18.00000    
+X216C61  	null	Yes        	Grade 2    	Positive   	71.00000   	Yes        	Breast Tumor	Wild type  	2a         	0.95929    	10.80000   	Yes        	0.04071    	22.00000    
+X217C79  	null	Yes        	Grade 2    	Positive   	74.00000   	No         	Breast Tumor	Wild type  	2a         	0.95929    	10.80000   	No         	0.04071    	19.00000    
+X218C29  	null	Yes        	Grade 2    	Positive   	69.00000   	No         	Breast Tumor	Wild type  	2a         	0.89398    	10.80000   	No         	0.10602    	14.00000    
+X21C28   	null	Yes        	Grade 1    	Positive   	68.00000   	No         	Breast Tumor	Wild type  	1-like     	0.95927    	10.70000   	No         	0.04073    	10.00000    
+X220C70  	null	Yes        	Grade 1    	Positive   	42.00000   	No         	Breast Tumor	Wild type  	1-like     	0.95927    	10.80000   	No         	0.04073    	20.00000    
+X221C14  	null	No         	Grade 2    	Positive   	68.00000   	No         	Breast Tumor	Wild type  	2b         	0.14109    	3.00000    	No         	0.85891    	17.00000    
+X222C26  	null	No         	Grade 3    	Positive   	50.00000   	Yes        	Breast Tumor	Mutated    	3-like     	0.02587    	0.10000    	Yes        	0.97413    	65.00000    
+X223C51  	null	Yes        	Grade 2    	Positive   	44.00000   	Yes        	Breast Tumor	Wild type  	2a         	0.89398    	8.40000    	Yes        	0.10602    	32.00000    
+X224C93  	null	Yes        	Grade 1    	Negative   	70.00000   	No         	Breast Tumor	Wild type  	1-like     	0.95927    	7.90000    	No         	0.04073    	11.00000    
+X225C52  	null	Yes        	Grade 2    	Positive   	72.00000   	Yes        	Breast Tumor	Wild type  	2b         	0.00068    	10.80000   	Yes        	0.99932    	27.00000    
+X226C06  	null	Yes        	Grade 3    	Positive   	28.00000   	Yes        	Breast Tumor	Mutated    	3-like     	0.00067    	10.80000   	Yes        	0.99933    	45.00000    
+X227C50  	null	Yes        	Grade 1    	Positive   	57.00000   	No         	Breast Tumor	Wild type  	1-like     	0.95927    	9.10000    	No         	0.04073    	12.00000    
+X229C44  	null	Yes        	Grade 1    	Positive   	52.00000   	No         	Breast Tumor	Wild type  	1-like     	0.95927    	10.70000   	No         	0.04073    	13.00000    
+X22C62   	null	Yes        	Grade 2    	Positive   	83.00000   	No         	Breast Tumor	Wild type  	2a         	0.95929    	4.80000    	No         	0.04071    	12.00000    
+X230C47  	null	No         	Grade 2    	Positive   	77.00000   	Yes        	Breast Tumor	Wild type  	2b         	0.00068    	0.50000    	Yes        	0.99932    	22.00000    
+X231C80  	null	No         	Grade 1    	Positive   	56.00000   	No         	Breast Tumor	Wild type  	1-like     	0.95927    	6.40000    	No         	0.04073    	22.00000    
+X232C58  	null	No         	Grade 3    	Positive   	44.00000   	Yes        	Breast Tumor	Wild type  	3-like     	0.00067    	1.80000    	Yes        	0.99933    	24.00000    
+X233C91  	null	Yes        	Grade 1    	Positive   	49.00000   	No         	Breast Tumor	Wild type  	1-like     	0.95927    	10.70000   	No         	0.04073    	11.00000    
+X234C15  	null	Yes        	Grade 3    	Positive   	29.00000   	Yes        	Breast Tumor	Wild type  	3-like     	0.00067    	10.70000   	Yes        	0.99933    	11.00000    
+X235C20  	null	Yes        	Grade 1    	Uncertain  	71.00000   	Yes        	Breast Tumor	Wild type  	1-like     	0.95927    	10.70000   	No         	0.04073    	21.00000    
+X236C55  	null	Yes        	Grade 1    	Positive   	72.00000   	No         	Breast Tumor	Wild type  	1-like     	0.95927    	10.70000   	No         	0.04073    	18.00000    
+X237C56  	null	Yes        	Grade 2    	Positive   	50.00000   	Yes        	Breast Tumor	Wild type  	2b         	0.14109    	10.70000   	Yes        	0.85891    	19.00000    
+X238C87  	null	Yes        	Grade 3    	Negative   	54.00000   	Yes        	Breast Tumor	Wild type  	1-like     	0.59500    	10.70000   	No         	0.40500    	24.00000    
+X23C52   	null	No         	Grade 2    	Positive   	68.00000   	No         	Breast Tumor	Mutated    	2b         	0.00454    	8.50000    	No         	0.99546    	22.00000    
+X240C54  	null	No         	Grade 2    	Positive   	61.00000   	No         	Breast Tumor	Mutated    	2b         	0.00454    	2.40000    	Yes        	0.99546    	35.00000    
+X241C01  	null	No         	Grade 3    	Positive   	66.00000   	No         	Breast Tumor	Wild type  	3-like     	0.04656    	0.90000    	No         	0.95344    	23.00000    
+X242C21  	null	No         	Grade 2    	Positive   	64.00000   	No         	Breast Tumor	Mutated    	2b         	0.20816    	2.20000    	No         	0.79184    	18.00000    
+X243C70  	null	Yes        	Grade 1    	Positive   	50.00000   	No         	Breast Tumor	Wild type  	1-like     	0.95927    	10.60000   	No         	0.04073    	10.00000    
+X244C89  	null	No         	Grade 2    	Positive   	51.00000   	Yes        	Breast Tumor	Wild type  	2a         	0.77619    	7.30000    	Yes        	0.22381    	33.00000    
+X245C22  	null	No         	Grade 2    	Positive   	76.00000   	Yes        	Breast Tumor	Mutated    	2b         	0.14109    	0.00000    	Yes        	0.85891    	45.00000    
+X246C75  	null	Yes        	Grade 1    	Positive   	73.00000   	No         	Breast Tumor	Wild type  	1-like     	0.88666    	10.20000   	No         	0.11334    	11.00000    
+X247C76  	null	Yes        	Grade 2    	Positive   	56.00000   	No         	Breast Tumor	Wild type  	2a         	0.95929    	10.50000   	No         	0.04071    	25.00000    
+X248C91  	null	Yes        	Grade 1    	Positive   	57.00000   	No         	Breast Tumor	Wild type  	3-like     	0.48563    	10.50000   	No         	0.51437    	23.00000    
+X249C42  	null	Yes        	Grade 3    	Negative   	88.00000   	No         	Breast Tumor	Wild type  	3-like     	0.00067    	0.20000    	Undetermined	0.99933    	25.00000    
+X24C30   	null	Yes        	Grade 2    	Positive   	55.00000   	No         	Breast Tumor	Wild type  	2a         	0.95929    	10.70000   	No         	0.04071    	16.00000    
+X250C78  	null	No         	Grade 3    	Negative   	75.00000   	No         	Breast Tumor	Mutated    	3-like     	0.00067    	2.50000    	No         	0.99933    	18.00000    
+X251C14  	null	Yes        	Grade 2    	Positive   	66.00000   	No         	Breast Tumor	Wild type  	2a         	0.95929    	10.50000   	No         	0.04071    	8.00000     
+X252C64  	null	No         	Grade 3    	Positive   	77.00000   	Yes        	Breast Tumor	Wild type  	3-like     	0.00067    	3.10000    	No         	0.99933    	25.25000    
+X253C20  	null	No         	Grade 1    	Positive   	75.00000   	No         	Breast Tumor	Wild type  	1-like     	0.95927    	2.20000    	No         	0.04073    	9.00000     
+X254C80  	null	Yes        	Grade 2    	Positive   	67.00000   	Yes        	Breast Tumor	Wild type  	2a         	0.95929    	10.50000   	No         	0.04071    	22.00000    
+X255C06  	null	Yes        	Grade 2    	Positive   	72.00000   	No         	Breast Tumor	Wild type  	2a         	0.95929    	10.50000   	No         	0.04071    	22.00000    
+X256C45  	null	No         	Grade 2    	Negative   	57.00000   	Yes        	Breast Tumor	Mutated    	2b         	0.00068    	1.30000    	Yes        	0.99932    	32.00000    
+X257C87  	null	Yes        	Grade 2    	Positive   	46.00000   	Yes        	Breast Tumor	Wild type  	2a         	0.95929    	10.50000   	Yes        	0.04071    	20.00000    
+X258C21  	null	No         	Grade 2    	Positive   	71.00000   	No         	Breast Tumor	Wild type  	2a         	0.95929    	5.80000    	No         	0.04071    	8.00000     
+X259C74  	null	Yes        	Grade 1    	Positive   	65.00000   	No         	Breast Tumor	Wild type  	1-like     	0.95927    	10.40000   	No         	0.04073    	10.00000    
+X260C91  	null	Yes        	Grade 2    	Positive   	58.00000   	No         	Breast Tumor	Mutated    	2b         	0.08879    	10.40000   	No         	0.91121    	21.00000    
+X261C94  	null	Yes        	Grade 1    	Positive   	76.00000   	No         	Breast Tumor	Wild type  	1-like     	0.95927    	10.40000   	No         	0.04073    	14.00000    
+X262C85  	null	Yes        	Grade 1    	Positive   	71.00000   	No         	Breast Tumor	Wild type  	1-like     	0.95927    	10.40000   	No         	0.04073    	20.00000    
+X263C82  	null	No         	Grade 1    	Positive   	71.00000   	No         	Breast Tumor	Wild type  	1-like     	0.95927    	8.10000    	No         	0.04073    	20.00000    
+X265C40  	null	Yes        	Grade 2    	Positive   	76.00000   	No         	Breast Tumor	Wild type  	2a         	0.77619    	10.40000   	No         	0.22381    	18.00000    
+X266C51  	null	Yes        	Grade 1    	Positive   	58.00000   	No         	Breast Tumor	Wild type  	1-like     	0.95927    	10.40000   	No         	0.04073    	22.00000    
+X267C04  	null	Yes        	Grade 1    	Positive   	84.00000   	No         	Breast Tumor	Wild type  	1-like     	0.95927    	10.30000   	No         	0.04073    	28.00000    
+X268C87  	null	Yes        	Grade 2    	Positive   	32.00000   	No         	Breast Tumor	Mutated    	2b         	0.00068    	10.30000   	No         	0.99932    	15.00000    
+X269C68  	null	Yes        	Grade 3    	Negative   	46.00000   	No         	Breast Tumor	Mutated    	3-like     	0.00067    	0.00000    	Yes        	0.99933    	25.00000    
+X26C23   	null	No         	Grade 3    	Positive   	39.00000   	Yes        	Breast Tumor	Wild type  	3-like     	0.00067    	1.20000    	Yes        	0.99933    	19.00000    
+X270C93  	null	Yes        	Grade 3    	Negative   	40.00000   	Yes        	Breast Tumor	Wild type  	3-like     	0.00269    	10.30000   	Yes        	0.99731    	33.00000    
+X271C71  	null	No         	Grade 3    	Negative   	66.00000   	Yes        	Breast Tumor	Wild type  	3-like     	0.00067    	1.20000    	Yes        	0.99933    	29.00000    
+X272C88  	null	Yes        	Grade 2    	Positive   	45.00000   	No         	Breast Tumor	Wild type  	2a         	0.95929    	10.30000   	No         	0.04071    	17.00000    
+X274C81  	null	Yes        	Grade 2    	Positive   	66.00000   	No         	Breast Tumor	Wild type  	2a         	0.95929    	10.30000   	No         	0.04071    	16.00000    
+X275C70  	null	Yes        	Grade 2    	Positive   	69.00000   	No         	Breast Tumor	Wild type  	2a         	0.95929    	10.30000   	No         	0.04071    	17.00000    
+X277C64  	null	Yes        	Grade 2    	Positive   	79.00000   	No         	Breast Tumor	Wild type  	2a         	0.95929    	8.60000    	No         	0.04071    	20.00000    
+X278C80  	null	Yes        	Grade 2    	Positive   	56.00000   	No         	Breast Tumor	Wild type  	2b         	0.34937    	10.30000   	No         	0.65063    	11.00000    
+X279C61  	null	Yes        	Grade 3    	Positive   	50.00000   	No         	Breast Tumor	Mutated    	3-like     	0.00067    	10.20000   	No         	0.99933    	19.00000    
+X27C82   	null	Yes        	Grade 2    	Positive   	67.00000   	Yes        	Breast Tumor	Wild type  	2a         	0.95929    	6.80000    	Yes        	0.04071    	13.00000    
+X280C43  	null	No         	Grade 2    	Positive   	45.00000   	No         	Breast Tumor	Wild type  	2a         	0.95929    	1.00000    	No         	0.04071    	11.00000    
+X282C51  	null	Yes        	Grade 1    	Positive   	55.00000   	No         	Breast Tumor	Wild type  	1-like     	0.73301    	9.90000    	No         	0.26699    	10.00000    
+X284C63  	null	Yes        	Grade 1    	Positive   	48.00000   	No         	Breast Tumor	Mutated    	1-like     	0.95927    	10.10000   	No         	0.04073    	18.00000    
+X286C91  	null	Yes        	Grade 2    	Positive   	62.00000   	No         	Breast Tumor	Wild type  	2a         	0.95929    	10.00000   	No         	0.04071    	20.00000    
+X287C67  	null	Yes        	Grade 3    	Positive   	37.00000   	Yes        	Breast Tumor	Mutated    	3-like     	0.00067    	10.00000   	Yes        	0.99933    	20.00000    
+X288C57  	null	Yes        	Grade 2    	Positive   	88.00000   	Yes        	Breast Tumor	Wild type  	2a         	0.95929    	10.00000   	Yes        	0.04071    	38.00000    
+X289C75  	null	Yes        	Grade 1    	Positive   	52.00000   	Yes        	Breast Tumor	Wild type  	1-like     	0.95927    	10.00000   	Yes        	0.04073    	20.00000    
+X28C76   	null	Yes        	Grade 1    	Positive   	56.00000   	No         	Breast Tumor	Wild type  	1-like     	0.95927    	10.50000   	No         	0.04073    	9.00000     
+X290C91  	null	Yes        	Grade 2    	Negative   	75.00000   	No         	Breast Tumor	Wild type  	2a         	0.95929    	10.00000   	No         	0.04071    	18.00000    
+X291C17  	null	Yes        	Grade 3    	Negative   	84.00000   	Yes        	Breast Tumor	Mutated    	3-like     	0.16137    	0.90000    	No         	0.83863    	42.00000    
+X292C66  	null	Yes        	Grade 2    	Positive   	51.00000   	No         	Breast Tumor	Wild type  	2a         	0.95929    	10.00000   	No         	0.04071    	20.00000    
+X294C04  	null	Yes        	Grade 1    	Positive   	43.00000   	Yes        	Breast Tumor	Wild type  	1-like     	0.95927    	10.00000   	No         	0.04073    	25.00000    
+X296C95  	null	Yes        	Grade 2    	Positive   	73.00000   	No         	Breast Tumor	Wild type  	2a         	0.95929    	9.90000    	No         	0.04071    	13.00000    
+X297C26  	null	Yes        	Grade 2    	Positive   	51.00000   	Yes        	Breast Tumor	Wild type  	2a         	0.95929    	9.90000    	Yes        	0.04071    	30.00000    
+X298C47  	null	No         	Grade 2    	Positive   	62.00000   	Yes        	Breast Tumor	Wild type  	2a         	0.95929    	6.50000    	No         	0.04071    	24.00000    
+X301C66  	null	Yes        	Grade 2    	Positive   	74.00000   	Yes        	Breast Tumor	Mutated    	2a         	0.95929    	9.90000    	No         	0.04071    	32.00000    
+X303C36  	null	Yes        	Grade 3    	Negative   	37.00000   	No         	Breast Tumor	Mutated    	3-like     	0.00067    	9.90000    	No         	0.99933    	23.00000    
+X304C89  	null	No         	Grade 3    	Positive   	54.00000   	No         	Breast Tumor	Wild type  	3-like     	0.00067    	2.60000    	No         	0.99933    	15.00000    
+X307C50  	null	Yes        	Grade 2    	Positive   	66.00000   	Yes        	Breast Tumor	Wild type  	2a         	0.77619    	9.80000    	No         	0.22381    	24.00000    
+X308C93  	null	No         	Grade 2    	Negative   	38.00000   	No         	Breast Tumor	Mutated    	2b         	0.00454    	2.30000    	No         	0.99546    	21.00000    
+X309C49  	null	Yes        	Grade 1    	Positive   	44.00000   	No         	Breast Tumor	Wild type  	3-like     	0.28547    	9.80000    	No         	0.71453    	12.00000    
+X311A27  	null	No         	Grade 3    	Positive   	70.00000   	Yes        	Breast Tumor	Mutated    	3-like     	0.00067    	0.60000    	Yes        	0.99933    	32.00000    
+X313A87  	null	Yes        	Grade 3    	Positive   	65.00000   	Yes        	Breast Tumor	Mutated    	3-like     	0.00067    	10.20000   	Yes        	0.99933    	28.00000    
+X314B55  	null	No         	Grade 3    	Negative   	38.00000   	No         	Breast Tumor	Mutated    	3-like     	0.00224    	0.20000    	No         	0.99776    	30.00000    
+X316C65  	null	Yes        	Grade 1    	Positive   	51.00000   	No         	Breast Tumor	Wild type  	1-like     	0.95927    	10.80000   	No         	0.04073    	13.00000    
+X33C30   	null	Yes        	Grade 1    	Positive   	49.00000   	Yes        	Breast Tumor	Wild type  	1-like     	0.95927    	10.20000   	Yes        	0.04073    	18.00000    
+X34C80   	null	Yes        	Grade 2    	Positive   	67.00000   	No         	Breast Tumor	Wild type  	2a         	0.95929    	10.20000   	No         	0.04071    	20.00000    
+X35C29   	null	No         	Grade 2    	Positive   	45.00000   	Yes        	Breast Tumor	Wild type  	2b         	0.20179    	2.40000    	No         	0.79821    	23.00000    
+X36C17   	null	Yes        	Grade 2    	Positive   	46.00000   	No         	Breast Tumor	Wild type  	2a         	0.95929    	10.10000   	No         	0.04071    	22.00000    
+X37C06   	null	Yes        	Grade 3    	Positive   	73.00000   	No         	Breast Tumor	Mutated    	3-like     	0.01529    	10.00000   	No         	0.98471    	15.00000    
+X39C24   	null	Yes        	Grade 1    	Positive   	52.00000   	Yes        	Breast Tumor	Wild type  	1-like     	0.95927    	10.00000   	Yes        	0.04073    	17.00000    
+X40C57   	null	Yes        	Grade 2    	Positive   	56.00000   	Yes        	Breast Tumor	Wild type  	2a         	0.87655    	10.00000   	Yes        	0.12345    	22.00000    
+X41C65   	null	Yes        	Grade 2    	Positive   	61.00000   	Yes        	Breast Tumor	Wild type  	2a         	0.95929    	9.90000    	Yes        	0.04071    	22.00000    
+X42C57   	null	Yes        	Grade 1    	Uncertain  	59.00000   	No         	Breast Tumor	Wild type  	1-like     	0.88666    	9.90000    	No         	0.11334    	26.00000    
+X43C47   	null	Yes        	Grade 2    	Positive   	46.00000   	No         	Breast Tumor	Wild type  	2a         	0.87655    	9.90000    	No         	0.12345    	12.00000    
+X44A53   	null	Yes        	Grade 2    	Positive   	41.00000   	Yes        	Breast Tumor	Wild type  	2b         	0.12181    	12.80000   	Yes        	0.87819    	19.00000    
+X45A96   	null	No         	Grade 1    	Positive   	75.00000   	No         	Breast Tumor	Wild type  	1-like     	0.78025    	7.60000    	No         	0.21975    	18.00000    
+X46A25   	null	No         	Grade 3    	Positive   	74.00000   	Yes        	Breast Tumor	Mutated    	3-like     	0.00067    	0.00000    	Yes        	0.99933    	22.00000    
+X47A87   	null	No         	Grade 2    	Negative   	61.00000   	No         	Breast Tumor	Wild type  	2b         	0.00068    	9.60000    	Yes        	0.99932    	53.00000    
+X48A46   	null	Yes        	Grade 1    	Positive   	78.00000   	Yes        	Breast Tumor	Wild type  	1-like     	0.67697    	1.80000    	Undetermined	0.32303    	38.00000    
+X49A07   	null	No         	Grade 1    	Positive   	80.00000   	No         	Breast Tumor	Wild type  	1-like     	0.95927    	4.90000    	No         	0.04073    	14.00000    
+X50A91   	null	No         	Grade 2    	Positive   	47.00000   	Yes        	Breast Tumor	Mutated    	2a         	0.77619    	9.10000    	Yes        	0.22381    	22.00000    
+X51A98   	null	Yes        	Grade 2    	Positive   	59.00000   	Yes        	Breast Tumor	Wild type  	2a         	0.95929    	12.70000   	Yes        	0.04071    	32.00000    
+X52A90   	null	Yes        	Grade 1    	Positive   	53.00000   	No         	Breast Tumor	Wild type  	3-like     	0.01002    	12.70000   	No         	0.98998    	24.00000    
+X53A06   	null	No         	Grade 2    	Positive   	82.00000   	Yes        	Breast Tumor	Wild type  	2b         	0.20179    	2.60000    	Yes        	0.79821    	21.00000    
+X54A09   	null	No         	Grade 3    	Negative   	68.00000   	No         	Breast Tumor	Mutated    	3-like     	0.00067    	0.60000    	No         	0.99933    	14.00000    
+X55A79   	null	Yes        	Grade 3    	Positive   	62.00000   	Yes        	Breast Tumor	Wild type  	3-like     	0.00067    	3.30000    	Yes        	0.99933    	41.00000    
+X56A94   	null	No         	Grade 2    	Positive   	52.00000   	Yes        	Breast Tumor	Wild type  	2a         	0.95929    	1.10000    	Yes        	0.04071    	45.00000    
+X58A50   	null	No         	Grade 2    	Positive   	47.00000   	Yes        	Breast Tumor	Wild type  	2b         	0.00068    	0.40000    	Yes        	0.99932    	8.00000     
+X5B97    	null	No         	Grade 2    	Positive   	37.00000   	No         	Breast Tumor	Mutated    	2b         	0.00068    	0.80000    	No         	0.99932    	26.00000    
+X60A05   	null	No         	Grade 2    	Positive   	77.00000   	No         	Breast Tumor	Wild type  	2a         	0.95929    	0.70000    	No         	0.04071    	36.00000    
+X61A53   	null	No         	Grade 1    	Positive   	68.00000   	No         	Breast Tumor	Wild type  	1-like     	0.95927    	6.10000    	No         	0.04073    	14.00000    
+X62A02   	null	No         	Grade 3    	Negative   	77.00000   	No         	Breast Tumor	Mutated    	3-like     	0.00067    	0.30000    	No         	0.99933    	24.00000    
+X63A62   	null	No         	Grade 2    	Positive   	55.00000   	Yes        	Breast Tumor	Wild type  	2a         	0.95929    	0.20000    	Yes        	0.04071    	24.00000    
+X64A59   	null	Yes        	Grade 2    	Positive   	61.00000   	Yes        	Breast Tumor	Mutated    	2b         	0.04575    	12.40000   	No         	0.95425    	28.00000    
+X65A68   	null	Yes        	Grade 1    	Positive   	49.00000   	No         	Breast Tumor	Wild type  	1-like     	0.95927    	12.40000   	No         	0.04073    	18.00000    
+X66A84   	null	No         	Grade 3    	Positive   	48.00000   	Yes        	Breast Tumor	Mutated    	3-like     	0.00067    	1.30000    	Yes        	0.99933    	35.00000    
+X67A43   	null	No         	Grade 3    	Negative   	79.00000   	Yes        	Breast Tumor	Wild type  	3-like     	0.00067    	0.90000    	Yes        	0.99933    	28.00000    
+X69A93   	null	Yes        	Grade 3    	Positive   	62.00000   	Yes        	Breast Tumor	Mutated    	3-like     	0.00067    	12.40000   	Yes        	0.99933    	50.00000    
+X6B85    	null	No         	Grade 1    	Positive   	71.00000   	Yes        	Breast Tumor	Wild type  	1-like     	0.95927    	0.60000    	Yes        	0.04073    	26.00000    
+X70A79   	null	Yes        	Grade 3    	Positive   	87.00000   	No         	Breast Tumor	Wild type  	3-like     	0.03353    	12.00000   	Undetermined	0.96647    	15.00000    
+X72A92   	null	Yes        	Grade 1    	Positive   	55.00000   	Yes        	Breast Tumor	Wild type  	1-like     	0.95927    	12.30000   	No         	0.04073    	16.00000    
+X73A01   	null	Yes        	Grade 3    	Positive   	44.00000   	Yes        	Breast Tumor	Mutated    	3-like     	0.00067    	12.30000   	Yes        	0.99933    	130.00000   
+X74A63   	null	No         	Grade 1    	Positive   	56.00000   	No         	Breast Tumor	Wild type  	1-like     	0.95927    	5.90000    	No         	0.04073    	22.00000    
+X75A01   	null	No         	Grade 2    	Positive   	69.00000   	No         	Breast Tumor	Wild type  	2b         	0.20179    	3.60000    	No         	0.79821    	19.00000    
+X76A44   	null	No         	Grade 3    	Positive   	81.00000   	Yes        	Breast Tumor	Mutated    	3-like     	0.00067    	0.00000    	Yes        	0.99933    	65.00000    
+X77A50   	null	No         	Grade 2    	Positive   	75.00000   	Yes        	Breast Tumor	Wild type  	2a         	0.65910    	1.10000    	Yes        	0.34090    	20.00000    
+X79A35   	null	Yes        	Grade 3    	Negative   	65.00000   	Yes        	Breast Tumor	Mutated    	1-like     	0.99662    	0.80000    	Yes        	0.00338    	25.00000    
+X7B96    	null	No         	Grade 2    	Positive   	52.00000   	Yes        	Breast Tumor	Mutated    	2a         	0.95929    	2.40000    	Yes        	0.04071    	19.00000    
+X82A83   	null	Yes        	Grade 3    	Positive   	72.00000   	Yes        	Breast Tumor	Mutated    	3-like     	0.00471    	2.60000    	Yes        	0.99529    	27.00000    
+X83A37   	null	Yes        	Grade 1    	Positive   	69.00000   	No         	Breast Tumor	Uncertain  	1-like     	0.95927    	12.20000   	No         	0.04073    	22.00000    
+X84A44   	null	Yes        	Grade 2    	Positive   	84.00000   	Yes        	Breast Tumor	Wild type  	2b         	0.01706    	12.20000   	No         	0.98294    	28.00000    
+X85A03   	null	Yes        	Grade 2    	Positive   	86.00000   	Yes        	Breast Tumor	Wild type  	2a         	0.77619    	2.10000    	Yes        	0.22381    	15.00000    
+X86A40   	null	Yes        	Grade 2    	Negative   	61.00000   	No         	Breast Tumor	Mutated    	2b         	0.00068    	12.20000   	No         	0.99932    	24.00000    
+X87A79   	null	Yes        	Grade 2    	Positive   	36.00000   	No         	Breast Tumor	Wild type  	2a         	0.65910    	12.10000   	No         	0.34090    	12.00000    
+X88A67   	null	No         	Grade 2    	Positive   	63.00000   	No         	Breast Tumor	Wild type  	2b         	0.02873    	4.30000    	No         	0.97127    	24.00000    
+X89A64   	null	Yes        	Grade 3    	Positive   	60.00000   	No         	Breast Tumor	Uncertain  	3-like     	0.00067    	12.10000   	No         	0.99933    	23.00000    
+X8B87    	null	Yes        	Grade 1    	Positive   	58.00000   	Yes        	Breast Tumor	Wild type  	1-like     	0.95927    	11.30000   	No         	0.04073    	17.00000    
+X90A63   	null	Yes        	Grade 3    	Positive   	76.00000   	No         	Breast Tumor	Wild type  	3-like     	0.00067    	2.70000    	No         	0.99933    	26.00000    
+X94A16   	null	Yes        	Grade 2    	Positive   	73.00000   	No         	Breast Tumor	Wild type  	2a         	0.95929    	11.10000   	No         	0.04071    	6.00000     
+X96A21   	null	No         	Grade 2    	Positive   	63.00000   	Yes        	Breast Tumor	Wild type  	2a         	0.95929    	0.10000    	Yes        	0.04071    	38.00000    
+X99A50   	null	Yes        	Grade 1    	Positive   	82.00000   	No         	Breast Tumor	Mutated    	1-like     	0.95927    	10.50000   	No         	0.04073    	19.00000    
+X9B52    	null	Yes        	Grade 2    	Positive   	71.00000   	No         	Breast Tumor	Wild type  	2a         	0.87655    	11.30000   	No         	0.12345    	12.00000    
