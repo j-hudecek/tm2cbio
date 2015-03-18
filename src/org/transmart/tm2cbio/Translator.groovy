@@ -70,8 +70,8 @@ case_list_ids: ${patients.join('\t')}
                 try {
                     fields[it.key] = applyConversion(fields[it.key], it.value, c)
                 }
-                catch (NumberFormatException) {
-                    throw new NumberFormatException("Invalid format for conversion '" + it.value + "': " + fields[it.key] + " on line " + lineNumber + " on column number " + it.key)
+                catch (NumberFormatException ex) {
+                    throw new IllegalArgumentException("Invalid format for conversion '" + it.value + "': " + fields[it.key] + " on line " + lineNumber + " on column number " + it.key, ex)
                 }
             }
             out.println(fields.join('\t'))
