@@ -6,7 +6,7 @@ package org.transmart.tm2cbio
 class Translator {
     private static final String termSeparator = '/'
 
-    private static String[] exportColumns
+    private static List<String> exportColumns
 
     private static List<String> patients = [];
 
@@ -60,7 +60,10 @@ case_list_ids: ${patients.join('\t')}
         new File(c.clinical_file_path).eachLine {line, lineNumber ->
             if (lineNumber == 1)
                 return;
-            String[] fields = line.split('\t')
+            String[] rawFields = line.split('\t')
+            //patient id will be sample id as well, we need it there twice
+            def fields = [rawFields[0].trim()]
+            fields.addAll(rawFields)
             //store patient's ID (first column) for case list
             patients.push(fields[0].trim())
             toReplace.each {
@@ -87,7 +90,12 @@ case_list_ids: ${patients.join('\t')}
         out.println("#" + exportColumns.collect({
             getTypeForConcept(it, c)
         }).join('\t'));
-        concept2col[exportColumns[0]] = "CASE_ID" //cbioportal's word for patient ID
+        out.println(exportColumns.collect({
+            "SAMPLE" //for SAMPLE/PATIENT type
+        }).join('\t'))
+        out.println(exportColumns.collect({
+            "5" //for priority
+        }).join('\t'))
         out.println(exportColumns.collect({
             concept2col[it]
         }).join('\t'))
@@ -113,7 +121,10 @@ case_list_ids: ${patients.join('\t')}
         firstRow = applyRegexes(firstRow, "mapping_concept_to_column_name_replace", c)
         firstRow = Config.translateConcept(firstRow)
 
-        exportColumns = firstRow.split('\t')
+        //prepend PATIENT_ID and SAMPLE ID 
+        exportColumns = ['PATIENT_ID']
+        exportColumns.addAll(firstRow.split('\t'))
+        exportColumns[1] = 'SAMPLE_ID'
         //get a clean list of concepts (must have a \)
         String[] concepts = exportColumns.dropWhile {it.indexOf(termSeparator) == -1}
         //map of concept from transmart and its column in cbioportal, initiated to the leaf name
