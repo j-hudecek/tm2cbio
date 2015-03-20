@@ -61,11 +61,12 @@ case_list_ids: ${patients.join('\t')}
             if (lineNumber == 1)
                 return;
             String[] rawFields = line.split('\t')
-            //patient id will be sample id as well, we need it there twice
-            def fields = [rawFields[0].trim()]
+            //patient id will be sample id as well, we need it there twice, trim trailing spaces
+            rawFields[0] = rawFields[0].trim()
+            def fields = [rawFields[0]]
             fields.addAll(rawFields)
             //store patient's ID (first column) for case list
-            patients.push(fields[0].trim())
+            patients.push(fields[0])
             toReplace.each {
                 fields[it.key] = applyRegexes(fields[it.key], it.value, c)
             }
