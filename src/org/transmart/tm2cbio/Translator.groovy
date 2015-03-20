@@ -63,6 +63,10 @@ case_list_ids: ${patients.join('\t')}
             String[] rawFields = line.split('\t')
             //patient id will be sample id as well, we need it there twice, trim trailing spaces
             rawFields[0] = rawFields[0].trim()
+            if (rawFields[0].indexOf(' ') != -1)
+                throw new IllegalArgumentException("Patient or sample IDs can't contain spaces!")
+            if (rawFields[0].indexOf(',') != -1)
+                throw new IllegalArgumentException("Patient or sample IDs can't contain commas!")
             def fields = [rawFields[0]]
             fields.addAll(rawFields)
             //store patient's ID (first column) for case list
