@@ -7,8 +7,8 @@ study id=test1
 study name=Test name
 study short name=Short name
 study description=test study description
-#short name e.g. brca
-study type=brca
+#short name e.g. BRCA (note ALL CAPS)
+study type=BRCA
 
 #meta clinical
 clinical file path=c:\temp\clinical_i2b2trans.txt 

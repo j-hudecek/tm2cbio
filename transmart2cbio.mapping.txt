@@ -9,7 +9,7 @@ study id=
 study name=
 study short name=
 study description=
-#short name of the type e.g. brca for breast cancer
+#short name of the type e.g. BRCA (note ALL CAPS) for breast cancer
 study type=
 #optional
 study citation=
