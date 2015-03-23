@@ -81,6 +81,8 @@ show_profile_in_analysis_tab: true
             def hugoid = rawFields[hugoindex].trim()
             def geneid = rawFields[geneindex].trim()
             def value = rawFields[valueindex].trim()
+            if (hugoid == "null")
+                return //ignore the value for unknown genes
             if (!samplesPerGene.containsKey(hugoid)) {
                 samplesPerGene[hugoid] = [:]
             }
