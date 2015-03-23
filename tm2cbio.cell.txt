@@ -1,0 +1,40 @@
+#tranSMART to cBioPortal mapping file
+#comments start with #
+
+#cbioportal
+#path to the directory to create
+target path=testcell
+#meta study
+study id=cluc
+study name=Cell-line use case
+study short name=Cell line
+study description=Cell line use case study
+#short name of the type e.g. BRCA (note ALL CAPS) for breast cancer
+study type=BRCA
+
+#meta clinical
+#path to the source clinical data file
+clinical file path=cell/clinical.txt
+
+#mapping of special attributes, specify concept path in tranSMART
+mapping AGE path=\Characteristics\Age
+
+mapping SEX path=\Characteristics\Gender
+#regex replace, specify a regular expression and what should it be substituted with, separated by TAB, there can be multiple
+mapping SEX replace=Male	MALE
+mapping SEX replace=Female	FEMALE
+
+mapping CANCER_TYPE path=\Characteristics\Disease
+
+mapping TUMOR_SITE path=\Characteristics\Origin tissue
+
+mapping RACE path=\Characteristics\Race
+
+#meta expression
+expression file path=cell/mrna-expr.txt
+#one of VALUE, LOG2E or ZSCORE
+expression data column=ZSCORE
+#by default study name + Expression data
+expression profile name=
+#by default study name + Expression data
+expression profile description=
