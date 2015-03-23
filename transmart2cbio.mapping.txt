@@ -39,10 +39,13 @@ mapping SEX path=
 mapping SEX replace=1	MALE
 mapping SEX replace=0	FEMALE
 
+#cbioportal doesn't do anything special with this column yet
 mapping RACE path=
 
+#cbioportal doesn't do anything special with this column yet
 mapping ETHNICITY path=
 
+#cbioportal expects years
 mapping AGE_AT_DIAGNOSIS path=
 
 mapping TUMOR_TYPE path=
