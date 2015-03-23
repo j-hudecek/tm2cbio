@@ -3,21 +3,19 @@ package org.transmart.tm2cbio
 /**
  * Created by j.hudecek on 20-3-2015.
  */
-class ClinicalTranslator {
+class ClinicalTranslator extends AbstractTranslator {
 
-    private static Map concept2col
+    private Map concept2col
     //column names to replace
-    private static Map toReplace
+    private Map toReplace
     //columns to run conversion on
-    private static Map toConvert
+    private Map toConvert
 
     private static final String termSeparator = '/'
 
-    private static List<String> patients = []
+    private List<String> exportColumns
 
-    private static List<String> exportColumns
-
-    public static void createMetaClinicalFile(Config c) {
+    public void createMetaFile(Config c) {
         def metaclinical = new File(c.target_path + "/meta_clinical.txt");
         metaclinical.write("""cancer_study_identifier: ${c.study_id}
 genetic_alteration_type: CLINICAL
@@ -27,20 +25,19 @@ profile_description: Clinical data for ${c.patient_count} patients from tranSMAR
 show_profile_in_analysis_tab: true
 profile_name: Clinical
 """)
-        Init(c)
     }
 
-    private static List<String> writeDataFile(Config c)
+    public List<String> writeDataFile(Config c, List<String> patients)
     {
         new File(c.target_path + "/data_clinical.txt").withWriter {out ->
             writeMeta(out, concept2col, c)
-            writeData(out, toReplace, toConvert, c)
+            patients = writeData(out, toReplace, toConvert, c, patients)
         }
         println("Created data file '"+c.target_path + "/data_clinical.txt'")
         return patients
     }
 
-    private static void Init(Config c)
+    public void init(Config c)
     {
         concept2col = createConceptToColumnMapping(c)
         // figure out on which column index are the special columns that need replacing/converting
@@ -69,7 +66,7 @@ profile_name: Clinical
         Converter."$methodName"(input)
     }
 
-    private static void writeData(out, Map toReplace, Map toConvert, Config c) {
+    private List<String> writeData(out, Map toReplace, Map toConvert, Config c, List<String> patients) {
         new File(c.clinical_file_path).eachLine {line, lineNumber ->
             if (lineNumber == 1)
                 return;
@@ -97,9 +94,10 @@ profile_name: Clinical
             }
             out.println(fields.join('\t'))
         }
+        return patients
     }
 
-    private static void writeMeta(Writer out, Map concept2col, Config c) {
+    private void writeMeta(Writer out, Map concept2col, Config c) {
         //write meta information
         out.println("#" + exportColumns.collect({
             concept2col[it]
@@ -132,7 +130,7 @@ profile_name: Clinical
     }
 
 
-    private static Map createConceptToColumnMapping(Config c) {
+    private Map createConceptToColumnMapping(Config c) {
         String firstRow;
         println("Reading data file '"+c.clinical_file_path+"'")
         new File(c.clinical_file_path).withReader { firstRow = it.readLine() } ;

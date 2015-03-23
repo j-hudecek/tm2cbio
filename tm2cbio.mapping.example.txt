@@ -23,3 +23,12 @@ mapping AGE convert=days2months
 
 mapping type \Compounds\Crizotinib PF2341066\Measurements\IC50, umol=INT
 
+
+#meta expression
+expression file path=c:\temp\mrna_Normalised_ratios_Probe_level_0.tsv
+#one of VALUE, LOG2E or ZSCORE
+expression data column=ZSCORE
+#by default study name + Expression data
+expression profile name=
+#by default study name + Expression data
+expression profile description=

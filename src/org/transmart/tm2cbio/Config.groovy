@@ -66,6 +66,11 @@ class Config  extends Expando {
     public List<String> mapping_concept_to_column_name_replace
     public List<String> mapping_concept_to_column_name_replace_with
 
+    public String expression_file_path;
+    public String expression_data_column;
+    public String expression_profile_name;
+    public String expression_profile_description;
+
     public int patient_count
 
     public Map types = [:]
@@ -114,6 +119,10 @@ class Config  extends Expando {
         target_path = expandPath(target_path)
         clinical_file_path = expandPath(clinical_file_path)
         patient_count = new File(clinical_file_path).readLines().size()-1
+        if (expression_profile_name == null || expression_profile_name.trim()  == "")
+            expression_profile_name = study_name+" expression data"
+        if (expression_profile_description == null || expression_profile_description.trim()  == "")
+            expression_profile_description = study_name+" expression data"
     }
 
     private void checkPathBeforeConvert(String variable_name) {

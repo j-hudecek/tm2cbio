@@ -71,3 +71,11 @@ mapping concept to column name replace=
 
 mapping type <custom concept> =
 
+#meta expression
+expression file path=
+#one of VALUE, LOG2E or ZSCORE
+expression data column=
+#by default study name + Expression data
+expression profile name=
+#by default study name + Expression data
+expression profile description=

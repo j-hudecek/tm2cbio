@@ -10,11 +10,16 @@ class Translator {
     public static void process(Config c) {
         new File(c.target_path).mkdirs()
         createMetaStudyFile(c)
-        ClinicalTranslator.createMetaClinicalFile(c)
+        def translators = [ new ClinicalTranslator(), new GeneExperessionTranslator()]
+        translators.each {it.init(c)}
+        translators.each {it.createMetaFile(c)}
         println("Created meta files")
 
-        patients = ClinicalTranslator.writeDataFile(c)
+        translators.each { patients = it.writeDataFile(c, patients)}
+        println("Created data files")
+
         writeCaseList(c)
+        println("Created case list with " + patients.size() + " cases")
     }
 
     private static void writeCaseList(Config c) {
@@ -27,7 +32,6 @@ case_list_name: All
 case_list_description: All tumor samples (${c.patient_count} samples)
 case_list_ids: ${patients.join('\t')}
 """)
-        println("Created case list with " + patients.size() + " cases")
     }
 
     private static void createMetaStudyFile(Config c) {
