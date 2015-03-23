@@ -18,7 +18,7 @@ mapping SEX replace=Male	MALE
 mapping SEX replace=Female	FEMALE
 
 mapping AGE path=/Compounds/Dovitinib_TKI258/Measurements/CCLE_Screen_Concentration_uM/Concentration_7/Response_7
-mapping AGE convert=days2months
+mapping AGE convert=days2years
 
 
 mapping type \Compounds\Crizotinib PF2341066\Measurements\IC50, umol=INT

@@ -29,6 +29,7 @@ type short name=
 clinical file path=
 
 #mapping of special attributes, specify concept path in tranSMART
+#cbioportal expects years
 mapping AGE path=
 #days2years, days2months, months2years, months2days, years2months, years2days
 mapping AGE convert=
