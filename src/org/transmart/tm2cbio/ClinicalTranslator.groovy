@@ -79,6 +79,10 @@ profile_name: Clinical
                 throw new IllegalArgumentException("Patient or sample IDs can't contain commas!")
             def fields = [rawFields[0]]
             fields.addAll(rawFields)
+            if (patients.contains(fields[0])) {
+                println("WARNING: duplicate ID in clinical data '${fields[0]}', ignoring data on line $lineNumber")
+                return
+            }
             //store patient's ID (first column) for case list
             patients.push(fields[0])
             toReplace.each {
