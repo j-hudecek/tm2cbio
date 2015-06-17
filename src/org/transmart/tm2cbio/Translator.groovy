@@ -18,20 +18,21 @@ class Translator {
         translators.each { patients = it.writeDataFile(c, patients)}
         println("Created data files")
 
-        writeCaseList(c)
-        println("Created case list with " + patients.size() + " cases")
+        translators.each {
+            writeCaseList(c, it.caseListName, it.patientsForThisDataType)
+        }
+        writeCaseList(c, 'all', patients)
     }
 
-    private static void writeCaseList(Config c) {
+    private static void writeCaseList(Config c, String name, List<String> cases) {
         new File(c.target_path + "/case_lists").mkdirs()
-        new File(c.target_path + "/case_lists/all.txt").write("""cancer_study_identifier: ${
-            c.study_id
-        }
-stable_id: ${c.study_id}_all
-case_list_name: All
-case_list_description: All tumor samples (${c.patient_count} samples)
-case_list_ids: ${patients.join('\t')}
+        new File(c.target_path + "/case_lists/${name}.txt").write("""cancer_study_identifier: ${c.study_id}
+stable_id: ${c.study_id}_$name
+case_list_name: $name
+case_list_description: $name tumor samples (${cases.size()} samples)
+case_list_ids: ${cases.join('\t')}
 """)
+        println("Created '$name' case list with ${cases.size()} cases")
     }
 
     private static void createMetaStudyFile(Config c) {

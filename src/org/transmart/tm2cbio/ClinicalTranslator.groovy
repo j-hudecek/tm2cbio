@@ -55,6 +55,11 @@ profile_name: Clinical
 
     }
 
+    @Override
+    String getCaseListName() {
+        'clinical'
+    }
+
     private static String applyRegexes(String input, String regexesInConfig, Config c) {
         String with_name = regexesInConfig+"_with"
         c.@"$regexesInConfig".eachWithIndex({ regex,i -> input = input.replace(regex, c.@"$with_name"[i])})
@@ -85,6 +90,7 @@ profile_name: Clinical
             }
             //store patient's ID (first column) for case list
             patients.push(fields[0])
+            patientsForThisDataType.push(fields[0])
             toReplace.each {
                 fields[it.key] = applyRegexes(fields[it.key], it.value, c)
             }

@@ -11,6 +11,9 @@ abstract class AbstractTranslator {
 
         public abstract void init(Config c)
 
+        public List<String> patientsForThisDataType = []
+        public abstract String getCaseListName()
+
         protected static void checkSampleID(String sampleid) {
             if (sampleid.indexOf(' ') != -1)
                 throw new IllegalArgumentException("Patient or sample IDs can't contain spaces ('$sampleid')!")

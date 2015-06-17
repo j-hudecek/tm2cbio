@@ -77,6 +77,7 @@ show_profile_in_analysis_tab: true
             }
             if (!patients.contains(sampleid)) {
                 patients.push(sampleid)
+                patientsForThisDataType.push(sampleid)
             }
             def hugoid = rawFields[hugoindex].trim()
             def geneid = rawFields[geneindex].trim()
@@ -112,4 +113,11 @@ show_profile_in_analysis_tab: true
         //header
         out.println(fields.join('\t'))
     }
+
+    @Override
+    public String getCaseListName() {
+        'mrna'
+    }
+
+
 }
