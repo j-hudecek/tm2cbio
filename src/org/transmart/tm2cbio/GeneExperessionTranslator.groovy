@@ -14,6 +14,8 @@ class GeneExperessionTranslator extends AbstractTranslator {
         if (c.expression_file_path == "") {
             return
         }
+        if (c.expression_profile_name == null)
+            c.expression_profile_name = "$c.study_name Expression data"
         def meta = new File(c.target_path + "/meta_expression.txt");
         meta.write("""cancer_study_identifier: ${c.study_id}
 genetic_alteration_type: MRNA_EXPRESSION
