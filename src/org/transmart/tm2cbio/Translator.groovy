@@ -8,6 +8,7 @@ class Translator {
     private static List<String> patients = [];
 
     public static void process(Config c) {
+        def start = System.currentTimeMillis()
         new File(c.target_path).mkdirs()
         createMetaStudyFile(c)
         def translators = [ new ClinicalTranslator(), new GeneExperessionTranslator(), new CopyNumberTranslator()]
@@ -22,6 +23,7 @@ class Translator {
             writeCaseList(c, it.caseListName, it.patientsForThisDataType)
         }
         writeCaseList(c, 'all', patients)
+        println("Execution took ${System.currentTimeMillis()-start} ms")
     }
 
     private static void writeCaseList(Config c, String name, List<String> cases) {
