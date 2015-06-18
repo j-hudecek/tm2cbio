@@ -61,10 +61,10 @@ show_profile_in_analysis_tab: true
                 if (geneindex == 0) {
                     throw new IllegalArgumentException("GENE ID column not found!")
                 }
-                if (geneindex == 0) {
+                if (hugoindex == 0) {
                     throw new IllegalArgumentException("GENE SYMBOL column not found!")
                 }
-                if (geneindex == 0) {
+                if (valueindex == 0) {
                     throw new IllegalArgumentException("'${c.expression_data_column}' column with expression values not found!")
                 }
                 return
