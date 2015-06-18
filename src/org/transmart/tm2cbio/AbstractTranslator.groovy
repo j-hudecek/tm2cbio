@@ -7,7 +7,7 @@ abstract class AbstractTranslator {
 
         public abstract void createMetaFile(Config c)
 
-        public abstract List<String> writeDataFile(Config c, List<String> patients)
+        public abstract SetList<String> writeDataFile(Config c, SetList<String> patients)
 
         public abstract void init(Config c)
 

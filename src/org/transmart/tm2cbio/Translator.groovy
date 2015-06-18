@@ -5,7 +5,7 @@ package org.transmart.tm2cbio
  */
 class Translator {
 
-    private static List<String> patients = [];
+    private static SetList<String> patients = [];
 
     public static void process(Config c) {
         def start = System.currentTimeMillis()

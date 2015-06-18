@@ -25,7 +25,7 @@ show_profile_in_analysis_tab: true
 """)
     }
 
-    public List<String> writeDataFile(Config c, List<String> patients) {
+    public SetList<String> writeDataFile(Config c, SetList<String> patients) {
         new File(c.target_path + "/data_expression.txt").withWriter {out ->
             patients = readData(c, patients)
             writeData(out)
@@ -38,7 +38,7 @@ show_profile_in_analysis_tab: true
 
     }
 
-    private List<String> readData(Config c, List<String> patients) {
+    private SetList<String> readData(Config c, SetList<String> patients) {
         int valueindex = 0;
         int geneindex = 0;
         int hugoindex = 0;

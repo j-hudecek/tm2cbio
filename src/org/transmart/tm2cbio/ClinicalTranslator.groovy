@@ -27,7 +27,7 @@ profile_name: Clinical
 """)
     }
 
-    public List<String> writeDataFile(Config c, List<String> patients)
+    public SetList<String> writeDataFile(Config c, SetList<String> patients)
     {
         new File(c.target_path + "/data_clinical.txt").withWriter {out ->
             writeMeta(out, concept2col, c)
@@ -71,7 +71,7 @@ profile_name: Clinical
         Converter."$methodName"(input)
     }
 
-    private List<String> writeData(out, Map toReplace, Map toConvert, Config c, List<String> patients) {
+    private SetList<String> writeData(out, Map toReplace, Map toConvert, Config c, SetList<String> patients) {
         new File(c.clinical_file_path).eachLine {line, lineNumber ->
             if (lineNumber == 1)
                 return;
