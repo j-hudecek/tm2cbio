@@ -109,7 +109,7 @@ show_profile_in_analysis_tab: true
 
     @Override
     public String getCaseListName() {
-        'gistic'
+        'cna'
     }
 
 
