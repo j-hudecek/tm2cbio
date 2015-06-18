@@ -77,8 +77,8 @@ show_profile_in_analysis_tab: true
             }
             if (!patients.contains(sampleid)) {
                 patients.push(sampleid)
-                patientsForThisDataType.push(sampleid)
             }
+            patientsForThisDataType.push(sampleid)
             def hugoid = rawFields[hugoindex].trim()
             def geneid = rawFields[geneindex].trim()
             def value = rawFields[valueindex].trim()
