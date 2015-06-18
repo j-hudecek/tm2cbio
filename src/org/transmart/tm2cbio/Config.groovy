@@ -123,6 +123,10 @@ class Config  extends Expando {
         }
         target_path = expandPath(target_path)
         clinical_file_path = expandPath(clinical_file_path)
+        if (expression_file_path != null)
+            expression_file_path = expandPath(expression_file_path)
+        if (copynumber_file_path != null)
+            copynumber_file_path = expandPath(copynumber_file_path)
         patient_count = new File(clinical_file_path).readLines().size()-1
         if (expression_profile_name == null || expression_profile_name.trim()  == "")
             expression_profile_name = study_name+" expression data"
@@ -161,7 +165,7 @@ class Config  extends Expando {
             path = System.getProperty("user.home") + path.substring(1);
         }
 
-        return path;
+        return path.trim();
     }
 
 }
