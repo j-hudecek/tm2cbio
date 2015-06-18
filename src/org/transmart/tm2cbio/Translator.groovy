@@ -10,7 +10,7 @@ class Translator {
     public static void process(Config c) {
         new File(c.target_path).mkdirs()
         createMetaStudyFile(c)
-        def translators = [ new ClinicalTranslator(), new GeneExperessionTranslator()]
+        def translators = [ new ClinicalTranslator(), new GeneExperessionTranslator(), new CopyNumberTranslator()]
         translators.each {it.init(c)}
         translators.each {it.createMetaFile(c)}
         println("Created meta files")

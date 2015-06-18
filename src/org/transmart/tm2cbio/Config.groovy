@@ -71,6 +71,11 @@ class Config  extends Expando {
     public String expression_profile_name;
     public String expression_profile_description;
 
+    public String copynumber_file_path;
+    public String copynumber_data_column;
+    public String copynumber_profile_name;
+    public String copynumber_profile_description;
+
     public int patient_count
 
     public Map types = [:]

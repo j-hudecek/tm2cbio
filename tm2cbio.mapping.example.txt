@@ -32,3 +32,12 @@ expression data column=ZSCORE
 expression profile name=
 #by default study name + Expression data
 expression profile description=
+
+#meta copy number 
+copynumber file path=d:\temp\subset1_DECODE\acgh_Genes_Affymetrix_SNP6_0_microarray_1.tsv 
+#by default FLAG
+copynumber data column=
+#by default study name + Copy number data
+copynumber profile name=
+#by default study name + Copy number data
+copynumber profile description=

@@ -83,3 +83,12 @@ expression data column=
 expression profile name=
 #by default study name + Expression data
 expression profile description=
+
+#meta copy number 
+copynumber file path=
+#by default FLAG
+copynumber data column=
+#by default study name + Copy number data
+copynumber profile name=
+#by default study name + Copy number data
+copynumber profile description=
