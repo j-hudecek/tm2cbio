@@ -13,7 +13,7 @@ class Translator {
         createMetaStudyFile(c)
         def translators = [ new ClinicalTranslator()]
         if (c.expression_file_path != null)
-            translators.push(new GeneExperessionTranslator())
+            translators.push(new GeneExpressionTranslator())
         else
             println("Skipping gene expression data, 'expression file path' not set");
         if (c.copynumber_file_path != null)

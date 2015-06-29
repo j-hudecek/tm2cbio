@@ -5,7 +5,7 @@ package org.transmart.tm2cbio
  * cancer_study_identifier: brca_tcga_pub
 
  */
-class GeneExperessionTranslator extends AbstractTranslator {
+class GeneExpressionTranslator extends AbstractTranslator {
 
     def samplesPerGene = [:]
     def geneIdsPerHugo = [:]
