@@ -11,7 +11,16 @@ class Translator {
         def start = System.currentTimeMillis()
         new File(c.target_path).mkdirs()
         createMetaStudyFile(c)
-        def translators = [ new ClinicalTranslator(), new GeneExperessionTranslator(), new CopyNumberTranslator()]
+        def translators = [ new ClinicalTranslator()]
+        if (c.expression_file_path != null)
+            translators.push(new GeneExperessionTranslator())
+        else
+            println("Skipping gene expression data, 'expression file path' not set");
+        if (c.copynumber_file_path != null)
+            translators.push(new CopyNumberTranslator())
+        else
+            println("Skipping copy number data, 'copynumber file path' not set");
+
         translators.each {it.init(c)}
         translators.each {it.createMetaFile(c)}
         println("Created meta files")
