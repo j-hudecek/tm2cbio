@@ -15,6 +15,8 @@ class CopyNumberTranslator extends AbstractTranslator {
         }
         if (c.copynumber_profile_name == null)
             c.copynumber_profile_name = "$c.study_name CNA data"
+        if (c.copynumber_profile_description == null)
+            c.copynumber_profile_description = c.copynumber_profile_name
         def meta = new File(c.target_path + "/meta_copynumber.txt");
         meta.write("""cancer_study_identifier: ${c.study_id}
 genetic_alteration_type: COPY_NUMBER_ALTERATION
