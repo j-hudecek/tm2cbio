@@ -8,7 +8,8 @@ package org.transmart.tm2cbio
 class GeneExpressionTranslator extends AbstractTranslator {
 
     def samplesPerGene = [:]
-    def geneIdsPerHugo = [:]
+    def entrezIdsPerHugo = [:]
+    def hugoIdsPerEntrez = [:]
 
     public void createMetaFile(Config c) {
         if (c.expression_file_path == "") {
@@ -42,28 +43,28 @@ show_profile_in_analysis_tab: true
 
     private SetList<String> readData(Config c, SetList<String> patients) {
         int valueindex = 0;
-        int geneindex = 0;
-        int hugoindex = 0;
+        int geneindex = -1;
+        int hugoindex = -1;
+        int entrezindex = -1;
+        boolean useHugo = false;
         println("Reading data file '"+c.expression_file_path+"'")
         new File(c.expression_file_path).eachLine {line, lineNumber ->
             String[] rawFields = line.split('\t')
             if (lineNumber == 1) {
                 rawFields.eachWithIndex {String entry, int i ->
                     if (entry.trim() == "GENE ID") {
-                        geneindex = i
+                        geneindex = entrezindex = i
                     };
                     if (entry.trim() == "GENE SYMBOL") {
-                        hugoindex = i
+                        geneindex = hugoindex = i
+                        useHugo = true
                     };
                     if (entry.trim() == c.expression_data_column) {
                         valueindex = i
                     };
                 }
-                if (geneindex == 0) {
-                    throw new IllegalArgumentException("GENE ID column not found!")
-                }
-                if (hugoindex == 0) {
-                    throw new IllegalArgumentException("GENE SYMBOL column not found!")
+                if (geneindex == -1) {
+                    throw new IllegalArgumentException("GENE ID or GENE SYMBOL column not found! At least one has to be specified")
                 }
                 if (valueindex == 0) {
                     throw new IllegalArgumentException("'${c.expression_data_column}' column with expression values not found!")
@@ -79,16 +80,23 @@ show_profile_in_analysis_tab: true
             if (!patients.contains(sampleid)) {
                 patients.push(sampleid)
             }
-            def hugoid = rawFields[hugoindex].trim()
-            def geneid = rawFields[geneindex].trim()
+            def hugoid = hugoindex != -1 ? rawFields[hugoindex].trim() : ''
+            def entrezid = entrezindex != -1 ? rawFields[entrezindex].trim() : ''
+            String geneid
+            if (useHugo)
+                geneid = hugoid
+            else
+                geneid = entrezid
             def value = rawFields[valueindex].trim()
-            if (hugoid == "null")
-                return //ignore the value for unknown genes
-            if (!samplesPerGene.containsKey(hugoid)) {
-                samplesPerGene[hugoid] = [:]
+            if (!samplesPerGene.containsKey(geneid)) {
+                samplesPerGene[geneid] = [:]
             }
-            samplesPerGene[hugoid][sampleid] = value
-            geneIdsPerHugo[hugoid] = geneid
+            //key can be either hugo or entrez whichever is present, we figure it out based on its presence in the mapping tables
+            samplesPerGene[geneid][sampleid] = value
+            if (hugoid != '')
+                entrezIdsPerHugo[hugoid] = entrezid
+            if (entrezid != '')
+                hugoIdsPerEntrez[entrezid] = hugoid
         }
         patients
     }
@@ -101,7 +109,18 @@ show_profile_in_analysis_tab: true
         writeHeader(out)
 
         samplesPerGene.each {samplesForGene ->
-            def fields = [samplesForGene.key, geneIdsPerHugo[samplesForGene.key]]
+            def geneid = samplesForGene.key
+            String hugoid, entrezid
+            //figure out if we used hugo or entrez as key
+            if (entrezIdsPerHugo[geneid] != null) {
+                hugoid = geneid
+                entrezid = entrezIdsPerHugo[hugoid]
+            } else {
+                entrezid = geneid
+                hugoid =  hugoIdsPerEntrez[entrezid]
+            }
+
+            def fields = [hugoid, entrezid]
             patientsForThisDataType.each {fields.push(samplesForGene.value[it])}
             out.println(fields.join('\t'))
         }
