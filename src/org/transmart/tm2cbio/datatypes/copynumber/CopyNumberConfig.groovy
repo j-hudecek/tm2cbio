@@ -1,9 +1,13 @@
-package org.transmart.tm2cbio
+package org.transmart.tm2cbio.datatypes.copynumber
+
+import org.transmart.tm2cbio.Config
+import org.transmart.tm2cbio.datatypes.AbstractTranslator
+import org.transmart.tm2cbio.datatypes.AbstractTypeConfig
 
 /**
  * Created by j.hudecek on 11-9-2015.
  */
-class CopyNumberConfig extends SpecificConfig {
+class CopyNumberConfig extends AbstractTypeConfig {
     public String data_column
 
     public void check(Config c) {

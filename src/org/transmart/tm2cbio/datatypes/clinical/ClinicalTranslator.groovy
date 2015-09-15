@@ -1,4 +1,9 @@
-package org.transmart.tm2cbio
+package org.transmart.tm2cbio.datatypes.clinical
+
+import org.transmart.tm2cbio.Config
+import org.transmart.tm2cbio.utils.Converter
+import org.transmart.tm2cbio.utils.SetList
+import org.transmart.tm2cbio.datatypes.AbstractTranslator
 
 /**
  * Created by j.hudecek on 20-3-2015.

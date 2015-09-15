@@ -1,5 +1,7 @@
 package org.transmart.tm2cbio
 
+import org.transmart.tm2cbio.utils.SetList
+
 /**
  * Created by j.hudecek on 10-11-2014.
  */

@@ -1,9 +1,12 @@
-package org.transmart.tm2cbio
+package org.transmart.tm2cbio.datatypes
+
+import org.transmart.tm2cbio.Config
+import org.transmart.tm2cbio.datatypes.AbstractTranslator
 
 /**
  * Created by j.hudecek on 11-9-2015.
  */
-abstract class SpecificConfig {
+abstract class AbstractTypeConfig {
     public String file_path;
     public String profile_name;
     public String profile_description;

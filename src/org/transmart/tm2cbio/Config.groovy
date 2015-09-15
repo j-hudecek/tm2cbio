@@ -1,5 +1,10 @@
 package org.transmart.tm2cbio
 
+import org.transmart.tm2cbio.datatypes.AbstractTypeConfig
+import org.transmart.tm2cbio.datatypes.clinical.ClinicalConfig
+import org.transmart.tm2cbio.datatypes.copynumber.CopyNumberConfig
+import org.transmart.tm2cbio.datatypes.expression.ExpressionConfig
+
 /**
  * Created by j.hudecek on 10-11-2014.
  */
@@ -54,7 +59,7 @@ class Config  extends Expando {
             String variable_name_prefix = variable_name.split(' ')[0]
             if (prefixes[variable_name_prefix] != null) {
                 //it is a type specific config clause
-                SpecificConfig specificConfig = fetchSpecificConfig(variable_name_prefix, variable_name)
+                AbstractTypeConfig specificConfig = fetchSpecificConfig(variable_name_prefix, variable_name)
                 variable_name = variable_name.replaceFirst(/^$variable_name_prefix (([0-9]+) )?/, "")
                 specificConfig.setVariable(variable_name, variable_value);
             } else {
@@ -75,14 +80,14 @@ class Config  extends Expando {
         println()
     }
 
-    private SpecificConfig fetchSpecificConfig(String variable_name_prefix, String variable_name) {
+    private AbstractTypeConfig fetchSpecificConfig(String variable_name_prefix, String variable_name) {
         if (specific_configs[variable_name_prefix] == null)
             specific_configs[variable_name_prefix] = []
         //get the right specific config
         int config_number = extractConfigNumber(variable_name, variable_name_prefix)
-        SpecificConfig specificConfig = specific_configs[variable_name_prefix][config_number];
+        AbstractTypeConfig specificConfig = specific_configs[variable_name_prefix][config_number];
         if (specificConfig == null)
-            specificConfig = specific_configs[variable_name_prefix][config_number] = prefixes[variable_name_prefix]() as SpecificConfig
+            specificConfig = specific_configs[variable_name_prefix][config_number] = prefixes[variable_name_prefix]() as AbstractTypeConfig
         specificConfig
     }
 

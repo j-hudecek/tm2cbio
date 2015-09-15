@@ -1,11 +1,15 @@
-package org.transmart.tm2cbio
+package org.transmart.tm2cbio.datatypes.expression
+
+import org.transmart.tm2cbio.Config
+import org.transmart.tm2cbio.utils.SetList
+import org.transmart.tm2cbio.datatypes.AbstractTranslator
 
 /**
  * Created by j.hudecek on 23-3-2015.
  * cancer_study_identifier: brca_tcga_pub
 
  */
-class GeneExpressionTranslator extends AbstractTranslator {
+class ExpressionTranslator extends AbstractTranslator {
 
     ExpressionConfig specific_config
 
@@ -39,7 +43,7 @@ show_profile_in_analysis_tab: true
         return patients
     }
 
-    public GeneExpressionTranslator(Config c, int config_number) {
+    public ExpressionTranslator(Config c, int config_number) {
         specific_config = c.specific_configs["expression"][config_number]
         configNumber = config_number
     }

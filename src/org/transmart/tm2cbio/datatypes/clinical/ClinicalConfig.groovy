@@ -1,9 +1,13 @@
-package org.transmart.tm2cbio
+package org.transmart.tm2cbio.datatypes.clinical
+
+import org.transmart.tm2cbio.Config
+import org.transmart.tm2cbio.datatypes.AbstractTranslator
+import org.transmart.tm2cbio.datatypes.AbstractTypeConfig
 
 /**
  * Created by j.hudecek on 11-9-2015.
  */
-class ClinicalConfig extends SpecificConfig {
+class ClinicalConfig extends AbstractTypeConfig {
     public String attributes_names
     public String attributes_descriptions
     public String attributes_types

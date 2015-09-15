@@ -1,4 +1,4 @@
-package org.transmart.tm2cbio
+package org.transmart.tm2cbio.utils
 
 /**
  * Created by j.hudecek on 18-6-2015.

@@ -1,4 +1,7 @@
-package org.transmart.tm2cbio
+package org.transmart.tm2cbio.datatypes
+
+import org.transmart.tm2cbio.Config
+import org.transmart.tm2cbio.utils.SetList
 
 /**
  * Created by j.hudecek on 23-3-2015.
