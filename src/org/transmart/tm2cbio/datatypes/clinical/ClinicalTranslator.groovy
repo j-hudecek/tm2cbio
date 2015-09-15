@@ -20,7 +20,7 @@ class ClinicalTranslator extends AbstractTranslator {
 
     private List<String> exportColumns
 
-    private ClinicalConfig specificConfig
+    private ClinicalConfig typeConfig
 
     private String forConfigNumber
 
@@ -48,20 +48,20 @@ profile_name: Clinical
 
     public ClinicalTranslator(Config c, int config_number)
     {
-        specificConfig = c.specific_configs["clinical"][config_number]
+        typeConfig = c.typeConfigs["clinical"][config_number]
         configNumber = config_number
         concept2col = createConceptToColumnMapping(c)
         // figure out on which column index are the special columns that need replacing/converting
         toReplace = [:]
         toConvert = [:]
-        specificConfig.special_attributes.each({
+        typeConfig.special_attributes.each({
             def replaceName = "mapping_"+it+"_replace"
             def convertName = "mapping_"+it+"_convert"
             def pathName = "mapping_"+it+"_path"
-            if (specificConfig.hasProperty(replaceName) && specificConfig.@"$replaceName" != null)
-                toReplace.put(exportColumns.findIndexOf {it==specificConfig.translateConcept(specificConfig.@"$pathName")}, replaceName)
-            if (specificConfig.hasProperty(convertName) && specificConfig.@"$convertName" != null)
-                toConvert.put(exportColumns.findIndexOf {it==specificConfig.translateConcept(specificConfig.@"$pathName")}, convertName)
+            if (typeConfig.hasProperty(replaceName) && typeConfig.@"$replaceName" != null)
+                toReplace.put(exportColumns.findIndexOf {it==typeConfig.translateConcept(typeConfig.@"$pathName")}, replaceName)
+            if (typeConfig.hasProperty(convertName) && typeConfig.@"$convertName" != null)
+                toConvert.put(exportColumns.findIndexOf {it==typeConfig.translateConcept(typeConfig.@"$pathName")}, convertName)
         })
         if (config_number > 0)
             forConfigNumber = " for config number $config_number"
@@ -74,17 +74,17 @@ profile_name: Clinical
 
     private String applyRegexes(String input, String regexesInConfig) {
         String with_name = regexesInConfig+"_with"
-        specificConfig.@"$regexesInConfig".eachWithIndex({ regex,i -> input = input.replace(regex, specificConfig.@"$with_name"[i])})
+        typeConfig.@"$regexesInConfig".eachWithIndex({ regex,i -> input = input.replace(regex, typeConfig.@"$with_name"[i])})
         return input;
     }
 
     private String applyConversion(String input, String converter) {
-        def methodName = specificConfig.@"$converter"
+        def methodName = typeConfig.@"$converter"
         Converter."$methodName"(input)
     }
 
     private SetList<String> writeData(out, Map toReplace, Map toConvert, SetList<String> patients) {
-        new File(specificConfig.file_path).eachLine {line, lineNumber ->
+        new File(typeConfig.file_path).eachLine {line, lineNumber ->
             if (lineNumber == 1)
                 return;
             String[] rawFields = line.split('\t')
@@ -140,8 +140,8 @@ profile_name: Clinical
     }
 
     private String getTypeForConcept(String it) {
-        if (specificConfig.types.containsKey(it))
-            return specificConfig.types[it]
+        if (typeConfig.types.containsKey(it))
+            return typeConfig.types[it]
         else
             "STRING"
     }
@@ -154,10 +154,10 @@ profile_name: Clinical
 
     private Map createConceptToColumnMapping(Config c) {
         String firstRow;
-        println("Reading data file '"+specificConfig.file_path+"'")
-        new File(specificConfig.file_path).withReader { firstRow = it.readLine() } ;
+        println("Reading data file '"+typeConfig.file_path+"'")
+        new File(typeConfig.file_path).withReader { firstRow = it.readLine() } ;
         firstRow = applyRegexes(firstRow, "mapping_concept_to_column_name_replace")
-        firstRow = specificConfig.translateConcept(firstRow)
+        firstRow = typeConfig.translateConcept(firstRow)
 
         //prepend PATIENT_ID and SAMPLE ID
         exportColumns = ['PATIENT_ID']
@@ -213,10 +213,10 @@ profile_name: Clinical
         }
 
         //rename standard (AGE, SEX, ...) columns
-        specificConfig.special_attributes.each({
+        typeConfig.special_attributes.each({
             def pathName = "mapping_"+it+"_path"
-            if (specificConfig.@"$pathName" != null)
-                concept2col[specificConfig.translateConcept(specificConfig.@"$pathName")] = it
+            if (typeConfig.@"$pathName" != null)
+                concept2col[typeConfig.translateConcept(typeConfig.@"$pathName")] = it
         })
 
         //check uniqueness of columns just in case...

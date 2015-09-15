@@ -11,25 +11,25 @@ import org.transmart.tm2cbio.datatypes.AbstractTranslator
  */
 class ExpressionTranslator extends AbstractTranslator {
 
-    ExpressionConfig specific_config
+    ExpressionConfig typeConfig
 
     def samplesPerGene = [:]
     def entrezIdsPerHugo = [:]
     def hugoIdsPerEntrez = [:]
 
     public void createMetaFile(Config c) {
-        if (specific_config.file_path == "") {
+        if (typeConfig.file_path == "") {
             return
         }
-        if (specific_config.profile_name == null)
-            specific_config.profile_name = "$c.study_name Expression data"
+        if (typeConfig.profile_name == null)
+            typeConfig.profile_name = "$c.study_name Expression data"
         def meta = new File(c.target_path + "/meta_expression${configNumberAsString}.txt");
         meta.write("""cancer_study_identifier: ${c.study_id}
 genetic_alteration_type: MRNA_EXPRESSION
-datatype: ${specific_config.data_column}
+datatype: ${typeConfig.data_column}
 stable_id: ${c.study_id}_mrna
-profile_name: ${specific_config.profile_name}
-profile_description: ${specific_config.profile_description} for ${c.patient_count} patients.
+profile_name: ${typeConfig.profile_name}
+profile_description: ${typeConfig.profile_description} for ${c.patient_count} patients.
 show_profile_in_analysis_tab: true
 """)
     }
@@ -44,7 +44,7 @@ show_profile_in_analysis_tab: true
     }
 
     public ExpressionTranslator(Config c, int config_number) {
-        specific_config = c.specific_configs["expression"][config_number]
+        typeConfig = c.typeConfigs["expression"][config_number]
         configNumber = config_number
     }
 
@@ -54,8 +54,8 @@ show_profile_in_analysis_tab: true
         int hugoindex = -1;
         int entrezindex = -1;
         boolean useHugo = false;
-        println("Reading data file '"+specific_config.file_path+"'")
-        new File(specific_config.file_path).eachLine {line, lineNumber ->
+        println("Reading data file '"+typeConfig.file_path+"'")
+        new File(typeConfig.file_path).eachLine {line, lineNumber ->
             String[] rawFields = line.split('\t')
             if (lineNumber == 1) {
                 rawFields.eachWithIndex {String entry, int i ->
@@ -66,7 +66,7 @@ show_profile_in_analysis_tab: true
                         geneindex = hugoindex = i
                         useHugo = true
                     };
-                    if (entry.trim() == specific_config.data_column) {
+                    if (entry.trim() == typeConfig.data_column) {
                         valueindex = i
                     };
                 }
@@ -74,7 +74,7 @@ show_profile_in_analysis_tab: true
                     throw new IllegalArgumentException("GENE ID or GENE SYMBOL column not found! At least one has to be specified")
                 }
                 if (valueindex == 0) {
-                    throw new IllegalArgumentException("'${specific_config.data_column}' column with expression values not found!")
+                    throw new IllegalArgumentException("'${typeConfig.data_column}' column with expression values not found!")
                 }
                 return
             }

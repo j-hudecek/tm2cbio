@@ -12,7 +12,7 @@ class Config  extends Expando {
     //these specify configs for a data type. In front of 1st space
     public final Map prefixes = [clinical: { -> new ClinicalConfig()}, expression: { -> new ExpressionConfig()}, copynumber: { -> new CopyNumberConfig()}]
 
-    public final Map specific_configs = [:]
+    public final Map typeConfigs = [:]
 
     public String target_path
 
@@ -59,7 +59,7 @@ class Config  extends Expando {
             String variable_name_prefix = variable_name.split(' ')[0]
             if (prefixes[variable_name_prefix] != null) {
                 //it is a type specific config clause
-                AbstractTypeConfig specificConfig = fetchSpecificConfig(variable_name_prefix, variable_name)
+                AbstractTypeConfig specificConfig = fetchSpecificTypeConfig(variable_name_prefix, variable_name)
                 variable_name = variable_name.replaceFirst(/^$variable_name_prefix (([0-9]+) )?/, "")
                 specificConfig.setVariable(variable_name, variable_value);
             } else {
@@ -69,25 +69,25 @@ class Config  extends Expando {
             }
         }
         target_path = expandPath(target_path)
-        specific_configs.each { config ->
+        typeConfigs.each { config ->
             config.value.each { it.check(this)}
         }
-        patient_count = new File(specific_configs["clinical"][0].file_path).readLines().size() - 1
+        patient_count = new File(typeConfigs["clinical"][0].file_path).readLines().size() - 1
         print("Loaded config: ");
-        specific_configs.each {
+        typeConfigs.each {
             print "${it.key}: ${it.value.size()}, "
         }
         println()
     }
 
-    private AbstractTypeConfig fetchSpecificConfig(String variable_name_prefix, String variable_name) {
-        if (specific_configs[variable_name_prefix] == null)
-            specific_configs[variable_name_prefix] = []
+    private AbstractTypeConfig fetchSpecificTypeConfig(String variable_name_prefix, String variable_name) {
+        if (typeConfigs[variable_name_prefix] == null)
+            typeConfigs[variable_name_prefix] = []
         //get the right specific config
         int config_number = extractConfigNumber(variable_name, variable_name_prefix)
-        AbstractTypeConfig specificConfig = specific_configs[variable_name_prefix][config_number];
+        AbstractTypeConfig specificConfig = typeConfigs[variable_name_prefix][config_number];
         if (specificConfig == null)
-            specificConfig = specific_configs[variable_name_prefix][config_number] = prefixes[variable_name_prefix]() as AbstractTypeConfig
+            specificConfig = typeConfigs[variable_name_prefix][config_number] = prefixes[variable_name_prefix]() as AbstractTypeConfig
         specificConfig
     }
 

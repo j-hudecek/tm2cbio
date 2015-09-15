@@ -14,14 +14,14 @@ class Translator {
         new File(c.target_path).mkdirs()
         createMetaStudyFile(c)
         def translators = []
-        c.specific_configs.each { config ->
+        c.typeConfigs.each { config ->
             config.value.eachWithIndex { e,i ->
                 translators.push(e.getTranslator(c, i))
             }
         }
-        if (c.specific_configs['expression'] == null)
+        if (c.typeConfigs['expression'] == null)
             println("Skipping gene expression data, 'expression file path' not set");
-        if (c.specific_configs['copynumber'] == null)
+        if (c.typeConfigs['copynumber'] == null)
             println("Skipping copy number data, 'copynumber file path' not set");
 
         translators.each {it.createMetaFile(c)}
