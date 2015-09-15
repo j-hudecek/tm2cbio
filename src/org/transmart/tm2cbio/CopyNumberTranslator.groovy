@@ -9,21 +9,23 @@ class CopyNumberTranslator extends AbstractTranslator {
     def samplesPerGene = [:]
     def geneIdsPerHugo = [:]
 
+    CopyNumberConfig specific_config
+
     public void createMetaFile(Config c) {
-        if (c.copynumber_file_path == "") {
+        if (specific_config.file_path == "") {
             return
         }
-        if (c.copynumber_profile_name == null)
-            c.copynumber_profile_name = "$c.study_name CNA data"
-        if (c.copynumber_profile_description == null)
-            c.copynumber_profile_description = c.copynumber_profile_name
+        if (specific_config.profile_name == null)
+            specific_config.profile_name = "$c.study_name CNA data"
+        if (specific_config.profile_description == null)
+            specific_config.profile_description = specific_config.profile_name
         def meta = new File(c.target_path + "/meta_copynumber.txt");
         meta.write("""cancer_study_identifier: ${c.study_id}
 genetic_alteration_type: COPY_NUMBER_ALTERATION
 datatype: DISCRETE
 stable_id: ${c.study_id}_gistic
-profile_name: ${c.copynumber_profile_name}
-profile_description: ${c.copynumber_profile_description} for ${c.patient_count} patients.
+profile_name: ${specific_config.profile_name}
+profile_description: ${specific_config.profile_description} for ${c.patient_count} patients.
 show_profile_in_analysis_tab: true
 """)
     }
@@ -37,25 +39,28 @@ show_profile_in_analysis_tab: true
         patients
     }
 
-    public void init(Config c) {
 
+    public CopyNumberTranslator(Config c, int config_number) {
+        specific_config = c.specific_configs["copynumber"][config_number]
+        configNumber = config_number
     }
+
 
     private SetList<String> readData(Config c, SetList<String> patients) {
         int valueindex = 0;
         int geneindex = 0;
         int hugoindex = 0;
-        if (c.copynumber_data_column == "" || c.copynumber_data_column == null)
-            c.copynumber_data_column = "FLAG"
-        println("Reading data file '"+c.copynumber_file_path+"'")
-        new File(c.copynumber_file_path).eachLine {line, lineNumber ->
+        if (specific_config.data_column == "" || specific_config.data_column == null)
+            specific_config.data_column = "FLAG"
+        println("Reading data file '"+specific_config.file_path+"'")
+        new File(specific_config.file_path).eachLine {line, lineNumber ->
             String[] rawFields = line.split('\t')
             if (lineNumber == 1) {
                 rawFields.eachWithIndex {String entry, int i ->
                     if (entry.trim() == "BIOMARKER") {
                         hugoindex = i
                     };
-                    if (entry.trim() == c.copynumber_data_column) {
+                    if (entry.trim() == specific_config.data_column) {
                         valueindex = i
                     };
                 }
@@ -63,7 +68,7 @@ show_profile_in_analysis_tab: true
                     throw new IllegalArgumentException("BIOMARKER column not found!")
                 }
                 if (valueindex == 0) {
-                    throw new IllegalArgumentException("'${c.copynumber_data_column}' column with copynumber values not found!")
+                    throw new IllegalArgumentException("'${specific_config.data_column}' column with copynumber values not found!")
                 }
                 return
             }

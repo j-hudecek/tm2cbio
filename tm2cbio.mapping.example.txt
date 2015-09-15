@@ -13,25 +13,30 @@ study type=BRCA
 #meta clinical
 clinical file path=c:\temp\clinical_i2b2trans.txt 
 
-mapping SEX path=\Subject Information\Sex
-mapping SEX replace=Male	MALE
-mapping SEX replace=Female	FEMALE
+clinical mapping SEX path=\Subject Information\Sex
+clinical mapping SEX replace=Male	MALE
+clinical mapping SEX replace=Female	FEMALE
 
-mapping AGE path=/Compounds/Dovitinib_TKI258/Measurements/CCLE_Screen_Concentration_uM/Concentration_7/Response_7
-mapping AGE convert=days2years
+clinical mapping AGE path=/Compounds/Dovitinib_TKI258/Measurements/CCLE_Screen_Concentration_uM/Concentration_7/Response_7
+clinical mapping AGE convert=days2years
 
-
-mapping type \Compounds\Crizotinib PF2341066\Measurements\IC50, umol=INT
+clinical mapping type \Compounds\Crizotinib PF2341066\Measurements\IC50, umol=INT
 
 
 #meta expression
-expression file path=c:\temp\mrna_Normalised_ratios_Probe_level_0.tsv
+#expression file path=c:\temp\mrna_Normalised_ratios_Probe_level_0.tsv
+expression file path=c:\temp\mrna_woEntrez.tsv
 #one of VALUE, LOG2E or ZSCORE
 expression data column=ZSCORE
 #by default study name + Expression data
 expression profile name=
 #by default study name + Expression data
 expression profile description=
+
+expression 1 file path=c:\temp\mrna_Normalised_ratios_Probe_level_0.tsv
+#expression 1 file path=c:\temp\mrna_woEntrez.tsv
+#one of VALUE, LOG2E or ZSCORE
+expression 1 data column=ZSCORE
 
 #meta copy number 
 copynumber file path=d:\temp\subset1_DECODE\acgh_Genes_Affymetrix_SNP6_0_microarray_1.tsv 

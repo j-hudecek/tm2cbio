@@ -15,6 +15,10 @@ class ClinicalTranslator extends AbstractTranslator {
 
     private List<String> exportColumns
 
+    private ClinicalConfig specificConfig
+
+    private String forConfigNumber
+
     public void createMetaFile(Config c) {
         def metaclinical = new File(c.target_path + "/meta_clinical.txt");
         metaclinical.write("""cancer_study_identifier: ${c.study_id}
@@ -30,29 +34,32 @@ profile_name: Clinical
     public SetList<String> writeDataFile(Config c, SetList<String> patients)
     {
         new File(c.target_path + "/data_clinical.txt").withWriter {out ->
-            writeMeta(out, concept2col, c)
-            patients = writeData(out, toReplace, toConvert, c, patients)
+            writeMeta(out, concept2col)
+            patients = writeData(out, toReplace, toConvert, patients)
         }
-        println("Created data file '"+c.target_path + "/data_clinical.txt'")
+        println("Created data file $forConfigNumber'"+c.target_path + "/data_clinical.txt'")
         return patients
     }
 
-    public void init(Config c)
+    public ClinicalTranslator(Config c, int config_number)
     {
+        specificConfig = c.specific_configs["clinical"][config_number]
+        configNumber = config_number
         concept2col = createConceptToColumnMapping(c)
         // figure out on which column index are the special columns that need replacing/converting
         toReplace = [:]
         toConvert = [:]
-        c.special_attributes.each({
+        specificConfig.special_attributes.each({
             def replaceName = "mapping_"+it+"_replace"
             def convertName = "mapping_"+it+"_convert"
             def pathName = "mapping_"+it+"_path"
-            if (c.hasProperty(replaceName) && c.@"$replaceName" != null)
-                toReplace.put(exportColumns.findIndexOf {it==Config.translateConcept(c.@"$pathName")}, replaceName)
-            if (c.hasProperty(convertName) && c.@"$convertName" != null)
-                toConvert.put(exportColumns.findIndexOf {it==Config.translateConcept(c.@"$pathName")}, convertName)
+            if (specificConfig.hasProperty(replaceName) && specificConfig.@"$replaceName" != null)
+                toReplace.put(exportColumns.findIndexOf {it==specificConfig.translateConcept(specificConfig.@"$pathName")}, replaceName)
+            if (specificConfig.hasProperty(convertName) && specificConfig.@"$convertName" != null)
+                toConvert.put(exportColumns.findIndexOf {it==specificConfig.translateConcept(specificConfig.@"$pathName")}, convertName)
         })
-
+        if (config_number > 0)
+            forConfigNumber = " for config number $config_number"
     }
 
     @Override
@@ -60,46 +67,46 @@ profile_name: Clinical
         'clinical'
     }
 
-    private static String applyRegexes(String input, String regexesInConfig, Config c) {
+    private String applyRegexes(String input, String regexesInConfig) {
         String with_name = regexesInConfig+"_with"
-        c.@"$regexesInConfig".eachWithIndex({ regex,i -> input = input.replace(regex, c.@"$with_name"[i])})
+        specificConfig.@"$regexesInConfig".eachWithIndex({ regex,i -> input = input.replace(regex, specificConfig.@"$with_name"[i])})
         return input;
     }
 
-    private static String applyConversion(String input, String converter, Config c) {
-        def methodName = c.@"$converter"
+    private String applyConversion(String input, String converter) {
+        def methodName = specificConfig.@"$converter"
         Converter."$methodName"(input)
     }
 
-    private SetList<String> writeData(out, Map toReplace, Map toConvert, Config c, SetList<String> patients) {
-        new File(c.clinical_file_path).eachLine {line, lineNumber ->
+    private SetList<String> writeData(out, Map toReplace, Map toConvert, SetList<String> patients) {
+        new File(specificConfig.file_path).eachLine {line, lineNumber ->
             if (lineNumber == 1)
                 return;
             String[] rawFields = line.split('\t')
             //patient id will be sample id as well, we need it there twice, trim trailing spaces
             rawFields[0] = rawFields[0].trim()
             if (rawFields[0].indexOf(' ') != -1)
-                throw new IllegalArgumentException("Patient or sample IDs can't contain spaces!")
+                throw new IllegalArgumentException("Patient or sample IDs$forConfigNumber can't contain spaces!")
             if (rawFields[0].indexOf(',') != -1)
-                throw new IllegalArgumentException("Patient or sample IDs can't contain commas!")
+                throw new IllegalArgumentException("Patient or sample IDs$forConfigNumber can't contain commas!")
             def fields = [rawFields[0]]
             fields.addAll(rawFields)
             if (patients.contains(fields[0])) {
-                println("WARNING: duplicate ID in clinical data '${fields[0]}', ignoring data on line $lineNumber")
+                println("WARNING: duplicate ID in clinical data$forConfigNumber '${fields[0]}', ignoring data on line $lineNumber")
                 return
             }
             //store patient's ID (first column) for case list
             patients.push(fields[0])
             patientsForThisDataType.push(fields[0])
             toReplace.each {
-                fields[it.key] = applyRegexes(fields[it.key], it.value, c)
+                fields[it.key] = applyRegexes(fields[it.key], it.value)
             }
             toConvert.each {
                 try {
-                    fields[it.key] = applyConversion(fields[it.key], it.value, c)
+                    fields[it.key] = applyConversion(fields[it.key], it.value)
                 }
                 catch (NumberFormatException ex) {
-                    throw new IllegalArgumentException("Invalid format for conversion '" + it.value + "': " + fields[it.key] + " on line " + lineNumber + " on column number " + it.key, ex)
+                    throw new IllegalArgumentException("Invalid format for conversion$forConfigNumber '" + it.value + "': " + fields[it.key] + " on line " + lineNumber + " on column number " + it.key, ex)
                 }
             }
             out.println(fields.join('\t'))
@@ -107,14 +114,14 @@ profile_name: Clinical
         return patients
     }
 
-    private void writeMeta(Writer out, Map concept2col, Config c) {
+    private void writeMeta(Writer out, Map concept2col) {
         //write meta information
         out.println("#" + exportColumns.collect({
             concept2col[it]
         }).join('\t'));
         out.println("#" + exportColumns.join('\t'));
         out.println("#" + exportColumns.collect({
-            getTypeForConcept(it, c)
+            getTypeForConcept(it)
         }).join('\t'));
         out.println(exportColumns.collect({
             "SAMPLE" //for SAMPLE/PATIENT type
@@ -127,14 +134,14 @@ profile_name: Clinical
         }).join('\t'))
     }
 
-    private static String getTypeForConcept(String it, Config c) {
-        if (c.types.containsKey(it))
-            return c.types[it]
+    private String getTypeForConcept(String it) {
+        if (specificConfig.types.containsKey(it))
+            return specificConfig.types[it]
         else
             "STRING"
     }
 
-    private static String getLeaf(String concept) {
+    private String getLeaf(String concept) {
         String pattern = '.*'+termSeparator;
         concept.replaceAll(~pattern, '')
     }
@@ -142,10 +149,10 @@ profile_name: Clinical
 
     private Map createConceptToColumnMapping(Config c) {
         String firstRow;
-        println("Reading data file '"+c.clinical_file_path+"'")
-        new File(c.clinical_file_path).withReader { firstRow = it.readLine() } ;
-        firstRow = applyRegexes(firstRow, "mapping_concept_to_column_name_replace", c)
-        firstRow = Config.translateConcept(firstRow)
+        println("Reading data file '"+specificConfig.file_path+"'")
+        new File(specificConfig.file_path).withReader { firstRow = it.readLine() } ;
+        firstRow = applyRegexes(firstRow, "mapping_concept_to_column_name_replace")
+        firstRow = specificConfig.translateConcept(firstRow)
 
         //prepend PATIENT_ID and SAMPLE ID
         exportColumns = ['PATIENT_ID']
@@ -201,17 +208,17 @@ profile_name: Clinical
         }
 
         //rename standard (AGE, SEX, ...) columns
-        c.special_attributes.each({
+        specificConfig.special_attributes.each({
             def pathName = "mapping_"+it+"_path"
-            if (c.@"$pathName" != null)
-                concept2col[Config.translateConcept(c.@"$pathName")] = it
+            if (specificConfig.@"$pathName" != null)
+                concept2col[specificConfig.translateConcept(specificConfig.@"$pathName")] = it
         })
 
         //check uniqueness of columns just in case...
         def uniqueCols = concept2col.values().unique(false)
         if (uniqueCols.size() != concept2col.values().size()) {
             //restore original ordering of columns for the error message
-            throw new IllegalArgumentException("Columns are not unique: "
+            throw new IllegalArgumentException("Columns are not unique$forConfigNumber: "
                     + exportColumns.collect({ concept2col[it] }).join(' '))
         }
         concept2col

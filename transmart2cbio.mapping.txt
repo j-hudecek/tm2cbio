@@ -1,4 +1,4 @@
-#tranSMART to cBioPortal mapping file
+#tranSMART to cBioPortal clinical mapping file
 #comments start with #
 
 #cbioportal
@@ -28,52 +28,53 @@ type short name=
 #path to the source clinical data file
 clinical file path=
 
-#mapping of special attributes, specify concept path in tranSMART
+#clinical mapping of special attributes, specify concept path in tranSMART
 #cbioportal expects years
-mapping AGE path=
+clinical mapping AGE path=
 #days2years, days2months, months2years, months2days, years2months, years2days
-mapping AGE convert=
+clinical mapping AGE convert=
 
-mapping SEX path=
+clinical mapping SEX path=
 #regex replace, specify a regular expression and what should it be substituted with, separated by TAB, there can be multiple
-mapping SEX replace=1	MALE
-mapping SEX replace=0	FEMALE
+clinical mapping SEX replace=1	MALE
+clinical mapping SEX replace=0	FEMALE
 
 #cbioportal doesn't do anything special with this column yet and doesn't expect particular values
-mapping RACE path=
+clinical mapping RACE path=
 
 #cbioportal doesn't do anything special with this column yet and doesn't expect particular values
-mapping ETHNICITY path=
+clinical mapping ETHNICITY path=
 
 #cbioportal expects years
-mapping AGE_AT_DIAGNOSIS path=
+clinical mapping AGE_AT_DIAGNOSIS path=
 
-mapping TUMOR_TYPE path=
+clinical mapping TUMOR_TYPE path=
 
-mapping DAYS_TO_DEATH path=
-mapping DAYS_TO_DEATH convert=
+clinical mapping DAYS_TO_DEATH path=
+clinical mapping DAYS_TO_DEATH convert=
 
-mapping OS_STATUS path=
-mapping OS_STATUS replace=1	LIVING
-mapping OS_STATUS replace=0	DECEASED
+clinical mapping OS_STATUS path=
+clinical mapping OS_STATUS replace=1	LIVING
+clinical mapping OS_STATUS replace=0	DECEASED
 
-mapping OS_MONTHS path=
-mapping OS_MONTHS convert=
+clinical mapping OS_MONTHS path=
+clinical mapping OS_MONTHS convert=
 
-mapping DFS_STATUS path=
-mapping DFS_STATUS replace=
+clinical mapping DFS_STATUS path=
+clinical mapping DFS_STATUS replace=
 
-mapping DFS_MONTHS path=
-mapping DFS_MONTHS convert=
+clinical mapping DFS_MONTHS path=
+clinical mapping DFS_MONTHS convert=
 
-mapping CANCER_TYPE path=
+clinical mapping CANCER_TYPE path=
 
-mapping TUMOR_SITE path=
+clinical mapping TUMOR_SITE path=
 
 #regex replace on concepts path - allows customization of column names, specify a regular expression and what should it be substituted with, separated by TAB
-mapping concept to column name replace=
+clinical mapping concept to column name replace=
 
-mapping type <custom concept> =
+#specify a column name for a specific concept, for example "clinical mapping type \Characteristics\DrugA = DrugAResponse"
+clinical mapping type <custom concept> =
 
 #meta expression
 expression file path=

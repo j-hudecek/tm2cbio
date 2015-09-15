@@ -13,7 +13,7 @@ study type=BRCA
 #meta clinical
 clinical file path=clinical_i2b2trans.txt
 
-mapping AGE path=/Subjects/Demographics/Age
-mapping AGE convert=years2months
+clinical mapping AGE path=/Subjects/Demographics/Age
+clinical mapping AGE convert=years2months
 
 

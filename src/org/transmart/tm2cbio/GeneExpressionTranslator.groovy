@@ -7,38 +7,41 @@ package org.transmart.tm2cbio
  */
 class GeneExpressionTranslator extends AbstractTranslator {
 
+    ExpressionConfig specific_config
+
     def samplesPerGene = [:]
     def entrezIdsPerHugo = [:]
     def hugoIdsPerEntrez = [:]
 
     public void createMetaFile(Config c) {
-        if (c.expression_file_path == "") {
+        if (specific_config.file_path == "") {
             return
         }
-        if (c.expression_profile_name == null)
-            c.expression_profile_name = "$c.study_name Expression data"
-        def meta = new File(c.target_path + "/meta_expression.txt");
+        if (specific_config.profile_name == null)
+            specific_config.profile_name = "$c.study_name Expression data"
+        def meta = new File(c.target_path + "/meta_expression${configNumberAsString}.txt");
         meta.write("""cancer_study_identifier: ${c.study_id}
 genetic_alteration_type: MRNA_EXPRESSION
-datatype: ${c.expression_data_column}
+datatype: ${specific_config.data_column}
 stable_id: ${c.study_id}_mrna
-profile_name: ${c.expression_profile_name}
-profile_description: ${c.expression_profile_description} for ${c.patient_count} patients.
+profile_name: ${specific_config.profile_name}
+profile_description: ${specific_config.profile_description} for ${c.patient_count} patients.
 show_profile_in_analysis_tab: true
 """)
     }
 
     public SetList<String> writeDataFile(Config c, SetList<String> patients) {
-        new File(c.target_path + "/data_expression.txt").withWriter {out ->
+        new File(c.target_path + "/data_expression${configNumberAsString}.txt").withWriter {out ->
             patients = readData(c, patients)
             writeData(out)
         }
-        println("Created data file '" + c.target_path + "/data_expression.txt'")
+        println("Created data file '" + c.target_path + "/data_expression${configNumberAsString}.txt'")
         return patients
     }
 
-    public void init(Config c) {
-
+    public GeneExpressionTranslator(Config c, int config_number) {
+        specific_config = c.specific_configs["expression"][config_number]
+        configNumber = config_number
     }
 
     private SetList<String> readData(Config c, SetList<String> patients) {
@@ -47,8 +50,8 @@ show_profile_in_analysis_tab: true
         int hugoindex = -1;
         int entrezindex = -1;
         boolean useHugo = false;
-        println("Reading data file '"+c.expression_file_path+"'")
-        new File(c.expression_file_path).eachLine {line, lineNumber ->
+        println("Reading data file '"+specific_config.file_path+"'")
+        new File(specific_config.file_path).eachLine {line, lineNumber ->
             String[] rawFields = line.split('\t')
             if (lineNumber == 1) {
                 rawFields.eachWithIndex {String entry, int i ->
@@ -59,7 +62,7 @@ show_profile_in_analysis_tab: true
                         geneindex = hugoindex = i
                         useHugo = true
                     };
-                    if (entry.trim() == c.expression_data_column) {
+                    if (entry.trim() == specific_config.data_column) {
                         valueindex = i
                     };
                 }
@@ -67,7 +70,7 @@ show_profile_in_analysis_tab: true
                     throw new IllegalArgumentException("GENE ID or GENE SYMBOL column not found! At least one has to be specified")
                 }
                 if (valueindex == 0) {
-                    throw new IllegalArgumentException("'${c.expression_data_column}' column with expression values not found!")
+                    throw new IllegalArgumentException("'${specific_config.data_column}' column with expression values not found!")
                 }
                 return
             }
