@@ -1,8 +1,8 @@
 package org.transmart.tm2cbio.datatypes.copynumber
 
 import org.transmart.tm2cbio.Config
-import org.transmart.tm2cbio.utils.SetList
 import org.transmart.tm2cbio.datatypes.AbstractTranslator
+import org.transmart.tm2cbio.utils.SetList
 
 /**
  * Created by j.hudecek on 23-3-2015.
@@ -35,7 +35,7 @@ show_profile_in_analysis_tab: true
     }
 
     public SetList<String> writeDataFile(Config c, SetList<String> patients) {
-        new File(c.target_path + "/data_copynumber.txt").withWriter {out ->
+        new File(c.target_path + "/data_copynumber.txt").withWriter { out ->
             patients = readData(c, patients)
             writeData(out)
         }
@@ -56,11 +56,11 @@ show_profile_in_analysis_tab: true
         int hugoindex = 0;
         if (typeConfig.data_column == "" || typeConfig.data_column == null)
             typeConfig.data_column = "FLAG"
-        println("Reading data file '"+typeConfig.file_path+"'")
-        new File(typeConfig.file_path).eachLine {line, lineNumber ->
+        println("Reading data file '" + typeConfig.file_path + "'")
+        new File(typeConfig.file_path).eachLine { line, lineNumber ->
             String[] rawFields = line.split('\t')
             if (lineNumber == 1) {
-                rawFields.eachWithIndex {String entry, int i ->
+                rawFields.eachWithIndex { String entry, int i ->
                     if (entry.trim() == "BIOMARKER") {
                         hugoindex = i
                     };
@@ -104,9 +104,9 @@ show_profile_in_analysis_tab: true
         // AGRN<TAB>375790<TAB>0.142<TAB>0.091<TAB>...
         writeHeader(out)
 
-        samplesPerGene.each {samplesForGene ->
+        samplesPerGene.each { samplesForGene ->
             def fields = [samplesForGene.key]
-            patientsForThisDataType.each {fields.push(samplesForGene.value[it])}
+            patientsForThisDataType.each { fields.push(samplesForGene.value[it]) }
             out.println(fields.join('\t'))
         }
     }

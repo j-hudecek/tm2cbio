@@ -65,13 +65,13 @@ class SetList<T> implements List<T> {
 
     @Override
     boolean addAll(Collection<? extends T> c) {
-        boolean  ret = false
+        boolean ret = false
         c.each { ret |= this.add(it) }
     }
 
     @Override
     boolean addAll(int index, Collection<? extends T> c) {
-        boolean  ret = false
+        boolean ret = false
         c.each { ret |= this.add(index, it) }
     }
 

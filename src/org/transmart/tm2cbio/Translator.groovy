@@ -15,7 +15,7 @@ class Translator {
         createMetaStudyFile(c)
         def translators = []
         c.typeConfigs.each { config ->
-            config.value.eachWithIndex { e,i ->
+            config.value.eachWithIndex { e, i ->
                 translators.push(e.getTranslator(c, i))
             }
         }
@@ -24,17 +24,17 @@ class Translator {
         if (c.typeConfigs['copynumber'] == null)
             println("Skipping copy number data, 'copynumber file path' not set");
 
-        translators.each {it.createMetaFile(c)}
+        translators.each { it.createMetaFile(c) }
         println("Created meta files")
 
-        translators.each { patients = it.writeDataFile(c, patients)}
+        translators.each { patients = it.writeDataFile(c, patients) }
         println("Created data files")
 
         translators.each {
             writeCaseList(c, it.caseListName, it.patientsForThisDataType)
         }
         writeCaseList(c, 'all', patients)
-        println("Execution took ${System.currentTimeMillis()-start} ms")
+        println("Execution took ${System.currentTimeMillis() - start} ms")
     }
 
     private static void writeCaseList(Config c, String name, List<String> cases) {
@@ -50,7 +50,7 @@ case_list_ids: ${cases.join('\t')}
 
     private static void createMetaStudyFile(Config c) {
         def metastudy = new File(c.target_path + "/meta_study.txt");
-        if (c.study_type.toUpperCase() != c.study_type )
+        if (c.study_type.toUpperCase() != c.study_type)
             throw new IllegalArgumentException("Cancer type must be ALL CAPS")
         metastudy.write("""type_of_cancer: ${c.study_type}
 cancer_study_identifier: ${c.study_id}

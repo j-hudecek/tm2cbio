@@ -12,10 +12,10 @@ class CopyNumberConfig extends AbstractTypeConfig {
 
     public void check(Config c) {
         super.check()
-        if (profile_name == null || profile_name.trim()  == "")
-            profile_name = c.study_name+" copy number data"
-        if (profile_description == null || profile_description.trim()  == "")
-            profile_description = c.study_name+" copy number data"
+        if (profile_name == null || profile_name.trim() == "")
+            profile_name = c.study_name + " copy number data"
+        if (profile_description == null || profile_description.trim() == "")
+            profile_description = c.study_name + " copy number data"
     }
 
     @Override

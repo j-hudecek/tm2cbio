@@ -12,7 +12,8 @@ class ClinicalConfig extends AbstractTypeConfig {
     public String attributes_descriptions
     public String attributes_types
 
-    public final List special_attributes = ["AGE", "SEX", "RACE", "ETHNICITY", "AGE_AT_DIAGNOSIS", "TUMOR_TYPE", "DAYS_TO_DEATH", "OS_STATUS", "OS_MONTHS", "DFS_STATUS", "DFS_MONTHS", "CANCER_TYPE", "TUMOR_SITE"]
+    public
+    final List special_attributes = ["AGE", "SEX", "RACE", "ETHNICITY", "AGE_AT_DIAGNOSIS", "TUMOR_TYPE", "DAYS_TO_DEATH", "OS_STATUS", "OS_MONTHS", "DFS_STATUS", "DFS_MONTHS", "CANCER_TYPE", "TUMOR_SITE"]
 
     public String mapping_AGE_path
     public String mapping_AGE_convert
@@ -82,7 +83,7 @@ class ClinicalConfig extends AbstractTypeConfig {
             if (value != "STRING" && value != "INT" && value != "BOOLEAN")
                 throw new IllegalArgumentException("$name has invalid type $value only STRING, INT or BOOLEAN are allowed")
             types.put(concept, value)
-        }  else {
+        } else {
             //general config
             checkPathBeforeConvert(name)
             name = name.replace(" ", "_")
@@ -91,29 +92,29 @@ class ClinicalConfig extends AbstractTypeConfig {
     }
 
 
-        private void checkPathBeforeConvert(String variable_name) {
-            //if it's a convert directive, check that we already know the path to the special attribute
-            def attrName = variable_name.replace(' convert', '').replace('mapping ', '')
-            if (this.special_attributes.contains(attrName) && variable_name.endsWith(' convert')) {
-                def pathName = variable_name.replace(' convert', ' path').replace(' ', '_')
-                if (!this.hasProperty(pathName) || this.@"$pathName" == null)
-                    throw new IllegalArgumentException("Cannot add conversion to " + attrName + " without specifying the concept path")
-            }
+    private void checkPathBeforeConvert(String variable_name) {
+        //if it's a convert directive, check that we already know the path to the special attribute
+        def attrName = variable_name.replace(' convert', '').replace('mapping ', '')
+        if (this.special_attributes.contains(attrName) && variable_name.endsWith(' convert')) {
+            def pathName = variable_name.replace(' convert', ' path').replace(' ', '_')
+            if (!this.hasProperty(pathName) || this.@"$pathName" == null)
+                throw new IllegalArgumentException("Cannot add conversion to " + attrName + " without specifying the concept path")
         }
+    }
 
-        private void checkPathBeforeReplace(String variable_name) {
-            //check that the path to special attribute is specified before the regex
-            def attrName = variable_name.replace(' replace', '').replace('mapping ', '')
-            if (this.special_attributes.contains(attrName)) {
-                def pathName = variable_name.replace(' replace', ' path').replace(' ', '_')
-                if (!this.hasProperty(pathName) || this.@"$pathName" == null)
-                    throw new IllegalArgumentException("Cannot add replace regexes to " + attrName + " without specifying the concept path")
-            }
+    private void checkPathBeforeReplace(String variable_name) {
+        //check that the path to special attribute is specified before the regex
+        def attrName = variable_name.replace(' replace', '').replace('mapping ', '')
+        if (this.special_attributes.contains(attrName)) {
+            def pathName = variable_name.replace(' replace', ' path').replace(' ', '_')
+            if (!this.hasProperty(pathName) || this.@"$pathName" == null)
+                throw new IllegalArgumentException("Cannot add replace regexes to " + attrName + " without specifying the concept path")
         }
+    }
 
 
-        public static  String translateConcept(String concept) {
-            //bug workaround: groovy's regexes fall apart if term separator is \
-            return concept.replace(' ','_').replace('\\','/')
-        }
+    public static String translateConcept(String concept) {
+        //bug workaround: groovy's regexes fall apart if term separator is \
+        return concept.replace(' ', '_').replace('\\', '/')
+    }
 }

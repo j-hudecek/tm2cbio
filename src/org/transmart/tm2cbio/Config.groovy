@@ -8,9 +8,11 @@ import org.transmart.tm2cbio.datatypes.expression.ExpressionConfig
 /**
  * Created by j.hudecek on 10-11-2014.
  */
-class Config  extends Expando {
+class Config extends Expando {
     //these specify configs for a data type. In front of 1st space
-    public final Map prefixes = [clinical: { -> new ClinicalConfig()}, expression: { -> new ExpressionConfig()}, copynumber: { -> new CopyNumberConfig()}]
+    public final Map prefixes = [clinical: { -> new ClinicalConfig() },
+                                 expression: { -> new ExpressionConfig()},
+                                 copynumber: { -> new CopyNumberConfig() }]
 
     public final Map typeConfigs = [:]
 
@@ -70,7 +72,7 @@ class Config  extends Expando {
         }
         target_path = expandPath(target_path)
         typeConfigs.each { config ->
-            config.value.each { it.check(this)}
+            config.value.each { it.check(this) }
         }
         patient_count = new File(typeConfigs["clinical"][0].file_path).readLines().size() - 1
         print("Loaded config: ");

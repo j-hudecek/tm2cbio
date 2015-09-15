@@ -1,7 +1,6 @@
 package org.transmart.tm2cbio.datatypes
 
 import org.transmart.tm2cbio.Config
-import org.transmart.tm2cbio.datatypes.AbstractTranslator
 
 /**
  * Created by j.hudecek on 11-9-2015.
