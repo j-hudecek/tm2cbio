@@ -42,7 +42,14 @@ class Config extends Expando {
     public String copynumber_profile_name;
     public String copynumber_profile_description;
 
+    public String importer_command
+    public String importer_remove_old_study
+
     public int patient_count
+
+    public String getMetaStudyFilename() {
+        target_path + "/meta_study.txt"
+    }
 
     public Config(String filename) {
         List<String> lines = new File(expandPath(filename)).readLines();

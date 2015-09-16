@@ -2,6 +2,11 @@
 
 #cbioportal
 target path=c:/temp/tm2cbiotest
+
+#import script
+importer command=$PORTAL_HOME/core/src/main/scripts/cbioportalImporter.py --jvm-args "-cp $CONNECTOR_JAR:$PORTAL_HOME/core/target/core-1.0-SNAPSHOT.jar" --command
+importer remove old study=TRUE
+
 #meta study
 study id=test1
 study name=Test name
@@ -33,13 +38,12 @@ expression profile name=
 #by default study name + Expression data
 expression profile description=
 
-expression 1 file path=c:\temp\mrna_Normalised_ratios_Probe_level_0.tsv
-#expression 1 file path=c:\temp\mrna_woEntrez.tsv
+expression 1 file path=c:\temp\mrna_short.tsv
 #one of VALUE, LOG2E or ZSCORE
 expression 1 data column=ZSCORE
 
 #meta copy number 
-copynumber file path=d:\temp\subset1_DECODE\acgh_Genes_Affymetrix_SNP6_0_microarray_1.tsv 
+copynumber file path=d:\temp\subset1_DECODE\acgh_short.tsv
 #by default FLAG
 copynumber data column=
 #by default study name + Copy number data

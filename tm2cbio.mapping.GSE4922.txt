@@ -2,6 +2,11 @@
 
 #cbioportal
 target path=test
+
+#import script
+importer command=$PORTAL_HOME/core/src/main/scripts/cbioportalImporter.py --jvm-args "-cp $CONNECTOR_JAR:$PORTAL_HOME/core/target/core-1.0-SNAPSHOT.jar" --command
+importer remove old study=TRUE
+
 #meta study
 study id=GSE4922
 study name=GSE4922

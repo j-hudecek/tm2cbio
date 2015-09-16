@@ -10,6 +10,25 @@ abstract class AbstractTypeConfig {
     public String profile_name;
     public String profile_description;
 
+    public String typeName
+    public int configNumber
+
+    //empty string for config 0, config number if specified (i.e. expression 1)
+    protected String getConfigNumberAsString() {
+        if (configNumber > 0)
+            return configNumber.toString()
+        else
+            return ""
+    }
+
+    public String getMetaFilename(Config c) {
+        c.target_path + "/meta_$typeName${configNumberAsString}.txt"
+    }
+
+    public String getDataFilename(Config c) {
+        c.target_path + "/data_$typeName${configNumberAsString}.txt"
+    }
+
     public void check(Config c) {
         if (file_path != null)
             file_path = Config.expandPath(file_path)
@@ -21,4 +40,5 @@ abstract class AbstractTypeConfig {
         name = name.replace(/[^ ]+ /, "").replace(" ", "_")
         this.@"$name" = value;
     }
+
 }

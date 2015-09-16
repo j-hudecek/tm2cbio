@@ -10,6 +10,11 @@ import org.transmart.tm2cbio.datatypes.AbstractTypeConfig
 class ExpressionConfig extends AbstractTypeConfig {
     public String data_column
 
+    public ExpressionConfig() {
+        typeName = "expression"
+    }
+
+
     public void check(Config c) {
         super.check()
         if (profile_name == null || profile_name.trim() == "")

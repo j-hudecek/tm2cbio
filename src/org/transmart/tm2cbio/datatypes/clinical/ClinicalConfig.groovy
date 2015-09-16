@@ -55,6 +55,10 @@ class ClinicalConfig extends AbstractTypeConfig {
 
     public Map types = [:]
 
+    public ClinicalConfig() {
+        typeName = "clinical"
+    }
+
 
     @Override
     public AbstractTranslator getTranslator(Config c, int config_number) {

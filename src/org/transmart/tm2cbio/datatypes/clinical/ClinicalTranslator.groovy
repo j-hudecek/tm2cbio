@@ -25,7 +25,7 @@ class ClinicalTranslator extends AbstractTranslator {
     private String forConfigNumber
 
     public void createMetaFile(Config c) {
-        def metaclinical = new File(c.target_path + "/meta_clinical.txt");
+        def metaclinical = new File(typeConfig.getMetaFilename(c));
         metaclinical.write("""cancer_study_identifier: ${c.study_id}
 genetic_alteration_type: CLINICAL
 datatype: FREE-FORM
@@ -37,17 +37,16 @@ profile_name: Clinical
     }
 
     public SetList<String> writeDataFile(Config c, SetList<String> patients) {
-        new File(c.target_path + "/data_clinical.txt").withWriter { out ->
+        new File(typeConfig.getDataFilename(c)).withWriter { out ->
             writeMeta(out, concept2col)
             patients = writeData(out, toReplace, toConvert, patients)
         }
-        println("Created data file $forConfigNumber'" + c.target_path + "/data_clinical.txt'")
+        println("Created data file $forConfigNumber'" + typeConfig.getDataFilename(c) + "'")
         return patients
     }
 
     public ClinicalTranslator(Config c, int config_number) {
         typeConfig = c.typeConfigs["clinical"][config_number]
-        configNumber = config_number
         concept2col = createConceptToColumnMapping(c)
         // figure out on which column index are the special columns that need replacing/converting
         toReplace = [:]

@@ -8,16 +8,6 @@ import org.transmart.tm2cbio.utils.SetList
  */
 abstract class AbstractTranslator {
 
-    public int configNumber
-
-    //empty string for config 0, config number if specified (i.e. expression 1)
-    protected String getConfigNumberAsString() {
-        if (configNumber > 0)
-            return configNumber.toString()
-        else
-            return ""
-    }
-
     public abstract void createMetaFile(Config c)
 
     public abstract SetList<String> writeDataFile(Config c, SetList<String> patients)

@@ -23,6 +23,9 @@ type keywords=
 type color=
 type short name=
 
+#import script
+importer command=$PORTAL_HOME/core/src/main/scripts/cbioportalImporter.py --jvm-args "-cp $CONNECTOR_JAR:$PORTAL_HOME/core/target/core-1.0-SNAPSHOT.jar" --command
+importer remove old study=TRUE
 
 #meta clinical
 #path to the source clinical data file

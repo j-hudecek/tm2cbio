@@ -1,5 +1,6 @@
 package org.transmart.tm2cbio
 
+import org.transmart.tm2cbio.utils.ImportScriptGenerator
 import org.transmart.tm2cbio.utils.SetList
 
 /**
@@ -34,6 +35,8 @@ class Translator {
             writeCaseList(c, it.caseListName, it.patientsForThisDataType)
         }
         writeCaseList(c, 'all', patients)
+
+        new ImportScriptGenerator(c).Generate()
         println("Execution took ${System.currentTimeMillis() - start} ms")
     }
 

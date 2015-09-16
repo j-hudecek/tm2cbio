@@ -23,7 +23,7 @@ class CopyNumberTranslator extends AbstractTranslator {
             typeConfig.profile_name = "$c.study_name CNA data"
         if (typeConfig.profile_description == null)
             typeConfig.profile_description = typeConfig.profile_name
-        def meta = new File(c.target_path + "/meta_copynumber.txt");
+        def meta = new File(typeConfig.getMetaFilename(c));
         meta.write("""cancer_study_identifier: ${c.study_id}
 genetic_alteration_type: COPY_NUMBER_ALTERATION
 datatype: DISCRETE
@@ -35,18 +35,17 @@ show_profile_in_analysis_tab: true
     }
 
     public SetList<String> writeDataFile(Config c, SetList<String> patients) {
-        new File(c.target_path + "/data_copynumber.txt").withWriter { out ->
+        new File(typeConfig.getDataFilename(c)).withWriter { out ->
             patients = readData(c, patients)
             writeData(out)
         }
-        println("Created data file '" + c.target_path + "/data_copynumber.txt'")
+        println("Created data file '" + typeConfig.getMetaFilename(c) + "'")
         patients
     }
 
 
     public CopyNumberTranslator(Config c, int config_number) {
         typeConfig = c.typeConfigs["copynumber"][config_number]
-        configNumber = config_number
     }
 
 

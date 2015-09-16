@@ -23,7 +23,7 @@ class ExpressionTranslator extends AbstractTranslator {
         }
         if (typeConfig.profile_name == null)
             typeConfig.profile_name = "$c.study_name Expression data"
-        def meta = new File(c.target_path + "/meta_expression${configNumberAsString}.txt");
+        def meta = new File(typeConfig.getMetaFilename(c));
         meta.write("""cancer_study_identifier: ${c.study_id}
 genetic_alteration_type: MRNA_EXPRESSION
 datatype: ${typeConfig.data_column}
@@ -35,17 +35,16 @@ show_profile_in_analysis_tab: true
     }
 
     public SetList<String> writeDataFile(Config c, SetList<String> patients) {
-        new File(c.target_path + "/data_expression${configNumberAsString}.txt").withWriter { out ->
+        new File(typeConfig.getDataFilename(c)).withWriter { out ->
             patients = readData(c, patients)
             writeData(out)
         }
-        println("Created data file '" + c.target_path + "/data_expression${configNumberAsString}.txt'")
+        println("Created data file '" + typeConfig.getDataFilename(c)+"'")
         return patients
     }
 
     public ExpressionTranslator(Config c, int config_number) {
         typeConfig = c.typeConfigs["expression"][config_number]
-        configNumber = config_number
     }
 
     private SetList<String> readData(Config c, SetList<String> patients) {
