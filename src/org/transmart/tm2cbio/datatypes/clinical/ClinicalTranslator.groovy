@@ -70,7 +70,7 @@ profile_name: Clinical
 
     @Override
     String getCaseListName() {
-        'clinical'
+        'clinical'+typeConfig.configNumberAsString
     }
 
     private String applyRegexes(String input, String regexesInConfig) {

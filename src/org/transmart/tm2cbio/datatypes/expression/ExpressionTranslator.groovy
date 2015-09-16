@@ -141,7 +141,7 @@ show_profile_in_analysis_tab: true
 
     @Override
     public String getCaseListName() {
-        'mrna'
+        'mrna'+typeConfig.configNumberAsString
     }
 
 
