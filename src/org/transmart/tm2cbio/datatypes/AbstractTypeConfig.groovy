@@ -32,6 +32,9 @@ abstract class AbstractTypeConfig {
     public void check(Config c) {
         if (file_path != null)
             file_path = Config.expandPath(file_path)
+        else
+            throw new IllegalArgumentException("$typeName $configNumberAsString is missing the file path")
+
     }
 
     public abstract AbstractTranslator getTranslator(Config c, int config_number);
