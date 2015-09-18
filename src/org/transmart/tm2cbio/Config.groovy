@@ -79,7 +79,7 @@ class Config extends Expando {
         }
         target_path = expandPath(target_path)
         typeConfigs.each { config ->
-            config.value.each { it.check(this) }
+            config.value.each { if (it!=null) it.check(this) }
         }
         patient_count = new File(typeConfigs["clinical"][0].file_path).readLines().size() - 1
         print("Loaded config: ");

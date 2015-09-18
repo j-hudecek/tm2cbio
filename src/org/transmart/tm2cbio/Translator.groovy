@@ -17,7 +17,8 @@ class Translator {
         def translators = []
         c.typeConfigs.each { config ->
             config.value.eachWithIndex { e, i ->
-                translators.push(e.getTranslator(c, i))
+                if (e!=null)
+                    translators.push(e.getTranslator(c, i))
             }
         }
         if (c.typeConfigs['expression'] == null)

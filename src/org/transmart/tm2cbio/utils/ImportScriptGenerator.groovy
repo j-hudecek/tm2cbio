@@ -32,8 +32,10 @@ echo "Importing study $config.study_id"\n""")
         config.typeConfigs.each { type ->
             script.append("echo 'Importing $type.key data'\n")
             type.value.eachWithIndex { AbstractTypeConfig typeConfig, i ->
-                addCommand("Importing $type.key datafile $i", "import-study-data --meta-filename \"${typeConfig.getMetaFilename(config)}\" --data-filename \"${typeConfig.getDataFilename(config)}\"")
-                script.append("echo 'Imported $type.key data ${i>0?i:''}'\n")
+                if (typeConfig != null) {
+                    addCommand("Importing $type.key datafile $i", "import-study-data --meta-filename \"${typeConfig.getMetaFilename(config)}\" --data-filename \"${typeConfig.getDataFilename(config)}\"")
+                    script.append("echo 'Imported $type.key data ${i > 0 ? i : ''}'\n")
+                }
             }
         }
         addCommand("Importing patient lists", "import-patient-list --meta-filename \"$config.target_path/patient_lists\"")
