@@ -20,7 +20,7 @@ All attributes are imported as STRING by default. INT and BOOLEAN can be specifi
 To run the utility you need a log4j and groovy installed. You can run it with
 
 	wget https://archive.apache.org/dist/logging/log4j/1.2.17/log4j-1.2.17.jar
-	groovyc -cp .:log4j-1.2.17.jar src/org/transmart/tm2cbio/*groovy
+	groovyc -cp .:log4j-1.2.17.jar src/org/transmart/tm2cbio/*.groovy src/org/transmart/tm2cbio/utils/*.groovy src/org/transmart/tm2cbio/datatypes/*.groovy src/org/transmart/tm2cbio/datatypes/expression/*.groovy src/org/transmart/tm2cbio/datatypes/copynumber/*.groovy src/org/transmart/tm2cbio/datatypes/clinical/*.groovy 
 	java -cp $GROOVY_HOME/embeddable/groovy-all-2.3.8.jar:.  org.transmart.tm2cbio.Main tm2cbio.mapping.GSE4922.txt
 
 You will need to replace 2.3.8 with the version of Groovy you have installed
