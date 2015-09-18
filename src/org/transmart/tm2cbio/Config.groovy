@@ -95,8 +95,10 @@ class Config extends Expando {
         //get the right specific config
         int config_number = extractConfigNumber(variable_name, variable_name_prefix)
         AbstractTypeConfig specificConfig = typeConfigs[variable_name_prefix][config_number];
-        if (specificConfig == null)
+        if (specificConfig == null) {
             specificConfig = typeConfigs[variable_name_prefix][config_number] = prefixes[variable_name_prefix]() as AbstractTypeConfig
+            specificConfig.configNumber = config_number
+        }
         specificConfig
     }
 
