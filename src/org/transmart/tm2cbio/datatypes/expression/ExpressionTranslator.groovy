@@ -97,8 +97,11 @@ show_profile_in_analysis_tab: true
             if (!samplesPerGene.containsKey(geneid)) {
                 samplesPerGene[geneid] = [:]
             }
+            if (!samplesPerGene[geneid].containsKey(sampleid)) {
+                samplesPerGene[geneid][sampleid] = []
+            }
             //key can be either hugo or entrez whichever is present, we figure it out based on its presence in the mapping tables
-            samplesPerGene[geneid][sampleid] = value
+            samplesPerGene[geneid][sampleid].push(value)
             if (hugoid != '')
                 entrezIdsPerHugo[hugoid] = entrezid
             if (entrezid != '')
@@ -127,9 +130,42 @@ show_profile_in_analysis_tab: true
             }
 
             def fields = [hugoid, entrezid]
-            patientsForThisDataType.each { fields.push(samplesForGene.value[it]) }
+            patientsForThisDataType.each {
+                def values = samplesForGene.value[it]
+                if (values == null)
+                    fields.push(null)
+                else {
+                    if (ExpressionConfig.AgregateGeneExpressions.AVERAGE.toString() == typeConfig.aggregate) {
+                        fields.push((values*.toDouble().sum() / values.size()).toString())
+                    } else if (ExpressionConfig.AgregateGeneExpressions.GEOMETRICAVERAGE.toString() == typeConfig.aggregate) {
+                        fields.push(geometricMean(values*.toDouble()).toString())
+                    } else if (ExpressionConfig.AgregateGeneExpressions.FIRST.toString() == typeConfig.aggregate) {
+                        fields.push(values[0])
+                    } else if (ExpressionConfig.AgregateGeneExpressions.LAST.toString() == typeConfig.aggregate) {
+                        fields.push(values.last())
+                    } else if (ExpressionConfig.AgregateGeneExpressions.ERROR.toString() == typeConfig.aggregate) {
+                        if (values.size() > 1)
+                            throw new IllegalArgumentException("Gene '$geneid' has multiple values, please specify a method of aggregation in 'expression aggregate', one of FIRST, LAST, AVERAGE, GEOMETRICAVERAGE or ERROR ")
+                        fields.push(values.first())
+                    } else {
+                        throw new IllegalArgumentException("Aggregation method '$typeConfig.aggregate' is not yet implemented, please specify one of FIRST, LAST, AVERAGE, GEOMETRICAVERAGE or ERROR in 'expression aggregate' ")
+                    }
+                }
+            }
             out.println(fields.join('\t'))
         }
+    }
+
+    public static double geometricMean(List<Double> x) {
+        int n = x.size();
+        double GM_log = 0.0d;
+        for (int i = 0; i < n; ++i) {
+            if (x[i] == 0L) {
+                return 0.0d;
+            }
+            GM_log += Math.log(x[i]);
+        }
+        return Math.exp(GM_log / n);
     }
 
     private void writeHeader(out) {

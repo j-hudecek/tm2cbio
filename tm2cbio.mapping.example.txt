@@ -37,10 +37,15 @@ expression data column=ZSCORE
 expression profile name=
 #by default study name + Expression data
 expression profile description=
+#one of FIRST, LAST, AVERAGE, GEOMETRICAVERAGE or ERROR (default)
+expression aggregate=AVERAGE
 
-expression 1 file path=c:\temp\mrna_short.tsv
+expression 2 file path=c:\temp\mrna_short.tsv
 #one of VALUE, LOG2E or ZSCORE
-expression 1 data column=ZSCORE
+expression 2 data column=ZSCORE
+#one of FIRST, LAST, AVERAGE, GEOMETRICAVERAGE or ERROR (default)
+expression aggregate=GEOMETRICAVERAGE
+
 
 #meta copy number 
 copynumber file path=d:\temp\subset1_DECODE\acgh_short.tsv

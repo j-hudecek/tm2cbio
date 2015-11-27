@@ -87,6 +87,8 @@ expression data column=
 expression profile name=
 #by default study name + Expression data
 expression profile description=
+#one of FIRST, LAST, AVERAGE, GEOMETRICAVERAGE or ERROR (default)
+expression aggregate=
 
 #meta copy number 
 copynumber file path=
