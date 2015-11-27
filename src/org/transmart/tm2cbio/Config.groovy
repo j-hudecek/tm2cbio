@@ -32,16 +32,6 @@ class Config extends Expando {
     public String type_color
     public String type_short_name
 
-    public String expression_file_path;
-    public String expression_data_column;
-    public String expression_profile_name;
-    public String expression_profile_description;
-
-    public String copynumber_file_path;
-    public String copynumber_data_column;
-    public String copynumber_profile_name;
-    public String copynumber_profile_description;
-
     public String importer_command
     public String importer_remove_old_study
 
