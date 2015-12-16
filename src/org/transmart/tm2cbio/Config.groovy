@@ -4,6 +4,7 @@ import org.transmart.tm2cbio.datatypes.AbstractTypeConfig
 import org.transmart.tm2cbio.datatypes.clinical.ClinicalConfig
 import org.transmart.tm2cbio.datatypes.copynumber.CopyNumberConfig
 import org.transmart.tm2cbio.datatypes.expression.ExpressionConfig
+import org.transmart.tm2cbio.datatypes.segmented.SegmentedConfig
 
 /**
  * Created by j.hudecek on 10-11-2014.
@@ -12,7 +13,9 @@ class Config extends Expando {
     //these specify configs for a data type. In front of 1st space
     public final Map prefixes = [clinical: { -> new ClinicalConfig() },
                                  expression: { -> new ExpressionConfig()},
-                                 copynumber: { -> new CopyNumberConfig() }]
+                                 copynumber: { -> new CopyNumberConfig() },
+                                 segmented: { -> new SegmentedConfig() },
+    ]
 
     public final Map typeConfigs = [:]
 

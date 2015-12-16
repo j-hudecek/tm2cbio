@@ -98,3 +98,12 @@ copynumber data column=
 copynumber profile name=
 #by default study name + Copy number data
 copynumber profile description=
+
+#meta segmented copy number
+segmented file path=
+#by default study name + segmented copy number data
+segmented profile name=
+#by default study name + segmented copy number data
+segmented profile description=
+#by default FLAG
+segmented data column=

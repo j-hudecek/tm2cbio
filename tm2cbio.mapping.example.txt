@@ -47,11 +47,11 @@ expression 2 data column=ZSCORE
 expression aggregate=GEOMETRICAVERAGE
 
 
-#meta copy number 
-copynumber file path=d:\temp\subset1_DECODE\acgh_short.tsv
+#meta segmented copy number
+segmented file path=d:\temp\Copy+number+aberrations+%28DNA%29\Agilent+180K+aCGH+microarray\Regions\data_acgh.tsv
+#by default study name + segmented copy number data
+segmented profile name=
+#by default study name + segmented copy number data
+segmented profile description=
 #by default FLAG
-copynumber data column=
-#by default study name + Copy number data
-copynumber profile name=
-#by default study name + Copy number data
-copynumber profile description=
+segmented data column=
