@@ -38,7 +38,7 @@ echo "Importing study $config.study_id"\n""")
                 }
             }
         }
-        addCommand("Importing patient lists", "import-patient-list --meta-filename \"$config.target_path/patient_lists\"")
+        addCommand("Importing patient lists", "import-case-list --meta-filename \"$config.target_path/patient_lists/all.txt\"")
         script.append("echo 'Import done!'\n")
 
         println "Created script $config.target_path/$filename, run it to import the study to cBioPortal"
