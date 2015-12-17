@@ -58,10 +58,10 @@ show_profile_in_analysis_tab: true
             String[] rawFields = line.split('\t')
             if (lineNumber == 1) {
                 rawFields.eachWithIndex { String entry, int i ->
-                    if (entry.trim() == "GENE ID") {
+                    if (entry.trim() == typeConfig.entrez_column) {
                         geneindex = entrezindex = i
                     };
-                    if (entry.trim() == "GENE SYMBOL") {
+                    if (entry.trim() ==  typeConfig.hugo_column) {
                         geneindex = hugoindex = i
                         useHugo = true
                     };
@@ -70,7 +70,7 @@ show_profile_in_analysis_tab: true
                     };
                 }
                 if (geneindex == -1) {
-                    throw new IllegalArgumentException("GENE ID or GENE SYMBOL column not found! At least one has to be specified")
+                    throw new IllegalArgumentException("'$typeConfig.hugo_column' or '$typeConfig.entrez_column' column not found! At least one has to be specified")
                 }
                 if (valueindex == 0) {
                     throw new IllegalArgumentException("'${typeConfig.data_column}' column with expression values not found!")

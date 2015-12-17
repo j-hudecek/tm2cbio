@@ -89,6 +89,10 @@ expression profile name=
 expression profile description=
 #one of FIRST, LAST, AVERAGE, GEOMETRICAVERAGE or ERROR (default)
 expression aggregate=
+#column name for Entrez gene id, by default GENE ID
+expression entrez column=
+#column name for Hugo gene symbol, by default GENE SYMBOL
+expression hugo column=
 
 #meta copy number 
 copynumber file path=
