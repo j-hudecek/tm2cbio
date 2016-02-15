@@ -115,6 +115,11 @@ profile_name: Clinical
                     throw new IllegalArgumentException("Invalid format for conversion$forConfigNumber '" + it.value + "': " + fields[it.key] + " on line " + lineNumber + " on column number " + it.key, ex)
                 }
             }
+            fields = fields.collect({
+                if (it == "")
+                    return "NA"
+                return it
+            })
             out.println(fields.join('\t'))
         }
         return patients
