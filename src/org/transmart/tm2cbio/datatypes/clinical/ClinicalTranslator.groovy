@@ -88,7 +88,7 @@ profile_name: Clinical
         new File(typeConfig.file_path).eachLine { line, lineNumber ->
             if (lineNumber == 1)
                 return;
-            String[] rawFields = line.split('\t', -1) //-1 is a limit of length to include also empty fields
+            String[] rawFields = line.replace("\"","").split('\t', -1) //-1 is a limit of length to include also empty fields
             //patient id will be sample id as well, we need it there twice, trim trailing spaces
             rawFields[0] = rawFields[0].trim()
             if (rawFields[0].indexOf(' ') != -1)
