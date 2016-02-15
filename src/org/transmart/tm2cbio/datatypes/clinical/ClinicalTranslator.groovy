@@ -29,7 +29,7 @@ class ClinicalTranslator extends AbstractTranslator {
         metaclinical.write("""cancer_study_identifier: ${c.study_id}
 genetic_alteration_type: CLINICAL
 datatype: CLINICAL
-data_filename: ${typeConfig.getDataFilename(c)}
+data_filename: ${typeConfig.getDataFilenameOnly(c)}
 """)
     }
 

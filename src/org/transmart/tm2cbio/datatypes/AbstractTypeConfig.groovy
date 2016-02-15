@@ -26,8 +26,12 @@ abstract class AbstractTypeConfig {
     }
 
     public String getDataFilename(Config c) {
-        c.target_path + "/data_$typeName${configNumberAsString}.txt"
+        c.target_path + "/" + getDataFilenameOnly(c)
     }
+    
+    public String getDataFilenameOnly(Config c) {
+        "data_$typeName${configNumberAsString}.txt"        
+    } 
 
     public void check(Config c) {
         if (file_path != null)

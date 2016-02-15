@@ -26,7 +26,7 @@ class SegmentedTranslator extends AbstractTranslator {
         meta.write("""cancer_study_identifier: ${c.study_id}
 genetic_alteration_type: COPY_NUMBER_ALTERATION
 datatype: SEG
-data_filename: ${typeConfig.getDataFilename(c)}
+data_filename: ${typeConfig.getDataFilenameOnly(c)}
 description: ${typeConfig.profile_description} for ${c.patient_count} patients.
 reference_genome_id: hg19
 """)

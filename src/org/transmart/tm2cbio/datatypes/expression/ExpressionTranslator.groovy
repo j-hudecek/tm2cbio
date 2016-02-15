@@ -32,6 +32,7 @@ datatype: ${typeConfig.data_column}
 stable_id: ${datatype2StableId[typeConfig.data_column]}
 profile_name: ${typeConfig.profile_name}
 profile_description: ${typeConfig.profile_description} for ${c.patient_count} patients.
+data_filename: ${typeConfig.getDataFilenameOnly(c)}
 show_profile_in_analysis_tab: true
 """)
     }

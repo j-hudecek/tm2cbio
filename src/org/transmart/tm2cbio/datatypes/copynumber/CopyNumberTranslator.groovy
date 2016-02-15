@@ -31,7 +31,7 @@ stable_id: gistic
 profile_name: ${typeConfig.profile_name}
 profile_description: ${typeConfig.profile_description} for ${c.patient_count} patients.
 show_profile_in_analysis_tab: true
-data_filename: ${typeConfig.getDataFilename(c)}
+data_filename: ${typeConfig.getDataFilenameOnly(c)}
 """)
     }
 
