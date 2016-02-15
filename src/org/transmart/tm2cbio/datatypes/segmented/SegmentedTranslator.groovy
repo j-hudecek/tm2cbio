@@ -24,14 +24,10 @@ class SegmentedTranslator extends AbstractTranslator {
             typeConfig.profile_description = typeConfig.profile_name
         def meta = new File(typeConfig.getMetaFilename(c));
         meta.write("""cancer_study_identifier: ${c.study_id}
-genetic_alteration_type: SEGMENT
-datatype: SEGMENT
-stable_id: ${c.study_id}_segment
-profile_name: ${typeConfig.profile_name}
+genetic_alteration_type: COPY_NUMBER_ALTERATION
+datatype: SEG
+data_filename: ${typeConfig.getDataFilename(c)}
 description: ${typeConfig.profile_description} for ${c.patient_count} patients.
-profile_description: ${typeConfig.profile_description} for ${c.patient_count} patients.
-show_profile_in_analysis_tab: true
-data_filename: data_segmented.txt
 reference_genome_id: hg19
 """)
     }

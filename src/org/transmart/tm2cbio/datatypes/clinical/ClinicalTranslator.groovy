@@ -28,11 +28,8 @@ class ClinicalTranslator extends AbstractTranslator {
         def metaclinical = new File(typeConfig.getMetaFilename(c));
         metaclinical.write("""cancer_study_identifier: ${c.study_id}
 genetic_alteration_type: CLINICAL
-datatype: FREE-FORM
-stable_id: ${c.study_id}_clinical
-profile_description: Clinical data for ${c.patient_count} patients from tranSMART.
-show_profile_in_analysis_tab: true
-profile_name: Clinical
+datatype: CLINICAL
+data_filename: ${typeConfig.getDataFilename(c)}
 """)
     }
 

@@ -12,6 +12,8 @@ import org.transmart.tm2cbio.utils.SetList
 class ExpressionTranslator extends AbstractTranslator {
 
     ExpressionConfig typeConfig
+    //magic stable ids for data type
+    def datatype2StableId = ['CONTINUOUS':'mrna', 'Z-SCORE':'mrna_median_Zscores', 'DISCRETE':'mrna_outliers']
 
     def samplesPerGene = [:]
     def entrezIdsPerHugo = [:]
@@ -27,7 +29,7 @@ class ExpressionTranslator extends AbstractTranslator {
         meta.write("""cancer_study_identifier: ${c.study_id}
 genetic_alteration_type: MRNA_EXPRESSION
 datatype: ${typeConfig.data_column}
-stable_id: ${c.study_id}_mrna
+stable_id: ${datatype2StableId[typeConfig.data_column]}
 profile_name: ${typeConfig.profile_name}
 profile_description: ${typeConfig.profile_description} for ${c.patient_count} patients.
 show_profile_in_analysis_tab: true

@@ -27,10 +27,11 @@ class CopyNumberTranslator extends AbstractTranslator {
         meta.write("""cancer_study_identifier: ${c.study_id}
 genetic_alteration_type: COPY_NUMBER_ALTERATION
 datatype: DISCRETE
-stable_id: ${c.study_id}_gistic
+stable_id: gistic
 profile_name: ${typeConfig.profile_name}
 profile_description: ${typeConfig.profile_description} for ${c.patient_count} patients.
 show_profile_in_analysis_tab: true
+data_filename: ${typeConfig.getDataFilename(c)}
 """)
     }
 
