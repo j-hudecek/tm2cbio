@@ -31,7 +31,7 @@ importer remove old study=TRUE
 #path to the source clinical data file
 clinical file path=
 
-#clinical mapping of special attributes, specify concept path in tranSMART
+#clinical mapping of special attributes, specify concept path in tranSMART, remove quotes and use forward slashes (/)
 #cbioportal expects years
 clinical mapping AGE path=
 #days2years, days2months, months2years, months2days, years2months, years2days

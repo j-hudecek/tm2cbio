@@ -119,6 +119,6 @@ class ClinicalConfig extends AbstractTypeConfig {
 
     public static String translateConcept(String concept) {
         //bug workaround: groovy's regexes fall apart if term separator is \
-        return concept.replace(' ', '_').replace('\\', '/')
+        return concept.replace("\"","").replace(' ', '_').replace('\\', '/')
     }
 }
