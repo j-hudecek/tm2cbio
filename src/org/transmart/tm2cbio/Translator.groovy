@@ -54,8 +54,6 @@ case_list_ids: ${cases.join('\t')}
 
     private static void createMetaStudyFile(Config c) {
         def metastudy = new File(c.target_path + "/meta_study.txt");
-        if (c.study_type.toUpperCase() != c.study_type)
-            throw new IllegalArgumentException("Cancer type must be ALL CAPS")
         metastudy.write("""type_of_cancer: ${c.study_type}
 cancer_study_identifier: ${c.study_id}
 name: ${c.study_name}
