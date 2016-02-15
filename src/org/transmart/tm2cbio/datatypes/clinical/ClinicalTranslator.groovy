@@ -129,10 +129,10 @@ profile_name: Clinical
         out.println("#" + exportColumns.collect({
             getTypeForConcept(it)
         }).join('\t'));
-        out.println(exportColumns.collect({
+        out.println("#" + exportColumns.collect({
             "SAMPLE" //for SAMPLE/PATIENT type
         }).join('\t'))
-        out.println(exportColumns.collect({
+        out.println("#" + exportColumns.collect({
             "5" //for priority
         }).join('\t'))
         out.println(exportColumns.collect({
