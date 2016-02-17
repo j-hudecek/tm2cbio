@@ -56,6 +56,7 @@ show_profile_in_analysis_tab: true
         int hugoindex = -1;
         int entrezindex = -1;
         boolean useHugo = false;
+        initSampleMapping(typeConfig)
         println("Reading data file '" + typeConfig.file_path + "'")
         new File(typeConfig.file_path).eachLine { line, lineNumber ->
             String[] rawFields = line.split('\t')
@@ -82,7 +83,7 @@ show_profile_in_analysis_tab: true
             }
             //patient id will be sample id as well, we need it there twice, trim trailing spaces
             def sampleid = rawFields[0].trim()
-            checkSampleID(sampleid)
+            sampleid = mapSampleid(sampleid)
             if (!patientsForThisDataType.contains(sampleid)) {
                 patientsForThisDataType.push(sampleid)
             }
