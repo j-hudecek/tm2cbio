@@ -57,6 +57,7 @@ data_filename: ${typeConfig.getDataFilenameOnly(c)}
         if (typeConfig.data_column == "" || typeConfig.data_column == null)
             typeConfig.data_column = "FLAG"
         println("Reading data file '" + typeConfig.file_path + "'")
+        initSampleMapping(typeConfig)
         new File(typeConfig.file_path).eachLine { line, lineNumber ->
             String[] rawFields = line.split('\t')
             if (lineNumber == 1) {
@@ -78,7 +79,7 @@ data_filename: ${typeConfig.getDataFilenameOnly(c)}
             }
             //patient id will be sample id as well, we need it there twice, trim trailing spaces
             def sampleid = rawFields[0].trim()
-            checkSampleID(sampleid)
+            sampleid = mapSampleid(sampleid)
             if (!patientsForThisDataType.contains(sampleid)) {
                 patientsForThisDataType.push(sampleid)
             }

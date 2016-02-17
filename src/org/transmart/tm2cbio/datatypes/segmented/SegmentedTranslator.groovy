@@ -61,6 +61,7 @@ reference_genome_id: hg19
 //            SAMPLE_ID_2<TAB>2<TAB>474222<TAB>5505492<TAB>2639<TAB>-0.0112
 //            SAMPLE_ID_2<TAB>2<TAB>5506070<TAB>5506204<TAB>2<TAB>-1.5012
 
+        initSampleMapping(typeConfig)
         new File(typeConfig.file_path).eachLine { line, lineNumber ->
             String[] rawFields = line.split('\t')
             if (lineNumber == 1) {
@@ -88,7 +89,7 @@ reference_genome_id: hg19
             }
             //patient id will be sample id as well, we need it there twice, trim trailing spaces
             def sampleid = rawFields[0].trim()
-            checkSampleID(sampleid)
+            sampleid = mapSampleid(sampleid)
             if (!patientsForThisDataType.contains(sampleid)) {
                 patientsForThisDataType.push(sampleid)
             }

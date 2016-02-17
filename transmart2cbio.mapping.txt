@@ -96,6 +96,8 @@ expression hugo column=
 
 #meta copy number 
 copynumber file path=
+#assay id to patient id mapping file 
+copynumber samplesfile path=
 #by default FLAG
 copynumber data column=
 #by default study name + Copy number data
@@ -105,6 +107,8 @@ copynumber profile description=
 
 #meta segmented copy number
 segmented file path=
+#assay id to patient id mapping file 
+segmented samplesfile path=
 #by default study name + segmented copy number data
 segmented profile name=
 #by default study name + segmented copy number data

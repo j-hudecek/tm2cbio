@@ -9,6 +9,7 @@ abstract class AbstractTypeConfig {
     public String file_path;
     public String profile_name;
     public String profile_description;
+    public String samplesfile_path
 
     public String typeName
     public int configNumber
