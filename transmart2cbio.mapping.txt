@@ -73,10 +73,13 @@ clinical mapping CANCER_TYPE path=
 
 clinical mapping TUMOR_SITE path=
 
-#regex replace on concepts path - allows customization of column names, specify a regular expression and what should it be substituted with, separated by TAB
+#specify a column name for a specific concept, for example "clinical mapping concept to column name replace=\Characteristics\DrugA	DrugAResponse"
+#or regex replace on concepts path - allows customization of column names, specify a regular expression and what should it be substituted with, separated by TAB
+#note that the regular expression needs to match the input (concept path) exactly including quotes and slashes 
 clinical mapping concept to column name replace=
 
-#specify a column name for a specific concept, for example "clinical mapping type \Characteristics\DrugA = DrugAResponse"
+#specify type for a specific concept, for example "clinical mapping type \Characteristics\DrugA=NUMBER"
+#possible types are STRING (default), NUMBER and BINARY
 clinical mapping type <custom concept> =
 
 #meta expression
