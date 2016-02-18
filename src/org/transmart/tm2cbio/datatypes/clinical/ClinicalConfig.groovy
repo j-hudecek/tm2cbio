@@ -84,8 +84,8 @@ class ClinicalConfig extends AbstractTypeConfig {
         } else if (name.startsWith("mapping type ")) {
             //handle type annotation
             def concept = translateConcept(name.substring("mapping type ".length()))
-            if (value != "STRING" && value != "INT" && value != "BOOLEAN")
-                throw new IllegalArgumentException("$name has invalid type $value only STRING, INT or BOOLEAN are allowed")
+            if (value != "STRING" && value != "NUMBER" && value != "BOOLEAN")
+                throw new IllegalArgumentException("$name has invalid type $value only STRING, NUMBER or BOOLEAN are allowed")
             types.put(concept, value)
         } else {
             //general config
