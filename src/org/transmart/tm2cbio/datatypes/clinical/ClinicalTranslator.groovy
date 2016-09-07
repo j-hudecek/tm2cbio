@@ -26,9 +26,10 @@ class ClinicalTranslator extends AbstractTranslator {
 
     public void createMetaFile(Config c) {
         def metaclinical = new File(typeConfig.getMetaFilename(c));
+        // datatype for clinical file should now be PATIENT_ATTRIBUTES or SAMPLE_ATTRIBUTES
         metaclinical.write("""cancer_study_identifier: ${c.study_id}
 genetic_alteration_type: CLINICAL
-datatype: CLINICAL
+datatype: SAMPLE_ATTRIBUTES
 data_filename: ${typeConfig.getDataFilenameOnly(c)}
 """)
     }
@@ -131,9 +132,6 @@ data_filename: ${typeConfig.getDataFilenameOnly(c)}
         out.println("#" + exportColumns.collect({
             getTypeForConcept(it)
         }).join('\t'));
-        out.println("#" + exportColumns.collect({
-            "SAMPLE" //for SAMPLE/PATIENT type
-        }).join('\t'))
         out.println("#" + exportColumns.collect({
             "5" //for priority
         }).join('\t'))
