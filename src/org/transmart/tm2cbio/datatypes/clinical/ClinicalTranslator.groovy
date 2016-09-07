@@ -174,9 +174,9 @@ data_filename: ${typeConfig.getDataFilenameOnly(c)}
         //get a list of collisions - different concepts with the same leaf name
         concepts.each {
             String leaf = getLeaf(it);
-            if (!leaf2concept.containsKey(leaf))
-                leaf2concept[leaf] = [];
-            leaf2concept[leaf].push(it)
+            if (!leaf2concept.containsKey(leaf.toLowerCase()))
+                leaf2concept[leaf.toLowerCase()] = [];
+            leaf2concept[leaf.toLowerCase()].push(it)
         }
 
         //prepend unique parts of the path to the leaf name to avoid the collision
@@ -193,7 +193,7 @@ data_filename: ${typeConfig.getDataFilenameOnly(c)}
                 for (int i = 0; i < longestPathLength; i++) {
                     //remove all terms which are the same in all the concepts
                     def term = longestPath[i];
-                    if (termsPerConcept.every({ it.size() <= i || it[i] == term })) {
+                    if (termsPerConcept.every({ it.size() <= i || it[i].toLowerCase() == term.toLowerCase() })) {
                         //all concepts have the same term on this position (or they are shorter), skip this term
                         toskip.push(i)
                     }
