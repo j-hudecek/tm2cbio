@@ -49,6 +49,8 @@ expression aggregate=GEOMETRICAVERAGE
 
 #meta segmented copy number
 segmented file path=d:\temp\Copy+number+aberrations+%28DNA%29\Agilent+180K+aCGH+microarray\Regions\data_acgh.tsv
+#assay id to patient id mapping file 
+segmented samplesfile path=c:\Users\j.hudecek\Documents\samples.txt
 #by default study name + segmented copy number data
 segmented profile name=
 #by default study name + segmented copy number data
