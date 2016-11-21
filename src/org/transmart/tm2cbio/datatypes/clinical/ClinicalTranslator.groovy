@@ -5,6 +5,8 @@ import org.transmart.tm2cbio.datatypes.AbstractTranslator
 import org.transmart.tm2cbio.utils.Converter
 import org.transmart.tm2cbio.utils.SetList
 
+import java.util.stream.Collectors
+
 /**
  * Created by j.hudecek on 20-3-2015.
  */
@@ -19,27 +21,62 @@ class ClinicalTranslator extends AbstractTranslator {
     private static final String termSeparator = '/'
 
     private List<String> exportColumns
+    private List<String> patientExportColumns = []
+    private List<String> sampleExportColumns = []
 
     private ClinicalConfig typeConfig
 
     private String forConfigNumber
 
     public void createMetaFile(Config c) {
-        def metaclinical = new File(typeConfig.getMetaFilename(c));
-        // datatype for clinical file should now be PATIENT_ATTRIBUTES or SAMPLE_ATTRIBUTES
+        createMetaFilePatient(c)
+        createMetaFileSample(c)
+    }
+
+    private void createMetaFilePatient(Config c){
+        def metaclinical = new File(getPatientFileName(typeConfig.getMetaFilename(c)))
         metaclinical.write("""cancer_study_identifier: ${c.study_id}
 genetic_alteration_type: CLINICAL
-datatype: SAMPLE_ATTRIBUTES
-data_filename: ${typeConfig.getDataFilenameOnly(c)}
+datatype: PATIENT_ATTRIBUTES
+data_filename: ${getPatientFileName(typeConfig.getDataFilenameOnly(c))}
 """)
     }
 
+    private void createMetaFileSample(Config c){
+        def metaclinical = new File(getSampleFileName(typeConfig.getMetaFilename(c)))
+        metaclinical.write("""cancer_study_identifier: ${c.study_id}
+genetic_alteration_type: CLINICAL
+datatype: SAMPLE_ATTRIBUTES
+data_filename: ${getSampleFileName(typeConfig.getDataFilenameOnly(c))}
+""")
+    }
+
+    private String getPatientFileName(String filename){
+        return filename.substring(0, filename.lastIndexOf("."))+"_patient.txt"
+    }
+
+    private String getSampleFileName(String filename){
+        return filename.substring(0, filename.lastIndexOf("."))+"_sample.txt"
+    }
+
     public SetList<String> writeDataFile(Config c, SetList<String> patients) {
-        new File(typeConfig.getDataFilename(c)).withWriter { out ->
-            writeMeta(out, concept2col)
-            patients = writeData(out, toReplace, toConvert, patients)
-        }
-        println("Created data file $forConfigNumber'" + typeConfig.getDataFilename(c) + "'")
+        // create filewriters for the patient and sample files
+        Writer patientFileWriter = new File(getPatientFileName(typeConfig.getDataFilename(c))).newWriter();
+        Writer sampleFileWriter = new File(getSampleFileName(typeConfig.getDataFilename(c))).newWriter();
+
+        // write the top 5 meta lines
+        writeMeta(patientFileWriter, concept2col, patientExportColumns)
+        writeMeta(sampleFileWriter, concept2col, sampleExportColumns)
+
+        // write the actual data
+        patients = writeData(patientFileWriter, sampleFileWriter, toReplace, toConvert, patients)
+
+        // close the writers
+        patientFileWriter.close()
+        sampleFileWriter.close()
+
+        println("Created data file $forConfigNumber'" + getPatientFileName(typeConfig.getDataFilename(c)) + "'")
+        println("Created data file $forConfigNumber'" + getSampleFileName(typeConfig.getDataFilename(c)) + "'")
         return patients
     }
 
@@ -82,7 +119,7 @@ data_filename: ${typeConfig.getDataFilenameOnly(c)}
         Converter."$methodName"(input)
     }
 
-    private SetList<String> writeData(out, Map toReplace, Map toConvert, SetList<String> patients) {
+    private SetList<String> writeData(patientWriter, sampleWriter, Map toReplace, Map toConvert, SetList<String> patients) {
         new File(typeConfig.file_path).eachLine { line, lineNumber ->
             if (lineNumber == 1)
                 return;
@@ -118,24 +155,46 @@ data_filename: ${typeConfig.getDataFilenameOnly(c)}
                     return "NA"
                 return it
             })
-            out.println(fields.join('\t'))
+
+            // split the result fields into patient and sample fields and write the to the files
+            def patientValues = [], sampleValues = []
+            splitValues(fields, patientValues, sampleValues)
+            patientWriter.println(patientValues.stream().collect(Collectors.joining("\t")))
+            sampleWriter.println(sampleValues.stream().collect(Collectors.joining("\t")));
         }
         return patients
     }
 
-    private void writeMeta(Writer out, Map concept2col) {
+    private void splitValues(List<String> fields, List<String> patientValues, List<String> sampleValues){
+        // for each of the fields
+        for(int i=0; i<fields.size(); i++){
+            // fetch the headername and the value
+            def header = exportColumns[i]
+            def value = fields.get(i)
+            // check whether the header belongs to patient or sample and add to the respective list
+            if(patientExportColumns.contains(header)){
+                patientValues.add(value)
+            }
+            // since an attribute can be in both another if
+            if(sampleExportColumns.contains(header)){
+                sampleValues.add(value)
+            }
+        }
+    }
+
+    private void writeMeta(Writer out, Map concept2col, List<String> columns) {
         //write meta information
-        out.println("#" + exportColumns.collect({
+        out.println("#" + columns.collect({
             concept2col[it]
         }).join('\t'));
-        out.println("#" + exportColumns.join('\t'));
-        out.println("#" + exportColumns.collect({
+        out.println("#" + columns.join('\t'));
+        out.println("#" + columns.collect({
             getTypeForConcept(it)
         }).join('\t'));
-        out.println("#" + exportColumns.collect({
+        out.println("#" + columns.collect({
             "5" //for priority
         }).join('\t'))
-        out.println(exportColumns.collect({
+        out.println(columns.collect({
             concept2col[it]
         }).join('\t'))
     }
@@ -227,6 +286,31 @@ data_filename: ${typeConfig.getDataFilenameOnly(c)}
             throw new IllegalArgumentException("Columns are not unique$forConfigNumber: "
                     + exportColumns.collect({ concept2col[it] }).join(' '))
         }
+
+        // split the original column names into sample and patient list
+        generateSamplePatientColumns()
         concept2col
+    }
+
+    private void generateSamplePatientColumns(){
+        exportColumns.each {
+            if(!typeConfig.attributeTypes.containsKey(it.toUpperCase())){
+                println("\tMissing and assumed sample attribute: ${it}")
+                sampleExportColumns.add(it)
+            }
+            else{
+                String type = typeConfig.attributeTypes.get(it.toUpperCase())
+                if(type.equalsIgnoreCase("S")){
+                    sampleExportColumns.add(it)
+                }
+                else if(type.equalsIgnoreCase("P")){
+                    patientExportColumns.add(it)
+                }
+                else{
+                    patientExportColumns.add(it)
+                    sampleExportColumns.add(it)
+                }
+            }
+        }
     }
 }

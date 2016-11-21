@@ -1,0 +1,100 @@
+# mapping attributes to the patient or sample file
+# specified attributes are equal to the second line of the meta data of your output file
+#
+# attribute<tab>type
+# type can be: B(oth), P(atient), S(ample)
+
+# Both
+PATIENT_ID	B
+
+# Patient attributes
+Age	P
+Sex	P
+Gender	P
+Adjuvant_therapy_-_Chemotherapy_-_Type_-_5-FU/LV	P
+Adjuvant_therapy_-_Chemotherapy_-_Type_-_5-FU	P
+Adjuvant_therapy_-_Chemotherapy_-_Type_-_Capecitabine	P
+Adjuvant_therapy_-_Chemotherapy_-_Type_-_Different	P
+Adjuvant_therapy_-_Chemotherapy_-_Type_-_Oxaliplatin	P
+Adjuvant_therapy_-_Chemotherapy_-_Type_-_Panorex	P
+Adjuvant_therapy_-_Chemotherapy_-_Type_-_Tumodex	P
+Adjuvant_therapy_-_Chemotherapy_-_Type_-_Xelox	P
+Adjuvant_therapy_-_Chemotherapy	P
+Adjuvant_therapy_-_Radiotherapy_-_Timing	P
+Adjuvant_therapy_-_Radiotherapy	P
+Resection_primary_tumor_-_Perforation	P
+Resection_primary_tumor_-_Surgery_plan_-_Indication_acute_-_Abscessed_diverticulitis	P
+Resection_primary_tumor_-_Surgery_plan_-_Indication_acute_-_Caecal_blowout	P
+Resection_primary_tumor_-_Surgery_plan_-_Indication_acute_-_Ileus	P
+Resection_primary_tumor_-_Surgery_plan_-_Indication_acute_-_Impending_blowout	P
+Resection_primary_tumor_-_Surgery_plan_-_Indication_acute_-_Impending_caecal_blowout	P
+Resection_primary_tumor_-_Surgery_plan_-_Indication_acute_-_Perforation	P
+Resection_primary_tumor_-_Surgery_plan_-_Indication_acute_-_Peritonitis_carcinomatosa	P
+Resection_primary_tumor_-_Surgery_plan_-_Indication_acute_-_Peritonitis	P
+Resection_primary_tumor_-_Surgery_plan_-_Indication_acute_-_Sigmoid_occlusion	P
+Resection_primary_tumor_-_Surgery_plan_-_Indication_acute_-_Suspected_appendicitis	P
+Resection_primary_tumor_-_Surgery_plan	P
+Resection_primary_tumor_-_Tumor_spill	P
+Resection_primary_tumor_-_Type_of_Resection	P
+Therapy_for_relapse_-_Chemotherapy	P
+Therapy_for_relapse_-_RFA	P
+Therapy_for_relapse_-_Radiotherapy	P
+Therapy_for_relapse_-_Resection	P
+DFS_MONTHS	P
+DFS_STATUS	P
+Distant_relapse_-_Organ_-_Abdomen_subcutaneous	P
+Distant_relapse_-_Organ_-_Adnexa_both_sides	P
+Distant_relapse_-_Organ_-_Around_umbillicus	P
+Distant_relapse_-_Organ_-_Blood_vessels	P
+Distant_relapse_-_Organ_-_Bone	P
+Distant_relapse_-_Organ_-_Brain	P
+Distant_relapse_-_Organ_-_Colon	P
+Distant_relapse_-_Organ_-_Liver	P
+Distant_relapse_-_Organ_-_Lung	P
+Distant_relapse_-_Organ_-_Lymph_nodes	P
+Distant_relapse_-_Organ_-_Mediastinum	P
+Distant_relapse_-_Organ_-_Neck	P
+Distant_relapse_-_Organ_-_Ovarium	P
+Distant_relapse_-_Organ_-_Peritoneum	P
+Distant_relapse	P
+Local_relapse	P
+OS_MONTHS	P
+OS_STATUS	P
+Status	P
+Disease-free_survival_after_primary_resection	P
+Disease-free_survival:_event	P
+Overall_survival_after_primary_resection	P
+Overall_survival:_event	P
+
+# Sample attributes
+SAMPLE_ID	S
+Angioinvasion	S
+DNA_microsatellite_instability	S
+Differentiation_grade	S
+Histological_type	S
+Isolated_tumor_deposit	S
+TUMOR_SITE	S
+Location_tumor	S
+Maximal_tumor_diameter	S
+M_stage	S
+N_stage	S
+Stage_grouping	S
+T_stage	S
+Ulceration	S
+Lymph_nodes_with_metastases	S
+Number_of_lymph_nodes_removed	S
+Number_of_lymph_nodes_with_metastases	S
+MSP:_RET	S
+TSACP:_APC	S
+TSACP:_BRAF	S
+TSACP:_FBXW7	S
+TSACP:_KRAS	S
+TSACP:_NRAS	S
+TSACP:_PIK3CA	S
+TSACP:_SMAD4	S
+TSACP:_TP53	S
+DNA_somatic_copy_number_alterations_-_Microarray:_Agilent_180K_aCGH	S
+IHC:_HTR2B	S
+IHC:_ITGA2	S
+IHC:_ITGB1	S
+IHC:_KCNQ1	S
