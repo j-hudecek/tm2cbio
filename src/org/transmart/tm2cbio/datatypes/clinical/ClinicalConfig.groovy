@@ -110,15 +110,16 @@ class ClinicalConfig extends AbstractTypeConfig {
                 // skip comments and empty lines
                 if (!it.startsWith("#") && it.length() > 0) {
                     def splitline = it.split("\t")
-                    def curAttribute = splitline[0].toUpperCase()
+                    def curAttribute = splitline[0].toUpperCase().replace(" ", "_")
                     def curValue = splitline[1]
                     if (splitline.length != 2) {
                         throw new IllegalArgumentException("wrong format at $it at file '" + Config.expandPath(filename) + "'")
                     }
                     else {
                         // if attribute already exists and a different value is detected give a warning that original value will be used
-                        if(attributeTypes.containsKey(curAttribute) && attributeTypes.get(curAttribute).equalsIgnoreCase(curValue)){
-                            println("Warning it is not possible to change an already existing attribute type: attribute ${curAttribute}; Used: ${curValue}")
+                        if(attributeTypes.containsKey(curAttribute) && !attributeTypes.get(curAttribute).equalsIgnoreCase(curValue)){
+                            println("Warning it is not possible to change an already existing attribute type. Attribute: ${curAttribute}; " +
+                                    "Found: ${curValue}, Using: ${attributeTypes.get(curAttribute)}")
                         }
                         else{
                             attributeTypes.put(curAttribute, curValue);
