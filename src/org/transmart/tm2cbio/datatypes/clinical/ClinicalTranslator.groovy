@@ -86,18 +86,23 @@ data_filename: ${getSampleFileName(typeConfig.getDataFilenameOnly(c))}
         // figure out on which column index are the special columns that need replacing/converting
         toReplace = [:]
         toConvert = [:]
-        typeConfig.special_attributes.each({
+        typeConfig.toReplace.each({
             def replaceName = "mapping_" + it + "_replace"
+            def pathName = "mapping_" + it + "_path"
+            if (typeConfig.get(pathName) == null)
+                throw new IllegalArgumentException("Cannot replace $it, you have to define custom concept to column mapping for it (clinical mapping <name> path=<name>")
+            toReplace.put(exportColumns.findIndexOf {
+                it == typeConfig.translateConcept(typeConfig.get(pathName))
+            }, replaceName)
+        })
+        typeConfig.toConvert.each({
             def convertName = "mapping_" + it + "_convert"
             def pathName = "mapping_" + it + "_path"
-            if (typeConfig.hasProperty(replaceName) && typeConfig.@"$replaceName" != null)
-                toReplace.put(exportColumns.findIndexOf {
-                    it == typeConfig.translateConcept(typeConfig.@"$pathName")
-                }, replaceName)
-            if (typeConfig.hasProperty(convertName) && typeConfig.@"$convertName" != null)
-                toConvert.put(exportColumns.findIndexOf {
-                    it == typeConfig.translateConcept(typeConfig.@"$pathName")
-                }, convertName)
+            if (typeConfig.get(pathName) == null)
+                throw new IllegalArgumentException("Cannot convert $it, you have to define custom concept to column mapping for it")
+            toConvert.put(exportColumns.findIndexOf {
+                it == typeConfig.translateConcept(typeConfig.get(pathName))
+            }, convertName)
         })
         if (config_number > 0)
             forConfigNumber = " for config number $config_number"
@@ -110,12 +115,12 @@ data_filename: ${getSampleFileName(typeConfig.getDataFilenameOnly(c))}
 
     private String applyRegexes(String input, String regexesInConfig) {
         String with_name = regexesInConfig + "_with"
-        typeConfig.@"$regexesInConfig".eachWithIndex({ regex, i -> input = input.replace(regex, typeConfig.@"$with_name"[i]) })
+        typeConfig.get(regexesInConfig).eachWithIndex({ regex, i -> input = input.replace(regex, typeConfig.get(with_name)[i]) })
         return input;
     }
 
     private String applyConversion(String input, String converter) {
-        def methodName = typeConfig.@"$converter"
+        def methodName = typeConfig.get(converter)
         Converter."$methodName"(input)
     }
 
@@ -275,8 +280,8 @@ data_filename: ${getSampleFileName(typeConfig.getDataFilenameOnly(c))}
         //rename standard (AGE, SEX, ...) columns
         typeConfig.special_attributes.each({
             def pathName = "mapping_" + it + "_path"
-            if (typeConfig.@"$pathName" != null)
-                concept2col[typeConfig.translateConcept(typeConfig.@"$pathName")] = it
+            if (typeConfig.get(pathName) != null)
+                concept2col[typeConfig.translateConcept(typeConfig.get(pathName))] = it
         })
 
         //check uniqueness of columns just in case...
