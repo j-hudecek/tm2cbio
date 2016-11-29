@@ -106,6 +106,8 @@ data_filename: ${getSampleFileName(typeConfig.getDataFilenameOnly(c))}
         })
         if (config_number > 0)
             forConfigNumber = " for config number $config_number"
+        else
+            forConfigNumber = ""
     }
 
     @Override
