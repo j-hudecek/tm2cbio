@@ -12,6 +12,8 @@ class ClinicalConfig extends AbstractTypeConfig {
     public String attributes_descriptions
     public String attributes_types
 
+    public String attributedef_path
+
     public
     final List special_attributes = ["AGE", "SEX", "RACE", "ETHNICITY", "AGE_AT_DIAGNOSIS", "TUMOR_TYPE", "DAYS_TO_DEATH", "OS_STATUS", "OS_MONTHS", "DFS_STATUS", "DFS_MONTHS", "CANCER_TYPE", "TUMOR_SITE"]
 
@@ -55,6 +57,8 @@ class ClinicalConfig extends AbstractTypeConfig {
 
     public Map types = [:]
 
+    public Map <String, String> attributeTypes = [:]
+
     public ClinicalConfig() {
         typeName = "clinical"
     }
@@ -62,6 +66,10 @@ class ClinicalConfig extends AbstractTypeConfig {
 
     @Override
     public AbstractTranslator getTranslator(Config c, int config_number) {
+        // read file with standard attribute mappings
+        readClinicalAttributeFile("defaultAttributeTypes.txt")
+        // read file with custom mappings
+        readClinicalAttributeFile(attributedef_path)
         new ClinicalTranslator(c, config_number)
     }
 
@@ -95,6 +103,32 @@ class ClinicalConfig extends AbstractTypeConfig {
         }
     }
 
+    private void readClinicalAttributeFile(String filename){
+        if(filename!=null) {
+            def lines = new File(Config.expandPath(filename)).readLines()
+            lines.each {
+                // skip comments and empty lines
+                if (!it.startsWith("#") && it.length() > 0) {
+                    def splitline = it.split("\t")
+                    def curAttribute = splitline[0].toUpperCase().replace(" ", "_")
+                    def curValue = splitline[1]
+                    if (splitline.length != 2) {
+                        throw new IllegalArgumentException("wrong format at $it at file '" + Config.expandPath(filename) + "'")
+                    }
+                    else {
+                        // if attribute already exists and a different value is detected give a warning that original value will be used
+                        if(attributeTypes.containsKey(curAttribute) && !attributeTypes.get(curAttribute).equalsIgnoreCase(curValue)){
+                            println("Warning it is not possible to change an already existing attribute type. Attribute: ${curAttribute}; " +
+                                    "Found: ${curValue}, Using: ${attributeTypes.get(curAttribute)}")
+                        }
+                        else{
+                            attributeTypes.put(curAttribute, curValue);
+                        }
+                    }
+                }
+            }
+        }
+    }
 
     private void checkPathBeforeConvert(String variable_name) {
         //if it's a convert directive, check that we already know the path to the special attribute
@@ -115,7 +149,6 @@ class ClinicalConfig extends AbstractTypeConfig {
                 throw new IllegalArgumentException("Cannot add replace regexes to " + attrName + " without specifying the concept path")
         }
     }
-
 
     public static String translateConcept(String concept) {
         //bug workaround: groovy's regexes fall apart if term separator is \

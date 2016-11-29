@@ -1,0 +1,17 @@
+# mapping attributes to the patient or sample file
+# specified attributes are equal to the second line of the meta data of your output file
+#
+# attribute<tab>type
+# type can be: B(oth), P(atient), S(ample)
+
+# Both
+PATIENT_ID	B
+
+# Patient attributes
+Age	P
+Sex	P
+Gender	P
+
+# Sample attributes
+SAMPLE_ID	S
+DNA_microsatellite_instability	S
