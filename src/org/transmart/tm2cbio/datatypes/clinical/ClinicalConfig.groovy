@@ -53,17 +53,38 @@ class ClinicalConfig extends AbstractTypeConfig {
     public List<String> mapping_concept_to_column_name_replace
     public List<String> mapping_concept_to_column_name_replace_with
 
+    public Map other_fields = [:]
     public Map types = [:]
-
+    public Set toConvert = []
+    public Set toReplace = []
+    
     public ClinicalConfig() {
         typeName = "clinical"
     }
 
-
+    def get(String name) {
+        if (!this.hasProperty(name)) {
+            if (other_fields.containsKey(name))
+                return other_fields[name]
+            else 
+                return null;
+        } else  {
+            return this.@"$name"
+        }     
+    }
+    def set(String name, def value) {
+        if (!this.hasProperty(name)) {
+            other_fields[name] = value
+        } else  {
+            this.@"$name" = value
+        }
+    }
+    
     @Override
     public AbstractTranslator getTranslator(Config c, int config_number) {
         new ClinicalTranslator(c, config_number)
     }
+
 
     @Override
     public void setVariable(String name, String value) {
@@ -75,12 +96,12 @@ class ClinicalConfig extends AbstractTypeConfig {
             checkPathBeforeReplace(name)
             name = name.replace(" ", "_")
             String with_name = name + "_with"
-            if (this.@"$name" == null) {
-                this.@"$name" = []
-                this.@"$with_name" = []
+            if (get(name) == null) {
+                set(name, [])
+                set(with_name, [])
             }
-            this.@"$name".push(replace_def[0])
-            this.@"$with_name".push(replace_def[1])
+            get(name).push(replace_def[0])
+            get(with_name).push(replace_def[1])
         } else if (name.startsWith("mapping type ")) {
             //handle type annotation
             def concept = translateConcept(name.substring("mapping type ".length()))
@@ -88,10 +109,13 @@ class ClinicalConfig extends AbstractTypeConfig {
                 throw new IllegalArgumentException("$name has invalid type $value only STRING, NUMBER or BOOLEAN are allowed")
             types.put(concept, value)
         } else {
+            if (name.endsWith(" convert"))
+            {
+                checkPathBeforeConvert(name)
+            }
             //general config
-            checkPathBeforeConvert(name)
             name = name.replace(" ", "_")
-            this.@"$name" = value;
+            set(name, value);
         }
     }
 
@@ -99,9 +123,10 @@ class ClinicalConfig extends AbstractTypeConfig {
     private void checkPathBeforeConvert(String variable_name) {
         //if it's a convert directive, check that we already know the path to the special attribute
         def attrName = variable_name.replace(' convert', '').replace('mapping ', '')
+        toConvert.add(attrName)
         if (this.special_attributes.contains(attrName) && variable_name.endsWith(' convert')) {
             def pathName = variable_name.replace(' convert', ' path').replace(' ', '_')
-            if (!this.hasProperty(pathName) || this.@"$pathName" == null)
+            if (!this.hasProperty(pathName) || get(pathName) == null)
                 throw new IllegalArgumentException("Cannot add conversion to " + attrName + " without specifying the concept path")
         }
     }
@@ -109,9 +134,11 @@ class ClinicalConfig extends AbstractTypeConfig {
     private void checkPathBeforeReplace(String variable_name) {
         //check that the path to special attribute is specified before the regex
         def attrName = variable_name.replace(' replace', '').replace('mapping ', '')
+        if (variable_name!="mapping concept to column name replace")
+            toReplace.add(attrName)
         if (this.special_attributes.contains(attrName)) {
             def pathName = variable_name.replace(' replace', ' path').replace(' ', '_')
-            if (!this.hasProperty(pathName) || this.@"$pathName" == null)
+            if (!this.hasProperty(pathName) || get(pathName) == null)
                 throw new IllegalArgumentException("Cannot add replace regexes to " + attrName + " without specifying the concept path")
         }
     }
