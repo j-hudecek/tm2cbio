@@ -85,8 +85,6 @@ class ClinicalConfig extends AbstractTypeConfig {
     
     @Override
     public AbstractTranslator getTranslator(Config c, int config_number) {
-        // read file with standard attribute mappings
-        readClinicalAttributeFile("defaultAttributeTypes.txt")
         // read file with custom mappings
         readClinicalAttributeFile(attributedef_path)
         new ClinicalTranslator(c, config_number)
@@ -141,7 +139,7 @@ class ClinicalConfig extends AbstractTypeConfig {
                     else {
                         // if attribute already exists and a different value is detected give a warning that original value will be used
                         if(attributeTypes.containsKey(curAttribute) && !attributeTypes.get(curAttribute).equalsIgnoreCase(curValue)){
-                            println("Warning it is not possible to change an already existing attribute type. Attribute: ${curAttribute}; " +
+                            println("Attribute defined twice in file with different attribute type: Attribute: ${curAttribute}; " +
                                     "Found: ${curValue}, Using: ${attributeTypes.get(curAttribute)}")
                         }
                         else{
