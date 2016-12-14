@@ -31,7 +31,7 @@ importer remove old study=TRUE
 #path to the source clinical data file
 clinical file path=
 
-#path to custom clinical attribute Patient / Sample mapping
+#path to custom clinical attribute Patient / Sample mapping. See exampleAttributeTypes.txt for an example of a mapping file
 clinical attributedef path=
 
 #clinical mapping of special attributes, specify concept path in tranSMART, remove quotes and use forward slashes (/)
