@@ -58,9 +58,13 @@ case_list_ids: ${cases.join('\t')}
 cancer_study_identifier: ${c.study_id}
 name: ${c.study_name}
 description: ${c.study_description}
-short_name: ${c.study_short_name}
-citation: ${c.study_citation}
-pmid: ${c.study_pmid}""")
+short_name: ${c.study_short_name}""")
+        if(!c.study_citation==null) {
+            metastudy.write("""citation:${c.study_citation }""")
+        }
+        if(!c.study_pmid==null) {
+            metastudy.write("""pmid: ${c.study_pmid}""")
+        }
     }
 
 

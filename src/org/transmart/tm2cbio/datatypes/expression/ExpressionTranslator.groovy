@@ -15,7 +15,7 @@ class ExpressionTranslator extends AbstractTranslator {
     //magic stable ids for data type
     def datatype2StableId = ['CONTINUOUS':'mrna', 'Z-SCORE':'mrna_median_Zscores', 'DISCRETE':'mrna_outliers']
     //mapping column name as defined in config file to the datatype
-    def datacol2datatype = ['LOG2E':'CONTINUOUS', 'Z-SCORE':'Z-SCORE']
+    def datacol2datatype = ['LOG2E':'CONTINUOUS', 'Z-SCORE':'Z-SCORE', 'ZSCORE':'Z-SCORE']
 
     def samplesPerGene = [:]
     def entrezIdsPerHugo = [:]
@@ -29,6 +29,7 @@ class ExpressionTranslator extends AbstractTranslator {
             typeConfig.profile_name = "$c.study_name Expression data"
         def datatype = datacol2datatype[typeConfig.data_column]
         def meta = new File(typeConfig.getMetaFilename(c));
+        def showInAnalysisTab = datatype.equalsIgnoreCase("Z-SCORE")?true:false;
         meta.write("""cancer_study_identifier: ${c.study_id}
 genetic_alteration_type: MRNA_EXPRESSION
 datatype: ${datatype}
@@ -36,7 +37,7 @@ stable_id: ${datatype2StableId[datatype]}
 profile_name: ${typeConfig.profile_name}
 profile_description: ${typeConfig.profile_description} for ${c.patient_count} patients.
 data_filename: ${typeConfig.getDataFilenameOnly(c)}
-show_profile_in_analysis_tab: true
+show_profile_in_analysis_tab: ${showInAnalysisTab}
 """)
     }
 
