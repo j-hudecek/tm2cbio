@@ -192,12 +192,14 @@ data_filename: ${getSampleFileName(typeConfig.getDataFilenameOnly(c))}
     private void writeMeta(Writer out, Map concept2col, List<String> columns) {
         //write meta information
         out.println("#" + columns.collect({
-            concept2col[it]
+            concept2col[it].replace("_", " ")
         }).join('\t'));
-        out.println("#" + columns.join('\t'));
+        out.println("#" + columns.collect({
+            it.replace("_", " ")
+        }).join('\t'))
         out.println("#" + columns.collect({
             getTypeForConcept(it)
-        }).join('\t'));
+        }).join('\t'))
         out.println("#" + columns.collect({
             "5" //for priority
         }).join('\t'))
@@ -205,6 +207,7 @@ data_filename: ${getSampleFileName(typeConfig.getDataFilenameOnly(c))}
             concept2col[it]
         }).join('\t'))
     }
+
 
     private String getTypeForConcept(String it) {
         if (typeConfig.types.containsKey(it))
