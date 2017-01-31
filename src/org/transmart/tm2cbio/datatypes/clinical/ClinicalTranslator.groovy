@@ -273,7 +273,7 @@ data_filename: ${getSampleFileName(typeConfig.getDataFilenameOnly(c))}
                             uniqueTerms.push(terms[j])
                     //always keep the leaf
                     uniqueTerms.push(terms.last())
-                    concept2col[conceptsInCollision[i]] = uniqueTerms.join('_')
+                    concept2col[conceptsInCollision[i]] = uniqueTerms.join(' ')
                 })
             }
         }
